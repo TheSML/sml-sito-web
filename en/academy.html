@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Academy | The Social Media Lab — Digital Training & Neuromarketing Courses</title>
+<meta name="description" content="SML Academy: professional in-person and online courses. Social Media Mastery, Neuromarketing Essentials, AI for Marketing. International certification included.">
+<meta name="keywords" content="social media marketing courses, neuromarketing training, digital marketing academy, online courses Switzerland, AI marketing training, digital certification, corporate training">
+<link rel="canonical" href="https://thesocialmedialab.ch/en/academy.html">
+<link rel="alternate" hreflang="it" href="https://thesocialmedialab.ch/academy.html">
+<link rel="alternate" hreflang="en" href="https://thesocialmedialab.ch/en/academy.html">
+<link rel="alternate" hreflang="es" href="https://thesocialmedialab.ch/es/academy.html">
+<link rel="alternate" hreflang="x-default" href="https://thesocialmedialab.ch/en/academy.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Academy | The Social Media Lab">
+<meta property="og:description" content="Professional courses: Social Media Mastery, Neuromarketing, AI for Marketing. In-person, online, certification. Learn from the best.">
+<meta property="og:url" content="https://thesocialmedialab.ch/en/academy.html">
+<meta property="og:locale" content="en_CH">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+
+<!-- Schema.org Organization -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"EducationalOrganization",
+  "name":"The Social Media Lab Academy",
+  "url":"https://thesocialmedialab.ch/en/academy.html",
+  "description":"Academy of professional training in social media marketing, neuromarketing and artificial intelligence for marketing.",
+  "educationalCredentialAwarded":"Professional Certification",
+  "areaServed":"CH",
+  "numberOfStudents":500,
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Professional Courses",
+    "itemListElement":[
+      {"@type":"Course","name":"Social Media Mastery","url":"https://thesocialmedialab.ch/en/academy.html#sml"},
+      {"@type":"Course","name":"Neuromarketing Essentials","url":"https://thesocialmedialab.ch/en/academy.html#neo"},
+      {"@type":"Course","name":"AI for Marketing","url":"https://thesocialmedialab.ch/en/academy.html#ai"}
+    ]
+  }
+}
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Background Mesh -->
+<div class="bg-mesh"></div>
+
+<!-- Canvas Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/en/" class="nav-brand">
+      <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+      <div class="nav-name">The Social Media <span>Lab</span></div>
+    </a>
+    <div class="nav-center">
+      <a href="/en/">Home</a>
+      <a href="/en/about.html">About</a>
+      <a href="/en/services.html">Services</a>
+      <a href="/en/portfolio.html">Portfolio</a>
+      <a href="/en/academy.html" class="active">Academy</a>
+      <a href="/en/packages.html">Packages</a>
+      <a href="/en/contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-lang">
+        <a href="/academy.html">IT</a>
+        <a href="/en/academy.html" class="active">EN</a>
+        <a href="/es/academy.html">ES</a>
+      </div>
+      <a href="/en/contact.html" class="nav-cta">Get a Quote</a>
+    </div>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/en/">Home</a>
+    <a href="/en/about.html">About</a>
+    <a href="/en/services.html">Services</a>
+    <a href="/en/portfolio.html">Portfolio</a>
+    <a href="/en/academy.html" class="active">Academy</a>
+    <a href="/en/packages.html">Packages</a>
+    <a href="/en/contact.html">Contact</a>
+    <div class="mobile-lang">
+      <a href="/academy.html">IT</a>
+      <a href="/en/academy.html" class="active">EN</a>
+      <a href="/es/academy.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════ PAGE HEADER ═══════════════ -->
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb reveal">
+      <a href="/en/">Home</a>
+      <span class="sep">/</span>
+      <span>Academy</span>
+    </div>
+    <h1 style="font-family:var(--font);font-size:3rem;font-weight:700;color:var(--white);margin-bottom:16px" class="reveal">SML <span class="grad">Academy</span></h1>
+    <p style="font-size:1.05rem;color:var(--text);max-width:700px;margin:0 auto;line-height:1.8" class="reveal">Professional courses designed for those who want to master digital marketing. In-person and on-demand online training with international certification. Learn from our experts with 20+ years of experience.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ WHY TRAIN WITH US ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">The Benefits</div>
+      <h2 class="section-title">Why <span class="grad">Train</span> With Us</h2>
+      <p class="section-desc">Three great reasons to choose The Social Media Lab Academy</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-d1">
+        <div class="service-icon">💪</div>
+        <h3>Practical, Immediately Applicable Skills</h3>
+        <p>No abstract theory: every lesson is based on real cases, strategies that work, tools we use daily. Complete the course and apply what you've learned right away.</p>
+        <span class="service-tag">Hands-on</span>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-icon">🎓</div>
+        <h3>International Certification</h3>
+        <p>Every course comes with professional certification recognized globally. Add credentials to your CV and prove verified expertise in the digital job market.</p>
+        <span class="service-tag">Certified</span>
+      </div>
+      <div class="service-card reveal reveal-d3">
+        <div class="service-icon">🤝</div>
+        <h3>Continuous Support & Community</h3>
+        <p>You're not alone: access an exclusive alumni community, monthly bonus webinars, updated resources and post-course support. Guglielmo and the team are here for you.</p>
+        <span class="service-tag">Lifetime</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COURSES ═══════════════ -->
+<section class="section dark-bg" id="corsi">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Training</div>
+      <h2 class="section-title">Our <span class="grad">Courses</span></h2>
+      <p class="section-desc">Three intensive programs to master 2026 digital marketing</p>
+    </div>
+    <div class="academy-grid" style="grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:28px">
+
+      <!-- Course 1: Social Media Mastery -->
+      <div class="academy-card reveal reveal-d1" id="sml" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:var(--transition)">
+        <span class="academy-badge badge-live">In-Person</span>
+        <h3 style="font-family:var(--font);font-size:1.25rem;font-weight:600;color:var(--white);margin-bottom:12px">Social Media Mastery</h3>
+        <p style="font-size:.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:20px">Intensive 3-day course to completely master social media channel management. From strategy to content calendar, content creation to advanced advertising and data analysis. For entrepreneurs, professionals and corporate teams.</p>
+
+        <div style="background:var(--surface2);padding:20px;border-radius:var(--radius);margin-bottom:20px">
+          <h4 style="font-family:var(--font);font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:12px">Course Modules:</h4>
+          <ul style="list-style:none;font-size:.85rem;color:var(--text-dim);line-height:2">
+            <li>✓ Social Media Strategy & ICP (Ideal Customer Profile)</li>
+            <li>✓ Content Calendar & Editorial Planning</li>
+            <li>✓ Copywriting for Social & Engagement</li>
+            <li>✓ Video Reels, TikTok & Short-form Content</li>
+            <li>✓ Advertising: Meta Ads, TikTok Ads, LinkedIn Ads</li>
+            <li>✓ Advanced Analytics & Reporting</li>
+          </ul>
+        </div>
+
+        <div class="academy-meta" style="display:flex;gap:14px;font-size:.82rem;color:var(--text-dim);flex-wrap:wrap;margin-bottom:20px">
+          <span>📅 3 consecutive days</span>
+          <span>🎯 Advanced</span>
+          <span>👥 Max 12 participants</span>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:16px;background:var(--surface2);border-radius:var(--radius);margin-bottom:20px">
+          <div>
+            <div style="font-size:.8rem;color:var(--text-dim);margin-bottom:4px">Price</div>
+            <div style="font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--white)">CHF 1'490</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:.8rem;color:var(--cyan);font-weight:600;margin-bottom:4px">Next Date</div>
+            <div style="font-size:.9rem;color:var(--white)">June 2026</div>
+          </div>
+        </div>
+
+        <a href="/en/contact.html" class="btn-grad" style="width:100%;text-align:center;justify-content:center">Enroll Now &rarr;</a>
+      </div>
+
+      <!-- Course 2: Neuromarketing Essentials -->
+      <div class="academy-card reveal reveal-d2" id="neo" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:var(--transition)">
+        <span class="academy-badge badge-online">Online</span>
+        <h3 style="font-family:var(--font);font-size:1.25rem;font-weight:600;color:var(--white);margin-bottom:12px">Neuromarketing Essentials</h3>
+        <p style="font-size:.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:20px">Discover how the consumer's brain works and learn to use this knowledge to create irresistible messages. 6 on-demand modules you can follow at your own pace, with video lessons, case studies and practical exercises.</p>
+
+        <div style="background:var(--surface2);padding:20px;border-radius:var(--radius);margin-bottom:20px">
+          <h4 style="font-family:var(--font);font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:12px">Course Modules:</h4>
+          <ul style="list-style:none;font-size:.85rem;color:var(--text-dim);line-height:2">
+            <li>✓ Introduction to Neuromarketing & Neuroscience</li>
+            <li>✓ Cognitive Biases & Mental Heuristics</li>
+            <li>✓ Emotional Triggers & Ethical Persuasion</li>
+            <li>✓ Storytelling Based on Neuroscience</li>
+            <li>✓ Copy & Design that Capture Attention</li>
+            <li>✓ Measuring Behavior & Conversions</li>
+          </ul>
+        </div>
+
+        <div class="academy-meta" style="display:flex;gap:14px;font-size:.82rem;color:var(--text-dim);flex-wrap:wrap;margin-bottom:20px">
+          <span>📚 6 modules (10-15 hours)</span>
+          <span>🎯 Intermediate</span>
+          <span>⏰ On-demand, lifetime access</span>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:16px;background:var(--surface2);border-radius:var(--radius);margin-bottom:20px">
+          <div>
+            <div style="font-size:.8rem;color:var(--text-dim);margin-bottom:4px">Price</div>
+            <div style="font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--white)">CHF 890</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:.8rem;color:var(--cyan);font-weight:600;margin-bottom:4px">Availability</div>
+            <div style="font-size:.9rem;color:var(--white)">Immediate</div>
+          </div>
+        </div>
+
+        <a href="/en/contact.html" class="btn-grad" style="width:100%;text-align:center;justify-content:center">Start the Course &rarr;</a>
+      </div>
+
+      <!-- Course 3: AI for Marketing -->
+      <div class="academy-card reveal reveal-d3" id="ai" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:var(--transition)">
+        <span class="academy-badge badge-ai">AI</span>
+        <h3 style="font-family:var(--font);font-size:1.25rem;font-weight:600;color:var(--white);margin-bottom:12px">AI for Marketing</h3>
+        <p style="font-size:.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:20px">Learn to use artificial intelligence to automate, analyze and optimize your marketing strategies. Hands-on 2-day course with ChatGPT, Midjourney, predictive analysis tools and marketing automations.</p>
+
+        <div style="background:var(--surface2);padding:20px;border-radius:var(--radius);margin-bottom:20px">
+          <h4 style="font-family:var(--font);font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:12px">Course Modules:</h4>
+          <ul style="list-style:none;font-size:.85rem;color:var(--text-dim);line-height:2">
+            <li>✓ AI Fundamentals: How Generative Models Work</li>
+            <li>✓ Content Creation with ChatGPT & Claude</li>
+            <li>✓ Visual Design with Midjourney & DALL-E 3</li>
+            <li>✓ Automation: Make, Zapier, N8N for Marketing</li>
+            <li>✓ Predictive Analytics & Machine Learning Basics</li>
+            <li>✓ AI-First Strategies for 2026</li>
+          </ul>
+        </div>
+
+        <div class="academy-meta" style="display:flex;gap:14px;font-size:.82rem;color:var(--text-dim);flex-wrap:wrap;margin-bottom:20px">
+          <span>📅 2-day intensive</span>
+          <span>🎯 All levels</span>
+          <span>💻 Practical & applicable</span>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:16px;background:var(--surface2);border-radius:var(--radius);margin-bottom:20px">
+          <div>
+            <div style="font-size:.8rem;color:var(--text-dim);margin-bottom:4px">Price</div>
+            <div style="font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--white)">CHF 990</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:.8rem;color:var(--cyan);font-weight:600;margin-bottom:4px">Next Date</div>
+            <div style="font-size:.9rem;color:var(--white)">May 2026</div>
+          </div>
+        </div>
+
+        <a href="/en/contact.html" class="btn-grad" style="width:100%;text-align:center;justify-content:center">Book Your Spot &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CORPORATE TRAINING ═══════════════ -->
+<section class="section gradient-bg">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Teams & Companies</div>
+      <h2 class="section-title"><span class="grad">Corporate</span> Training</h2>
+      <p class="section-desc">Bring training directly to your team</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:48px 40px;text-align:center;max-width:800px;margin:0 auto" class="reveal">
+      <h3 style="font-family:var(--font);font-size:1.35rem;font-weight:600;color:var(--white);margin-bottom:16px">Custom Courses for Your Company</h3>
+      <p style="font-size:.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:24px">Not all teams have the same needs. We offer completely customized courses on topics that matter to your company: social media, neuromarketing, AI, SEO/AEO, content creation. In-person at your location or remotely.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px">
+        <div style="flex:1;min-width:200px;padding:14px;background:var(--surface2);border-radius:var(--radius)">
+          <div style="font-family:var(--font);font-size:1.3rem;font-weight:700;color:var(--cyan);margin-bottom:4px">5-20</div>
+          <div style="font-size:.75rem;color:var(--text-dim)">Participants per course</div>
+        </div>
+        <div style="flex:1;min-width:200px;padding:14px;background:var(--surface2);border-radius:var(--radius)">
+          <div style="font-family:var(--font);font-size:1.3rem;font-weight:700;color:var(--cyan);margin-bottom:4px">1-5</div>
+          <div style="font-size:.75rem;color:var(--text-dim)">Days of training</div>
+        </div>
+        <div style="flex:1;min-width:200px;padding:14px;background:var(--surface2);border-radius:var(--radius)">
+          <div style="font-family:var(--font);font-size:1.3rem;font-weight:700;color:var(--cyan);margin-bottom:4px">CHF 2'490</div>
+          <div style="font-size:.75rem;color:var(--text-dim)">Starting from</div>
+        </div>
+      </div>
+      <a href="/en/contact.html" class="btn-grad">Request Training Quote &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ YOUR TRAINER ═══════════════ -->
+<section class="section dark-bg">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Our Team</div>
+      <h2 class="section-title">Who Will <span class="grad">Teach</span> You</h2>
+      <p class="section-desc">Over 20 years of experience at your service</p>
+    </div>
+    <div class="team-grid" style="max-width:900px;margin:0 auto">
+      <div class="team-card reveal reveal-d1" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;transition:var(--transition);text-align:center;padding:48px 32px 40px">
+        <div class="team-photo" style="width:140px;height:140px;border-radius:50%;overflow:hidden;margin:0 auto 24px;position:relative;padding:3px;background:var(--gradient)">
+          <img src="/img/guglielmo-poli.jpg" alt="Guglielmo Poli - Head of Training" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+        </div>
+        <h3 style="font-family:var(--font);font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:4px">Guglielmo Poli</h3>
+        <div class="team-role" style="font-size:.82rem;color:var(--cyan);font-weight:500;margin-bottom:20px">Co-Founder &amp; Head of Training</div>
+        <p style="font-size:.88rem;color:var(--text-dim);line-height:1.7;margin-bottom:24px">Over 20 years of experience in professional training and talent development. Speaks Italian, English, Spanish and French. Has trained more than 500 professionals in digital marketing, from small businesses to multinational corporations. His approach is practical, engaging and focused on tangible results.</p>
+        <div class="team-social" style="display:flex;justify-content:center;gap:10px">
+          <a href="https://www.instagram.com/thesocialmedialab.ch?igsh=MXJ4ejFpaGt6eGFoOQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/guglielmo-poli-4b4211398/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://wa.me/41782303582" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Frequently Asked</div>
+      <h2 class="section-title">Everything You <span class="grad">Need to Know</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>How does the certification work?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>All courses come with professional international certification. Upon completion, you will receive a digital certificate (and paper, if you wish) attesting to course completion and acquired skills. It is recognized in the job market and you can add it to your LinkedIn.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>What's the difference between in-person and online courses?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>In-person courses (Social Media Mastery, AI for Marketing) are intensive, interactive and ideal if you want to immerse yourself completely. On-demand online courses (Neuromarketing Essentials) let you learn at your own pace, with lifetime access to all materials. Choose based on your learning style.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>Can I take the courses if I have no prior experience?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>Yes, absolutely. Our courses are designed for people at all levels. Social Media Mastery and AI for Marketing start from basics and progress to advanced techniques. Neuromarketing Essentials is recommended if you have basic marketing knowledge.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>Which course should I choose if I'm a small business?</h3>
+          <div class="faq-toggle">+</div>
+        <div class="faq-a"><p>We recommend starting with Social Media Mastery to learn how to strategically manage your social channels and measure results. Then add Neuromarketing Essentials to understand how your customers think. Finally, leverage AI with the third course to automate and scale. Or choose personalized corporate training.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>Do you offer discounts for groups or companies?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>Yes. For groups of 5 or more people we offer exclusive discounts. Companies can request customized courses with negotiated pricing. Contact us directly to discuss your specific needs and best training options.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Start Your Training Journey</h2>
+      <p>Choose the course that's right for you, enroll today and start learning from the best digital marketing professionals. Your new career in digital starts here.</p>
+      <div class="cta-btns">
+        <a href="/en/contact.html" class="btn-grad">Enroll Now &rarr;</a>
+        <a href="#corsi" class="btn-ghost">View Courses</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/en/" class="nav-brand">
+          <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+          <div class="nav-name">The Social Media <span>Lab</span></div>
+        </a>
+        <p>Social media marketing agency based on neuromarketing. Strategies that speak to the brain, results that speak to the numbers.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/thesocialmedialab.ch?igsh=MXJ4ejFpaGt6eGFoOQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/company/the-social-media-lab-ch/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.facebook.com/thesocialmedialabagency/" target="_blank" rel="noopener" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/en/services.html">Social Media Management</a>
+        <a href="/en/services.html">Websites</a>
+        <a href="/en/services.html">Neuromarketing</a>
+        <a href="/en/services.html">Content Creation</a>
+        <a href="/en/services.html">SEO & AEO</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/en/about.html">About</a>
+        <a href="/en/portfolio.html">Portfolio</a>
+        <a href="/en/academy.html">Academy</a>
+        <a href="/en/packages.html">Packages</a>
+        <a href="/en/contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Languages</h4>
+        <a href="/academy.html">🇮🇹 Italiano</a>
+        <a href="/en/academy.html">🇬🇧 English</a>
+        <a href="/es/academy.html">🇪🇸 Español</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Social Media Lab — Morbio Inferiore, Ticino. All rights reserved.</p>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+<script>
+/* === Scroll Progress === */
+const sp=document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{const h=document.documentElement;sp.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+
+/* === Navbar Scroll === */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+
+/* === Mobile Menu === */
+const mt=document.getElementById('mobileToggle'),mm=document.getElementById('mobileMenu');
+mt.addEventListener('click',()=>{mm.classList.toggle('open');const s=mt.querySelectorAll('span');if(mm.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{s[0].style.transform='';s[1].style.opacity='1';s[2].style.transform=''}});
+
+/* === Custom Cursor === */
+const cur=document.getElementById('cursor');
+if(window.innerWidth>1024){document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('active'));el.addEventListener('mouseleave',()=>cur.classList.remove('active'))})}
+
+/* === Reveal on Scroll === */
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* === FAQ Accordion === */
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')})});
+
+/* === Canvas Particles === */
+(function(){
+  const c=document.getElementById('particles'),ctx=c.getContext('2d');
+  let w,h,particles=[];
+  function resize(){w=c.width=window.innerWidth;h=c.height=window.innerHeight}
+  resize();window.addEventListener('resize',resize);
+  class P{
+    constructor(){this.reset()}
+    reset(){this.x=Math.random()*w;this.y=Math.random()*h;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.r=Math.random()*1.5+.5;this.a=Math.random()*.4+.1}
+    update(){this.x+=this.vx;this.y+=this.vy;if(this.x>w||this.x<0||this.y>h||this.y<0)this.reset()}
+  }
+  for(let i=0;i<30;i++)particles.push(new P());
+  function draw(){ctx.clearRect(0,0,w,h);ctx.fillStyle='rgba(0,212,255,.2)';particles.forEach(p=>{p.update();ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()});requestAnimationFrame(draw)}
+  draw();
+})();
+</script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

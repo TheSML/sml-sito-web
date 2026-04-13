@@ -1,0 +1,20 @@
+{
+  "members": [
+    {
+      "name": "Alejandra Moya",
+      "role": "Co-Founder & Neuromarketing Strategist",
+      "photo": "/img/alejandra-moya.jpg",
+      "bio": "Laureata in psicologia, specializzata in neuromarketing applicato ai social media. Crea strategie basate sulla scienza del comportamento per massimizzare engagement e conversioni.",
+      "linkedin": "",
+      "instagram": ""
+    },
+    {
+      "name": "Guglielmo Poli",
+      "role": "Co-Founder & Head of Training",
+      "photo": "/img/guglielmo-poli.jpg",
+      "bio": "Oltre 20 anni di esperienza internazionale nella formazione e nel marketing digitale. Parla 4 lingue e guida la divisione training e sviluppo web.",
+      "linkedin": "",
+      "instagram": ""
+    }
+  ]
+}

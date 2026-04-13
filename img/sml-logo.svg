@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <clipPath id="circle"><circle cx="100" cy="100" r="100"/></clipPath>
+  </defs>
+  <circle cx="100" cy="100" r="100" fill="#070b1a"/>
+  <text x="100" y="72" text-anchor="middle" fill="#ffffff" font-family="'Arial',sans-serif" font-weight="700" font-size="18" letter-spacing="2">THE</text>
+  <text x="100" y="96" text-anchor="middle" fill="#ffffff" font-family="'Arial',sans-serif" font-weight="700" font-size="18" letter-spacing="1.5">SOCIAL MEDIA</text>
+  <text x="100" y="132" text-anchor="middle" fill="#00d4ff" font-family="'Arial',sans-serif" font-weight="700" font-size="36" letter-spacing="8">LAB</text>
+</svg>

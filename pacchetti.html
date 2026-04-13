@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pacchetti | The Social Media Lab — Agenzia Social Media Marketing Ticino</title>
+<meta name="description" content="Pacchetti sito web + social media management per imprenditori in Ticino. Sito professionale, gestione social, strategie di neuromarketing. 4 piani per ogni budget.">
+<meta name="keywords" content="pacchetti sito web ticino, social media management lugano, gestione social media svizzera, pacchetti web design, prezzi marketing digitale ticino">
+<link rel="canonical" href="https://thesocialmedialab.ch/pacchetti.html">
+<link rel="alternate" hreflang="it" href="https://thesocialmedialab.ch/pacchetti.html">
+<link rel="alternate" hreflang="en" href="https://thesocialmedialab.ch/en/packages.html">
+<link rel="alternate" hreflang="es" href="https://thesocialmedialab.ch/es/paquetes.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pacchetti — The Social Media Lab">
+<meta property="og:description" content="Il tuo business online in 30 giorni. Sito professionale + gestione social. Pacchetti all-in-one per imprenditori.">
+<meta property="og:url" content="https://thesocialmedialab.ch/pacchetti.html">
+<meta property="og:locale" content="it_CH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+<style>
+/* Pricing Card Enhancements */
+.pricing-card-enhanced {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.pricing-card-enhanced.popular {
+  background: linear-gradient(135deg, rgba(0,212,255,0.08), rgba(139,92,246,0.06));
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%) 1;
+  position: relative;
+}
+
+.pricing-card-enhanced.popular::before {
+  content: 'PIÙ SCELTO';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #00b4d8, #7c3aed);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 9999px;
+  letter-spacing: 0.08em;
+}
+
+.pricing-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+@media(max-width: 768px) {
+  .pricing-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Background Mesh -->
+<div class="bg-mesh"></div>
+
+<!-- Canvas Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+      <div class="nav-name">The Social Media <span>Lab</span></div>
+    </a>
+    <div class="nav-center">
+      <a href="/">Home</a>
+      <a href="/chi-siamo.html">Chi Siamo</a>
+      <a href="/servizi.html">Servizi</a>
+      <a href="/portfolio.html">Portfolio</a>
+      <a href="/academy.html">Academy</a>
+      <a href="/pacchetti.html" class="active">Pacchetti</a>
+      <a href="/contatti.html">Contatti</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-lang">
+        <a href="/pacchetti.html" class="active">IT</a>
+        <a href="/en/packages.html">EN</a>
+        <a href="/es/paquetes.html">ES</a>
+      </div>
+      <a href="/contatti.html" class="nav-cta">Richiedi Preventivo</a>
+    </div>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="/chi-siamo.html">Chi Siamo</a>
+    <a href="/servizi.html">Servizi</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/academy.html">Academy</a>
+    <a href="/pacchetti.html">Pacchetti</a>
+    <a href="/contatti.html">Contatti</a>
+    <div class="mobile-lang">
+      <a href="/pacchetti.html" class="active">IT</a>
+      <a href="/en/packages.html">EN</a>
+      <a href="/es/paquetes.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════ PAGE HEADER ═══════════════ -->
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span>Pacchetti</span>
+    </div>
+    <h1 style="font-family:var(--font);font-size:2.8rem;font-weight:700;color:var(--white);margin-bottom:16px">Piani per Ogni <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Budget</span></h1>
+    <p style="font-size:1.05rem;color:var(--text);max-width:600px;margin:0 auto">Scegli il pacchetto che fa per te. Ogni piano include strategie di neuromarketing e risultati misurabili.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ IL PROBLEMA ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px">
+      <div style="font-size:.72rem;font-weight:600;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px">Il Problema</div>
+      <h2 style="font-family:var(--font);font-size:2.2rem;font-weight:700;color:var(--white);margin-bottom:16px">Perché hai bisogno di una strategia digitale?</h2>
+    </div>
+    
+    <div class="services-grid reveal reveal-d1">
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Nessuna Presenza Online</h3>
+        <p>Il 75% dei tuoi potenziali clienti ti cercano online prima di contattarti. Senza un sito web e social media, stai perdendo affari.</p>
+        <span class="service-tag">URGENTE</span>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Bassi Engagement</h3>
+        <p>I tuoi post non generano reazioni, commenti o conversioni? Significa che il contenuto non è strutturato con principi di neuromarketing.</p>
+        <span class="service-tag">STRATEGIA</span>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">💸</div>
+        <h3>Nessun ROI Misurato</h3>
+        <p>Spendi in marketing ma non sai se funziona davvero? Mancano i dati, la trackabilità e una strategia basata su metriche concrete.</p>
+        <span class="service-tag">ANALISI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRICING ═══════════════ -->
+<section class="section dark-bg">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px">
+      <div style="font-size:.72rem;font-weight:600;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px">I Nostri Pacchetti</div>
+      <h2 style="font-family:var(--font);font-size:2.2rem;font-weight:700;color:var(--white)">Piani Trasparenti e Completi</h2>
+    </div>
+    
+    <div class="services-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: start;">
+      
+      <!-- STARTER -->
+      <div class="service-card pricing-card-enhanced reveal reveal-d1" style="padding: 36px 28px;">
+        <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Starter</div>
+        <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">Per iniziare</div>
+        
+        <div style="margin-bottom:6px">
+          <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 2'490
+          </div>
+        </div>
+        <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">Setup una tantum + primo mese gratis</div>
+        
+        <div style="display:flex;align-items:center;gap:6px;background:var(--cyan-dim);border:1px solid var(--cyan-dim);border-radius:var(--radius);padding:10px 14px;margin:16px 0 24px;font-size:.78rem;color:var(--cyan);font-weight:500">
+          <span style="font-size:1rem">💰</span> Poi CHF 390/mese
+        </div>
+        
+        <div style="height:1px;background:var(--border);margin:0 0 24px"></div>
+        
+        <div style="font-size:.68rem;font-weight:700;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px">Cosa è Incluso</div>
+        
+        <ul style="list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Landing page (1 pagina)</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>1 canale social</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>8 post/mese</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Reportistica mensile</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:rgba(255,255,255,0.15);flex-shrink:0">✗</span>
+            <span style="opacity:.5">Fotografia</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:rgba(255,255,255,0.15);flex-shrink:0">✗</span>
+            <span style="opacity:.5">Video</span>
+          </li>
+        </ul>
+        
+        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:14px;background:transparent;color:var(--white);border:1.5px solid var(--border-light);border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.borderColor='var(--cyan)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='var(--border-light)';this.style.color='var(--white)'">Scegli Starter</a>
+      </div>
+      
+      <!-- PROFESSIONAL (POPULAR) -->
+      <div class="service-card pricing-card-enhanced popular reveal reveal-d2" style="padding: 36px 28px;">
+        <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Professional</div>
+        <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">La scelta migliore</div>
+        
+        <div style="margin-bottom:6px">
+          <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 4'990
+          </div>
+        </div>
+        <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">Setup una tantum + primo mese gratis</div>
+        
+        <div style="display:flex;align-items:center;gap:6px;background:var(--cyan-dim);border:1px solid var(--cyan-dim);border-radius:var(--radius);padding:10px 14px;margin:16px 0 24px;font-size:.78rem;color:var(--cyan);font-weight:500">
+          <span style="font-size:1rem">💰</span> Poi CHF 690/mese
+        </div>
+        
+        <div style="height:1px;background:var(--border);margin:0 0 24px"></div>
+        
+        <div style="font-size:.68rem;font-weight:700;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px">Cosa è Incluso</div>
+        
+        <ul style="list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Sito multi-pagina (6 pagine)</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>2 canali social</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>12 post/mese</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Stories e Reels</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Reportistica + SEO</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:rgba(255,255,255,0.15);flex-shrink:0">✗</span>
+            <span style="opacity:.5">Fotografia Pro</span>
+          </li>
+        </ul>
+        
+        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:14px;background:linear-gradient(135deg, #00b4d8, #7c3aed);color:white;border:none;border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,180,216,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">Scegli Professional</a>
+      </div>
+      
+      <!-- BUSINESS -->
+      <div class="service-card pricing-card-enhanced reveal reveal-d3" style="padding: 36px 28px;">
+        <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Business</div>
+        <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">Per crescere</div>
+        
+        <div style="margin-bottom:6px">
+          <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 7'990
+          </div>
+        </div>
+        <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">Setup una tantum + primo mese gratis</div>
+        
+        <div style="display:flex;align-items:center;gap:6px;background:var(--cyan-dim);border:1px solid var(--cyan-dim);border-radius:var(--radius);padding:10px 14px;margin:16px 0 24px;font-size:.78rem;color:var(--cyan);font-weight:500">
+          <span style="font-size:1rem">💰</span> Poi CHF 990/mese
+        </div>
+        
+        <div style="height:1px;background:var(--border);margin:0 0 24px"></div>
+        
+        <div style="font-size:.68rem;font-weight:700;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px">Cosa è Incluso</div>
+        
+        <ul style="list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Sito premium (10 pagine + blog)</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>3 canali social</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>16 post/mese + Reels</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Fotografia professionale</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Reportistica + SEO/AEO avanzato</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:rgba(255,255,255,0.15);flex-shrink:0">✗</span>
+            <span style="opacity:.5">Campagne Ads</span>
+          </li>
+        </ul>
+        
+        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:14px;background:transparent;color:var(--white);border:1.5px solid var(--border-light);border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.borderColor='var(--cyan)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='var(--border-light)';this.style.color='var(--white)'">Scegli Business</a>
+      </div>
+      
+      <!-- ENTERPRISE -->
+      <div class="service-card pricing-card-enhanced reveal reveal-d3" style="padding: 36px 28px;">
+        <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Enterprise</div>
+        <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">Soluzione completa</div>
+        
+        <div style="margin-bottom:6px">
+          <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 12'490<span style="font-size:1rem;color:var(--text-dim)">+</span>
+          </div>
+        </div>
+        <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">Setup una tantum + primo mese gratis</div>
+        
+        <div style="display:flex;align-items:center;gap:6px;background:var(--cyan-dim);border:1px solid var(--cyan-dim);border-radius:var(--radius);padding:10px 14px;margin:16px 0 24px;font-size:.78rem;color:var(--cyan);font-weight:500">
+          <span style="font-size:1rem">💰</span> Poi CHF 1'490/mese
+        </div>
+        
+        <div style="height:1px;background:var(--border);margin:0 0 24px"></div>
+        
+        <div style="font-size:.68rem;font-weight:700;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px">Cosa è Incluso</div>
+        
+        <ul style="list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:8px">
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Sito custom (design illimitato)</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Tutti i canali social</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>20 post/mese + Reels</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Fotografia + Video pro</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Campagne Ads (Meta + Google)</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Reportistica & strategie custom</span>
+          </li>
+        </ul>
+        
+        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:14px;background:transparent;color:var(--white);border:1.5px solid var(--border-light);border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.borderColor='var(--cyan)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='var(--border-light)';this.style.color='var(--white)'">Scegli Enterprise</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COSA INCLUDE ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px">
+      <div style="font-size:.72rem;font-weight:600;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px">In Tutti i Pacchetti</div>
+      <h2 style="font-family:var(--font);font-size:2.2rem;font-weight:700;color:var(--white)">Cosa è Sempre Incluso</h2>
+    </div>
+    
+    <div class="services-grid reveal reveal-d1">
+      <div class="service-card">
+        <div class="service-icon">🎯</div>
+        <h3>Strategia Neuromarketing</h3>
+        <p>Ogni contenuto è basato su principi di psicologia cognitiva per massimizzare engagement e conversioni.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Reportistica Mensile</h3>
+        <p>Dati dettagliati su engagement, reach, conversioni e ROI. Saprai esattamente cosa funziona.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">💬</div>
+        <h3>Supporto Dedicato</h3>
+        <p>Un account manager dedicato disponibile per domande, cambiamenti e ottimizzazioni in tempo reale.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>Setup Completo</h3>
+        <p>Configurazione di profili, backend, SEO, Google Analytics e tutti gli strumenti necessari.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">🚀</div>
+        <h3>Ottimizzazione Continua</h3>
+        <p>Test A/B, analisi competitor e aggiustamenti mensili per migliorare costantemente i risultati.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">🌍</div>
+        <h3>SEO & AEO</h3>
+        <p>Ottimizzazione per motori di ricerca (SEO) e per IA (AEO) per massimizzare la visibilità.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Mobile First Design</h3>
+        <p>Tutti i siti sono ottimizzati per dispositivi mobili e caricano velocemente da qualsiasi luogo.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">🔒</div>
+        <h3>Sicurezza & Compliance</h3>
+        <p>SSL, GDPR compliance, backup automatici e protezione totale dei dati dei tuoi clienti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROCESSO ═══════════════ -->
+<section class="section dark-bg">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px">
+      <div style="font-size:.72rem;font-weight:600;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px">Come Funziona</div>
+      <h2 style="font-family:var(--font);font-size:2.2rem;font-weight:700;color:var(--white)">Processo in 4 Step</h2>
+    </div>
+    
+    <div class="stats-row reveal reveal-d1" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;max-width:100%">
+      <div>
+        <div style="width:64px;height:64px;background:var(--card);border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--cyan);margin:0 auto 16px;margin-bottom:16px;transition:var(--transition)">1</div>
+        <h3 style="font-family:var(--font);font-size:1rem;font-weight:600;color:var(--white);margin-bottom:6px">Consulenza Iniziale</h3>
+        <p style="font-size:.82rem;color:var(--text-dim);line-height:1.6">Analizziamo il tuo business, competitor e visione. Definiamo gli obiettivi SMART.</p>
+      </div>
+      
+      <div>
+        <div style="width:64px;height:64px;background:var(--card);border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--cyan);margin:0 auto 16px;transition:var(--transition)">2</div>
+        <h3 style="font-family:var(--font);font-size:1rem;font-weight:600;color:var(--white);margin-bottom:6px">Design & Setup</h3>
+        <p style="font-size:.82rem;color:var(--text-dim);line-height:1.6">Creiamo sito web, profili social e configuriamo tutti gli strumenti. Durata: 2-3 settimane.</p>
+      </div>
+      
+      <div>
+        <div style="width:64px;height:64px;background:var(--card);border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--cyan);margin:0 auto 16px;transition:var(--transition)">3</div>
+        <h3 style="font-family:var(--font);font-size:1rem;font-weight:600;color:var(--white);margin-bottom:6px">Content & Launch</h3>
+        <p style="font-size:.82rem;color:var(--text-dim);line-height:1.6">Produciamo contenuti, lancio il sito e iniziamo la gestione social. Primo mese gratis!</p>
+      </div>
+      
+      <div>
+        <div style="width:64px;height:64px;background:var(--card);border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--cyan);margin:0 auto 16px;transition:var(--transition)">4</div>
+        <h3 style="font-family:var(--font);font-size:1rem;font-weight:600;color:var(--white);margin-bottom:6px">Crescita Continua</h3>
+        <p style="font-size:.82rem;color:var(--text-dim);line-height:1.6">Reportistica mensile, ottimizzazioni e strategie per massimizzare ROI a lungo termine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px">
+      <div style="font-size:.72rem;font-weight:600;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px">Domande Frequenti</div>
+      <h2 style="font-family:var(--font);font-size:2.2rem;font-weight:700;color:var(--white)">Risposte ai Tuoi Dubbi</h2>
+    </div>
+    
+    <div class="faq-list">
+      
+      <div class="faq-item">
+        <div class="faq-q">
+          <h3>Quali sono le differenze tra i pacchetti?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">
+          <p><strong>Starter</strong> è perfetto per chi inizia: 1 pagina landing + 1 social + 8 post/mese. <strong>Professional</strong> aggiunge un sito multi-pagina e 2 social con 12 post. <strong>Business</strong> include fotografia professionale e 3 social con blog e video. <strong>Enterprise</strong> è fully custom con tutti i canali, video, ads e reportistica avanzata.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">
+          <h3>Posso cambiare pacchetto più tardi?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">
+          <p>Sì, completamente. Molti nostri clienti iniziano con Starter e crescono fino a Professional o Business man mano che il business si sviluppa. Le modifiche vengono applicate al prossimo ciclo di fatturazione.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">
+          <h3>Il "primo mese gratis" significa davvero gratis?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">
+          <p>Sì, il primo mese di gestione social è completamente gratuito dopo il setup iniziale. Paghi solo la tariffa una tantum (setup, design, launch). Dopo il primo mese, la fatturazione parte regolarmente.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">
+          <h3>Cos'è incluso nel "setup una tantum"?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">
+          <p>Design del sito, sviluppo, configurazione profili social, setup Google Analytics, SEO base, SSL, backup automatici, test di velocità e ottimizzazione mobile. Tutto quello che serve per lanciare online.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">
+          <h3>Posso vedere risultati prima di impegnarmi a lungo termine?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">
+          <p>Assolutamente. Ti offriamo una consulenza gratuita di 30 minuti e il primo mese di gestione è incluso nel prezzo. Se non sei soddisfatto dopo il primo mese, possiamo discutere le modifiche o risolvere il contratto.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">
+          <h3>Quali sono i termini contrattuali?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">
+          <p>I pacchetti richiedono un minimo di 3-6 mesi di impegno a seconda del piano. Questo assicura che abbiamo tempo di implementare strategie e vedere risultati concreti. Dopo il periodo iniziale, puoi decidere di continuare mese per mese.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-q">
+          <h3>Come funzionano le campagne Ads in Enterprise?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a">
+          <p>Nel pacchetto Enterprise, configuriamo le tue campagne pubblicitarie su Meta (Facebook/Instagram) e Google. Il budget pubblicitario (il denaro che spendi effettivamente in ads) è separato dalle nostre tariffe e gestito direttamente con i fornitori.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA FINAL ═══════════════ -->
+<section class="section" style="background:var(--gradient-soft);border-top:1px solid rgba(0,212,255,0.1);border-bottom:1px solid rgba(0,212,255,0.1)">
+  <div class="container">
+    <div style="text-align:center">
+      <h2 style="font-family:var(--font);font-size:2.4rem;font-weight:700;color:var(--white);margin-bottom:16px">Pronto a Far Crescere il Tuo Business?</h2>
+      <p style="font-size:1.05rem;color:var(--text);max-width:560px;margin:0 auto 36px;line-height:1.8">
+        Scegli il tuo pacchetto e contattaci oggi. Ti faremo una consulenza gratuita per definire la strategia perfetta.
+      </p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="/contatti.html" style="display:inline-flex;align-items:center;gap:8px;padding:15px 34px;background:linear-gradient(135deg, #00b4d8, #7c3aed);color:white;border-radius:9999px;font-family:var(--font);font-size:.88rem;font-weight:600;cursor:pointer;transition:var(--transition);border:none;text-decoration:none" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 32px rgba(0,212,255,0.25)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          Richiedi Consulenza Gratuita &rarr;
+        </a>
+        <a href="/chi-siamo.html" style="display:inline-flex;align-items:center;gap:8px;padding:15px 34px;background:transparent;color:white;border:1.5px solid rgba(255,255,255,0.1);border-radius:9999px;font-family:var(--font);font-size:.88rem;font-weight:500;cursor:pointer;transition:var(--transition);text-decoration:none" onmouseover="this.style.borderColor='var(--cyan)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)';this.style.color='white'">
+          Scopri il Nostro Team
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:36px;height:36px;background:var(--gradient-btn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:700;font-size:.65rem;color:var(--white)">SML</div>
+          <div style="font-family:var(--font);font-weight:600;color:var(--white)">The Social Media <span style="color:var(--cyan)">Lab</span></div>
+        </div>
+        <p>Agenzia di social media marketing in Ticino specializzata in neuromarketing, siti web e formazione digitale.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thesocialmedia_lab" target="_blank" title="Instagram">📷</a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Naviga</h4>
+        <a href="/">Home</a>
+        <a href="/chi-siamo.html">Chi Siamo</a>
+        <a href="/servizi.html">Servizi</a>
+        <a href="/portfolio.html">Portfolio</a>
+      </div>
+      <div class="footer-col">
+        <h4>Servizi</h4>
+        <a href="/pacchetti.html">Pacchetti</a>
+        <a href="/academy.html">Academy</a>
+        <a href="/contatti.html">Contatti</a>
+        <a href="/">Privacy Policy</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <a href="mailto:info@thesocialmedia-lab.com">Email</a>
+        <a href="tel:+41">Telefono</a>
+        <a href="https://instagram.com/thesocialmedia_lab">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Social Media Lab. Tutti i diritti riservati.</p>
+      <div>
+        <a href="/">Privacy</a> • <a href="/">Termini</a> • <a href="/">Cookie</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// Mobile Menu Toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+if(mobileToggle){
+  mobileToggle.addEventListener('click',()=>{
+    mobileMenu.classList.toggle('open');
+    mobileToggle.classList.toggle('active');
+  });
+}
+
+// Scroll Progress
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  if(scrollProgress) scrollProgress.style.width = scrolled + '%';
+});
+
+// Custom Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove',e=>{
+  if(cursor){
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  }
+});
+
+document.addEventListener('mousedown',()=>{
+  if(cursor) cursor.classList.add('active');
+});
+
+document.addEventListener('mouseup',()=>{
+  if(cursor) cursor.classList.remove('active');
+});
+
+// Nav Scrolled Effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY > 50){
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Reveal Animation
+const revealElements = document.querySelectorAll('.reveal');
+const revealOnScroll = ()=>{
+  revealElements.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight * 0.9){
+      el.classList.add('visible');
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item=>{
+  const question = item.querySelector('.faq-q');
+  question.addEventListener('click',()=>{
+    faqItems.forEach(i=>i.classList.remove('open'));
+    item.classList.add('open');
+  });
+});
+
+// Particles Canvas (simple version)
+const canvas = document.getElementById('particles');
+if(canvas && canvas.getContext){
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  let particles = [];
+  
+  class Particle {
+    constructor(){
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 1.5;
+      this.speedX = (Math.random() - 0.5) * 0.5;
+      this.speedY = (Math.random() - 0.5) * 0.5;
+      this.opacity = Math.random() * 0.5;
+    }
+    update(){
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if(this.x > canvas.width) this.x = 0;
+      if(this.x < 0) this.x = canvas.width;
+      if(this.y > canvas.height) this.y = 0;
+      if(this.y < 0) this.y = canvas.height;
+    }
+    draw(){
+      ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  
+  for(let i = 0; i < 50; i++){
+    particles.push(new Particle());
+  }
+  
+  const animateParticles = ()=>{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p=>{
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  };
+  animateParticles();
+  
+  window.addEventListener('resize',()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+}
+</script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "badge": "Neuromarketing + Social Media",
+    "title_line1": "We Turn",
+    "title_line2": "Brain Science into Social Strategy",
+    "subtitle": "We don't just do marketing. We apply neuroscience and cognitive psychology to create content your audience can't ignore. The only agency in Ticino combining neuromarketing, social management, and professional training.",
+    "cta1_text": "View Packages",
+    "cta1_link": "/en/packages.html",
+    "cta2_text": "See Portfolio",
+    "cta2_link": "/en/portfolio.html"
+  },
+  "stats": [
+    { "number": "47+", "label": "Projects Completed" },
+    { "number": "98%", "label": "Client Satisfaction" },
+    { "number": "3x", "label": "Average ROI" },
+    { "number": "4", "label": "Languages Spoken" }
+  ],
+  "cta_section": {
+    "title": "Ready to Transform Your Digital Presence?",
+    "description": "Discover how neuromarketing can revolutionize your social strategy. Book a free consultation.",
+    "button_text": "Book Free Consultation",
+    "button_link": "/en/contact.html"
+  }
+}

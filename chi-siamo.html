@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chi Siamo | The Social Media Lab — Agenzia Neuromarketing Ticino</title>
+<meta name="description" content="Conosci il team di The Social Media Lab: Alejandra Moya, neuromarketing expert, e Guglielmo Poli, formatore internazionale. Scopri la nostra storia, valori e metodo.">
+<meta name="keywords" content="The Social Media Lab chi siamo, Alejandra Moya neuromarketing, Guglielmo Poli formatore, agenzia marketing Ticino, team marketing digitale">
+<link rel="canonical" href="https://thesocialmedialab.ch/chi-siamo.html">
+<link rel="alternate" hreflang="it" href="https://thesocialmedialab.ch/chi-siamo.html">
+<link rel="alternate" hreflang="en" href="https://thesocialmedialab.ch/en/about.html">
+<link rel="alternate" hreflang="es" href="https://thesocialmedialab.ch/es/quienes-somos.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chi Siamo | The Social Media Lab">
+<meta property="og:description" content="La storia di The Social Media Lab: neuromarketing + formazione internazionale = risultati straordinari.">
+<meta property="og:url" content="https://thesocialmedialab.ch/chi-siamo.html">
+<meta property="og:locale" content="it_CH">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- Schema.org JSON-LD AboutPage -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"AboutPage",
+  "name":"Chi Siamo — The Social Media Lab",
+  "description":"Scopri la storia, il team e il metodo di The Social Media Lab, l'agenzia che unisce neuromarketing con formazione professionale.",
+  "url":"https://thesocialmedialab.ch/chi-siamo.html",
+  "mainEntity":{
+    "@type":"Organization",
+    "name":"The Social Media Lab",
+    "url":"https://thesocialmedialab.ch/",
+    "description":"Agenzia di social media marketing basata sul neuromarketing in Ticino.",
+    "founder":[
+      {
+        "@type":"Person",
+        "name":"Alejandra Moya",
+        "jobTitle":"Co-Founder & Neuromarketing Strategist",
+        "description":"Laureata in psicologia applicata, specializzata in neuromarketing e cognitive psychology applicati al marketing digitale.",
+        "knowsLanguage":["it","en","es"]
+      },
+      {
+        "@type":"Person",
+        "name":"Guglielmo Poli",
+        "jobTitle":"Co-Founder & Head of Training",
+        "description":"Esperto di formazione professionale con 20+ anni di esperienza internazionale. Parla italiano, inglese, spagnolo e francese.",
+        "knowsLanguage":["it","en","es","fr"]
+      }
+    ],
+    "address":{"@type":"PostalAddress","addressLocality":"Morbio Inferiore","addressRegion":"Ticino","addressCountry":"CH"},
+    "areaServed":["Ticino","Switzerland","Italy","Spain"]
+  }
+}
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Background Mesh -->
+<div class="bg-mesh"></div>
+
+<!-- Canvas Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+      <div class="nav-name">The Social Media <span>Lab</span></div>
+    </a>
+    <div class="nav-center">
+      <a href="/">Home</a>
+      <a href="/chi-siamo.html" class="active">Chi Siamo</a>
+      <a href="/servizi.html">Servizi</a>
+      <a href="/portfolio.html">Portfolio</a>
+      <a href="/academy.html">Academy</a>
+      <a href="/pacchetti.html">Pacchetti</a>
+      <a href="/contatti.html">Contatti</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-lang">
+        <a href="/chi-siamo.html" class="active">IT</a>
+        <a href="/en/about.html">EN</a>
+        <a href="/es/quienes-somos.html">ES</a>
+      </div>
+      <a href="/contatti.html" class="nav-cta">Richiedi Preventivo</a>
+    </div>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="/chi-siamo.html" class="active">Chi Siamo</a>
+    <a href="/servizi.html">Servizi</a>
+    <a href="/portfolio.html">Portfolio</a>
+    <a href="/academy.html">Academy</a>
+    <a href="/pacchetti.html">Pacchetti</a>
+    <a href="/contatti.html">Contatti</a>
+    <div class="mobile-lang">
+      <a href="/chi-siamo.html" class="active">IT</a>
+      <a href="/en/about.html">EN</a>
+      <a href="/es/quienes-somos.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════ PAGE HEADER ═══════════════ -->
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span>Chi Siamo</span>
+    </div>
+    <h1 class="section-title" style="font-size:3rem;margin-bottom:20px">La Nostra <span class="grad">Storia</span></h1>
+    <p class="section-desc" style="font-size:1.1rem;margin:0 auto">Due expertise che si incontrano per trasformare il marketing digitale in una scienza affidabile.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ STORIA ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px" class="reveal">
+      <h2 class="section-title">Come è Nato The Social Media Lab</h2>
+    </div>
+    <div style="max-width:900px;margin:0 auto;line-height:2;font-size:1.05rem;color:var(--text);margin-bottom:40px" class="reveal">
+      <p style="margin-bottom:24px">Nel 2022, in Ticino, due professionisti con background completamente diversi hanno avuto la stessa intuizione: il marketing digitale era diventato improvvisato, superficiale e sconnesso da come realmente funziona il cervello umano.</p>
+      <p style="margin-bottom:24px"><strong style="color:var(--white)">Alejandra Moya</strong>, laureata in psicologia e specializzata in neuromarketing, sapeva che ogni decisione di acquisto nasce da meccanismi cerebrali che poco hanno a che fare con la logica. <strong style="color:var(--white)">Guglielmo Poli</strong>, con oltre 20 anni di esperienza nella formazione professionale internazionale, sapeva che le competenze insegnate in aula dovevano essere concrete, misurabili e immediatamente applicabili.</p>
+      <p>La loro visione era chiara: creare un'agenzia che non facesse solo marketing, ma lo praticasse come una <strong style="color:var(--cyan)">scienza</strong>. Un'agenzia che non solo gestisse i social media, ma insegnasse ai clienti come pensano i loro consumatori. E così è nato The Social Media Lab — l'unico luogo in Ticino dove neuromarketing, gestione social, web design e formazione professionale convergono sotto lo stesso tetto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ VALORI ═══════════════ -->
+<section class="section dark-bg">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">I Nostri Principi</div>
+      <h2 class="section-title">I Quattro <span class="grad">Pilastri</span></h2>
+      <p class="section-desc">Non sono solo parole. Ogni decisione che prendiamo per i nostri clienti passa da questi quattro principi.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-d1" style="text-align:center">
+        <div class="service-icon" style="margin:0 auto 24px">🧠</div>
+        <h3>Scienza</h3>
+        <p>Ogni strategia si basa su psicologia cognitiva, neuroscienze e dati affidabili — non su intuizioni o trend passeggeri.</p>
+        <span class="service-tag">Fondamentale</span>
+      </div>
+      <div class="service-card reveal reveal-d2" style="text-align:center">
+        <div class="service-icon" style="margin:0 auto 24px">📊</div>
+        <h3>Risultati</h3>
+        <p>Misuriamo tutto. Engagement, conversioni, ROI — non vi proponiamo nulla senza numeri chiari e verificabili.</p>
+        <span class="service-tag">Prioritario</span>
+      </div>
+      <div class="service-card reveal reveal-d3" style="text-align:center">
+        <div class="service-icon" style="margin:0 auto 24px">📚</div>
+        <h3>Formazione</h3>
+        <p>Vi insegniamo, non vi rendiamo dipendenti. Vogliamo che il vostro team diventi autonomo e consapevole.</p>
+        <span class="service-tag">Esclusivo</span>
+      </div>
+      <div class="service-card reveal reveal-d1" style="text-align:center">
+        <div class="service-icon" style="margin:0 auto 24px">⚡</div>
+        <h3>Innovazione</h3>
+        <p>L'IA, l'AEO, i nuovi algoritmi: siamo sempre un passo avanti. Che sia il vostro vantaggio competitivo.</p>
+        <span class="service-tag">Continuo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TEAM ESPANSO ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Il Nostro Team</div>
+      <h2 class="section-title">Due Menti, <span class="grad">Una Visione</span></h2>
+      <p class="section-desc">Scopri come i nostri founder hanno costruito un'agenzia completamente diversa da tutte le altre.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal reveal-d1">
+        <div class="team-photo">
+          <img src="/img/alejandra-moya.png" alt="Alejandra Moya - Co-Founder The Social Media Lab">
+        </div>
+        <h3>Alejandra Moya</h3>
+        <div class="team-role">Co-Founder &amp; Neuromarketing Strategist</div>
+        <p style="margin-bottom:16px">Laureata in psicologia applicata, Alejandra è un'esperta riconosciuta di neuromarketing e behavioral psychology nel panorama svizzero. Ha completato master specialistici in cognitive psychology e consumer neuroscience presso le università di Zurigo e Basilea.</p>
+        <p style="margin-bottom:16px">Alejandra applica le neuroscienze a ogni strategia social che disegniamo. Capisce come il cervello processa i colori, come rispondiamo ai trigger emotivi, quali meccanismi psicologici generano vero engagement. Non crediamo ai trends — crediamo a come il cervello umano realmente funziona.</p>
+        <p style="margin-bottom:16px">Nel team, porta il rigore scientifico che trasforma supposizioni in certezze misurabili. Parla italiano, inglese e spagnolo.</p>
+        <div class="team-social">
+          <a href="https://www.instagram.com/thesocialmedialab.ch?igsh=MXJ4ejFpaGt6eGFoOQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/alejandra-amaya-b56714233/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://wa.me/41782303582" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+      <div class="team-card reveal reveal-d2">
+        <div class="team-photo">
+          <img src="/img/guglielmo-poli.jpg" alt="Guglielmo Poli - Co-Founder The Social Media Lab">
+        </div>
+        <h3>Guglielmo Poli</h3>
+        <div class="team-role">Co-Founder &amp; Head of Training</div>
+        <p style="margin-bottom:16px">Con oltre 20 anni di esperienza internazionale nella formazione professionale, Guglielmo ha insegnato in aula e online in Svizzera, Italia, Spagna e oltre. Ha certificazioni di Master Trainer e specializzazioni in adult learning methodology e instructional design.</p>
+        <p style="margin-bottom:16px">Ha lavorato con multinazionali, PMI e università, trasformando sempre competenze complesse in percorsi formativi concreti e immediatamente applicabili. Parla italiano, inglese, spagnolo e francese con fluenza — una rarità nel marketing digitale svizzero.</p>
+        <p style="margin-bottom:16px">Nel team, porta la capacità di tradurre le strategie di Alejandra in formazione pratica per i vostri team. Se comprate una strategia neuromarketing, lui garantisce che il vostro team sappia implementarla senza aiuto esterno.</p>
+        <div class="team-social">
+          <a href="https://www.instagram.com/thesocialmedialab.ch?igsh=MXJ4ejFpaGt6eGFoOQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/guglielmo-poli-4b4211398/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://wa.me/41782303582" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ METODO ═══════════════ -->
+<section class="section dark-bg">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Come Lavoriamo</div>
+      <h2 class="section-title">Il Nostro <span class="grad">Metodo</span></h2>
+      <p class="section-desc">Quattro fasi che garantiscono risultati misurabili e sostenibili nel tempo.</p>
+    </div>
+    <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:40px">
+      <div class="reveal" style="position:relative;padding-left:60px">
+        <div style="position:absolute;top:0;left:0;width:48px;height:48px;background:var(--gradient-btn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:700;font-size:1.4rem;color:var(--white)">1</div>
+        <h3 style="font-family:var(--font);font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:12px">Analisi Profonda</h3>
+        <p style="color:var(--text-dim);line-height:1.8">Non iniziamo da supposizioni. Analizziamo il vostro pubblico, la concorrenza, gli algoritmi attuali e soprattutto i meccanismi psicologici che guidano le decisioni dei vostri clienti. Attraverso indagini comportamentali, eye tracking e analisi cognitiva, identifichiamo i vostri trigger di conversione unici.</p>
+      </div>
+      <div class="reveal" style="position:relative;padding-left:60px">
+        <div style="position:absolute;top:0;left:0;width:48px;height:48px;background:var(--gradient-btn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:700;font-size:1.4rem;color:var(--white)">2</div>
+        <h3 style="font-family:var(--font);font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:12px">Strategia Neuromarketing</h3>
+        <p style="color:var(--text-dim);line-height:1.8">Dalla psicologia nasce la strategia. Disegniamo il vostro messaggio, il vostro piano editoriale e la vostra content strategy basati direttamente su come il cervello del vostro pubblico processa le informazioni. Colori, parole, timing, emojis — tutto ha una ragione scientifica.</p>
+      </div>
+      <div class="reveal" style="position:relative;padding-left:60px">
+        <div style="position:absolute;top:0;left:0;width:48px;height:48px;background:var(--gradient-btn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:700;font-size:1.4rem;color:var(--white)">3</div>
+        <h3 style="font-family:var(--font);font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:12px">Esecuzione Professionale</h3>
+        <p style="color:var(--text-dim);line-height:1.8">La strategia è carta bianca se non eseguita bene. I nostri content creator, designer e community manager implementano il piano con precisione. Ogni post è prodotto secondo gli standard della strategia — con coerenza visiva, narrativa e cognitiva.</p>
+      </div>
+      <div class="reveal" style="position:relative;padding-left:60px">
+        <div style="position:absolute;top:0;left:0;width:48px;height:48px;background:var(--gradient-btn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:700;font-size:1.4rem;color:var(--white)">4</div>
+        <h3 style="font-family:var(--font);font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:12px">Ottimizzazione Continua</h3>
+        <p style="color:var(--text-dim);line-height:1.8">I dati non mentono mai. Monitoriamo ogni metrica: engagement, sentiment analysis, conversioni, ROI. Ogni mese portiamo dati e insights. Se una tattica non funziona, la cambiamo con evidenza scientifica. Se una funziona, la amplifichiamo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STATS ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:60px" class="reveal">
+      <h2 class="section-title">I Nostri Numeri</h2>
+    </div>
+    <div class="stats-row">
+      <div class="reveal reveal-d1">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Anni di Esperienza</div>
+      </div>
+      <div class="reveal reveal-d2">
+        <div class="stat-num">3x</div>
+        <div class="stat-label">ROI Medio Clienti</div>
+      </div>
+      <div class="reveal reveal-d3">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Lingue Parlate</div>
+      </div>
+      <div class="reveal reveal-d4">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Clienti Soddisfatti</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Pronti a Scoprire Come Pensiamo i Vostri Clienti?</h2>
+      <p>Contattateci per una consulenza gratuita. Vi racconteremo come il neuromarketing può trasformare il vostro business.</p>
+      <div class="cta-btns">
+        <a href="/contatti.html" class="btn-grad">Richiedi Consulenza Gratuita &rarr;</a>
+        <a href="/servizi.html" class="btn-ghost">Scopri Tutti i Servizi &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="nav-brand">
+          <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+          <div class="nav-name">The Social Media <span>Lab</span></div>
+        </a>
+        <p>Agenzia di social media marketing basata sul neuromarketing. Strategie che parlano al cervello, risultati che parlano ai numeri.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/thesocialmedialab.ch?igsh=MXJ4ejFpaGt6eGFoOQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/company/the-social-media-lab-ch/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.facebook.com/thesocialmedialabagency/" target="_blank" rel="noopener" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servizi</h4>
+        <a href="/servizi.html">Social Media Management</a>
+        <a href="/servizi.html">Siti Web</a>
+        <a href="/servizi.html">Neuromarketing</a>
+        <a href="/servizi.html">Content Creation</a>
+        <a href="/servizi.html">SEO & AEO</a>
+      </div>
+      <div class="footer-col">
+        <h4>Azienda</h4>
+        <a href="/chi-siamo.html">Chi Siamo</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/academy.html">Academy</a>
+        <a href="/pacchetti.html">Pacchetti</a>
+        <a href="/contatti.html">Contatti</a>
+      </div>
+      <div class="footer-col">
+        <h4>Lingue</h4>
+        <a href="/chi-siamo.html">&#127470;&#127481; Italiano</a>
+        <a href="/en/about.html">&#127468;&#127463; English</a>
+        <a href="/es/quienes-somos.html">&#127466;&#127480; Espa&ntilde;ol</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Social Media Lab — Morbio Inferiore, Ticino. Tutti i diritti riservati.</p>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+<script>
+/* === Scroll Progress === */
+const sp=document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{const h=document.documentElement;sp.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+
+/* === Navbar Scroll === */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+
+/* === Mobile Menu === */
+const mt=document.getElementById('mobileToggle'),mm=document.getElementById('mobileMenu');
+mt.addEventListener('click',()=>{mm.classList.toggle('open');const s=mt.querySelectorAll('span');if(mm.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{s[0].style.transform='';s[1].style.opacity='1';s[2].style.transform=''}});
+
+/* === Custom Cursor === */
+const cur=document.getElementById('cursor');
+if(window.innerWidth>1024){document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});document.querySelectorAll('a,button,.faq-q').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('active'));el.addEventListener('mouseleave',()=>cur.classList.remove('active'))})}
+
+/* === Reveal on Scroll === */
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* === Canvas Particles === */
+(function(){
+  const c=document.getElementById('particles'),ctx=c.getContext('2d');
+  let w,h,particles=[];
+  function resize(){w=c.width=window.innerWidth;h=c.height=window.innerHeight}
+  resize();window.addEventListener('resize',resize);
+  class P{
+    constructor(){this.reset()}
+    reset(){this.x=Math.random()*w;this.y=Math.random()*h;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.r=Math.random()*1.5+.5;this.a=Math.random()*.4+.1}
+    update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0||this.x>w)this.vx*=-1;if(this.y<0||this.y>h)this.vy*=-1}
+    draw(){ctx.beginPath();ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fillStyle=`rgba(0,212,255,${this.a})`;ctx.fill()}
+  }
+  const count=Math.min(80,Math.floor(w*h/15000));
+  for(let i=0;i<count;i++)particles.push(new P());
+  function lines(){for(let i=0;i<particles.length;i++){for(let j=i+1;j<particles.length;j++){const dx=particles[i].x-particles[j].x,dy=particles[i].y-particles[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<150){ctx.beginPath();ctx.moveTo(particles[i].x,particles[i].y);ctx.lineTo(particles[j].x,particles[j].y);ctx.strokeStyle=`rgba(0,212,255,${.08*(1-d/150)})`;ctx.lineWidth=.5;ctx.stroke()}}}}
+  function animate(){ctx.clearRect(0,0,w,h);particles.forEach(p=>{p.update();p.draw()});lines();requestAnimationFrame(animate)}
+  animate();
+})();
+
+/* === Counter Animation === */
+const counters=document.querySelectorAll('.stat-num');
+const cio=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target;const text=el.textContent;const match=text.match(/(\d+)/);if(match){const target=parseInt(match[1]);const suffix=text.replace(match[1],'');let current=0;const step=Math.ceil(target/40);const timer=setInterval(()=>{current+=step;if(current>=target){current=target;clearInterval(timer)}el.innerHTML=current+suffix},30)}cio.unobserve(el)}})},{threshold:0.5});
+counters.forEach(c=>cio.observe(c));
+</script>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

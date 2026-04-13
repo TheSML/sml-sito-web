@@ -1,0 +1,183 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: 'it'
+
+media_folder: "img"
+public_folder: "/img"
+
+# Contenuti editabili organizzati per sezione
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - name: "home_it"
+        label: "Homepage (Italiano)"
+        file: "_data/home_it.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string", default: "Neuromarketing + Social Media" }
+              - { label: "Titolo (riga 1)", name: "title_line1", widget: "string" }
+              - { label: "Titolo (riga 2 - gradient)", name: "title_line2", widget: "string" }
+              - { label: "Sottotitolo", name: "subtitle", widget: "text" }
+              - { label: "Testo pulsante 1", name: "cta1_text", widget: "string" }
+              - { label: "Link pulsante 1", name: "cta1_link", widget: "string" }
+              - { label: "Testo pulsante 2", name: "cta2_text", widget: "string" }
+              - { label: "Link pulsante 2", name: "cta2_link", widget: "string" }
+          - label: "Statistiche"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Numero", name: "number", widget: "string" }
+              - { label: "Etichetta", name: "label", widget: "string" }
+          - label: "Sezione CTA"
+            name: "cta_section"
+            widget: "object"
+            fields:
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Descrizione", name: "description", widget: "text" }
+              - { label: "Testo pulsante", name: "button_text", widget: "string" }
+              - { label: "Link pulsante", name: "button_link", widget: "string" }
+
+      - name: "home_en"
+        label: "Homepage (English)"
+        file: "_data/home_en.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Title (line 1)", name: "title_line1", widget: "string" }
+              - { label: "Title (line 2 - gradient)", name: "title_line2", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text" }
+              - { label: "Button 1 text", name: "cta1_text", widget: "string" }
+              - { label: "Button 1 link", name: "cta1_link", widget: "string" }
+              - { label: "Button 2 text", name: "cta2_text", widget: "string" }
+              - { label: "Button 2 link", name: "cta2_link", widget: "string" }
+          - label: "Statistics"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "CTA Section"
+            name: "cta_section"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button text", name: "button_text", widget: "string" }
+              - { label: "Button link", name: "button_link", widget: "string" }
+
+      - name: "home_es"
+        label: "Homepage (Espanol)"
+        file: "_data/home_es.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Badge", name: "badge", widget: "string" }
+              - { label: "Titulo (linea 1)", name: "title_line1", widget: "string" }
+              - { label: "Titulo (linea 2 - gradient)", name: "title_line2", widget: "string" }
+              - { label: "Subtitulo", name: "subtitle", widget: "text" }
+              - { label: "Texto boton 1", name: "cta1_text", widget: "string" }
+              - { label: "Link boton 1", name: "cta1_link", widget: "string" }
+              - { label: "Texto boton 2", name: "cta2_text", widget: "string" }
+              - { label: "Link boton 2", name: "cta2_link", widget: "string" }
+          - label: "Estadisticas"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Numero", name: "number", widget: "string" }
+              - { label: "Etiqueta", name: "label", widget: "string" }
+          - label: "Seccion CTA"
+            name: "cta_section"
+            widget: "object"
+            fields:
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Descripcion", name: "description", widget: "text" }
+              - { label: "Texto boton", name: "button_text", widget: "string" }
+              - { label: "Link boton", name: "button_link", widget: "string" }
+
+  - name: "servizi"
+    label: "Servizi"
+    files:
+      - name: "servizi_it"
+        label: "Servizi (Italiano)"
+        file: "_data/servizi_it.json"
+        fields:
+          - label: "Servizi"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Icona (emoji)", name: "icon", widget: "string" }
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Descrizione", name: "description", widget: "text" }
+              - label: "Caratteristiche"
+                name: "features"
+                widget: "list"
+                field: { label: "Caratteristica", name: "feature", widget: "string" }
+
+  - name: "team"
+    label: "Team"
+    files:
+      - name: "team"
+        label: "Membri del Team"
+        file: "_data/team.json"
+        fields:
+          - label: "Membri"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "Nome", name: "name", widget: "string" }
+              - { label: "Ruolo", name: "role", widget: "string" }
+              - { label: "Foto", name: "photo", widget: "image" }
+              - { label: "Bio", name: "bio", widget: "text" }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+
+  - name: "contatti"
+    label: "Contatti & Info"
+    files:
+      - name: "info"
+        label: "Informazioni Azienda"
+        file: "_data/info.json"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Telefono", name: "phone", widget: "string" }
+          - { label: "Indirizzo", name: "address", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string" }
+          - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+          - { label: "TikTok URL", name: "tiktok", widget: "string", required: false }
+
+  - name: "faq"
+    label: "FAQ"
+    files:
+      - name: "faq_it"
+        label: "FAQ (Italiano)"
+        file: "_data/faq_it.json"
+        fields:
+          - label: "Domande"
+            name: "questions"
+            widget: "list"
+            fields:
+              - { label: "Domanda", name: "question", widget: "string" }
+              - { label: "Risposta", name: "answer", widget: "text" }
+
+      - name: "faq_en"
+        label: "FAQ (English)"
+        file: "_data/faq_en.json"
+        fields:
+          - label: "Questions"
+            name: "questions"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }

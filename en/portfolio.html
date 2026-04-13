@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio | The Social Media Lab — Web and Social Media Projects</title>
+<meta name="description" content="See our portfolio: 47+ completed projects, professional websites, e-commerce platforms, dental practices and aesthetic centers. Live and navigable projects.">
+<meta name="keywords" content="web portfolio Ticino, digital project portfolio, web design Lugano, e-commerce projects, digital marketing case studies, agency portfolio">
+<link rel="canonical" href="https://thesocialmedialab.ch/en/portfolio.html">
+<link rel="alternate" hreflang="it" href="https://thesocialmedialab.ch/portfolio.html">
+<link rel="alternate" hreflang="en" href="https://thesocialmedialab.ch/en/portfolio.html">
+<link rel="alternate" hreflang="es" href="https://thesocialmedialab.ch/es/portfolio.html">
+<link rel="alternate" hreflang="x-default" href="https://thesocialmedialab.ch/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portfolio | The Social Media Lab">
+<meta property="og:description" content="47+ completed projects: websites, e-commerce platforms, professional studios. See our latest work.">
+<meta property="og:url" content="https://thesocialmedialab.ch/en/portfolio.html">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+
+<!-- Schema.org ItemList -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "@language":"en",
+  "name":"Portfolio — The Social Media Lab",
+  "description":"Portfolio of 47+ completed projects for clients in luxury, real estate, healthcare and beauty sectors.",
+  "numberOfItems":47,
+  "itemListElement":[
+    {"@type":"CreativeWork","name":"Parquet Ticinese","url":"https://pavimenti-ticino.netlify.app","description":"Premium flooring website","inLanguage":"en"},
+    {"@type":"CreativeWork","name":"Helvetia Prestige Realty","url":"https://luxury-realestate-lugano.netlify.app","description":"Luxury real estate platform","inLanguage":"en"},
+    {"@type":"CreativeWork","name":"Dr. Bianchi Dental Clinic","url":"https://dental-lugano-luxury.netlify.app","description":"Professional dental practice","inLanguage":"en"},
+    {"@type":"CreativeWork","name":"Fidelis Fiduciaria","url":"https://fiduciaria-lugano.netlify.app","description":"Corporate fiduciary services","inLanguage":"en"},
+    {"@type":"CreativeWork","name":"Maison Lune","url":"https://estetica-lugano-luxury.netlify.app","description":"Luxury aesthetic center","inLanguage":"en"}
+  ]
+}
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Background Mesh -->
+<div class="bg-mesh"></div>
+
+<!-- Canvas Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/en/" class="nav-brand">
+      <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+      <div class="nav-name">The Social Media <span>Lab</span></div>
+    </a>
+    <div class="nav-center">
+      <a href="/en/">Home</a>
+      <a href="/en/about.html">About</a>
+      <a href="/en/services.html">Services</a>
+      <a href="/en/portfolio.html" class="active">Portfolio</a>
+      <a href="/en/academy.html">Academy</a>
+      <a href="/en/packages.html">Packages</a>
+      <a href="/en/contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-lang">
+        <a href="/portfolio.html">IT</a>
+        <a href="/en/portfolio.html" class="active">EN</a>
+        <a href="/es/portfolio.html">ES</a>
+      </div>
+      <a href="/en/contact.html" class="nav-cta">Get a Quote</a>
+    </div>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/en/">Home</a>
+    <a href="/en/about.html">About</a>
+    <a href="/en/services.html">Services</a>
+    <a href="/en/portfolio.html" class="active">Portfolio</a>
+    <a href="/en/academy.html">Academy</a>
+    <a href="/en/packages.html">Packages</a>
+    <a href="/en/contact.html">Contact</a>
+    <div class="mobile-lang">
+      <a href="/portfolio.html">IT</a>
+      <a href="/en/portfolio.html" class="active">EN</a>
+      <a href="/es/portfolio.html">ES</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════ PAGE HEADER ═══════════════ -->
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb reveal">
+      <a href="/en/">Home</a>
+      <span class="sep">/</span>
+      <span>Portfolio</span>
+    </div>
+    <h1 style="font-family:var(--font);font-size:3rem;font-weight:700;color:var(--white);margin-bottom:16px" class="reveal">Our <span class="grad">Projects</span></h1>
+    <p style="font-size:1.05rem;color:var(--text);max-width:600px;margin:0 auto;line-height:1.8" class="reveal">47 completed projects for clients in luxury, real estate, healthcare and beauty. Every project is live, navigable and optimized for results.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ PORTFOLIO FILTERS ═══════════════ -->
+<section class="section" style="padding:40px 0">
+  <div class="container">
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;animation:fadeUp .8s var(--ease) forwards;opacity:0">
+      <button class="filter-btn active" data-filter="all" style="padding:10px 22px;background:var(--gradient-btn);color:var(--white);border:none;border-radius:var(--radius-full);font-family:var(--font);font-size:.85rem;font-weight:600;cursor:pointer;transition:var(--transition)">All</button>
+      <button class="filter-btn" data-filter="social" style="padding:10px 22px;background:transparent;color:var(--text);border:1.5px solid var(--border);border-radius:var(--radius-full);font-family:var(--font);font-size:.85rem;font-weight:600;cursor:pointer;transition:var(--transition)">Social Media Profiles</button>
+      <button class="filter-btn" data-filter="web" style="padding:10px 22px;background:transparent;color:var(--text);border:1.5px solid var(--border);border-radius:var(--radius-full);font-family:var(--font);font-size:.85rem;font-weight:600;cursor:pointer;transition:var(--transition)">Websites</button>
+    </div>
+  </div>
+</section>
+
+<style>
+.filter-btn.active {
+  background: var(--gradient-btn) !important;
+  color: var(--white) !important;
+  border-color: rgba(0,212,255,0.5) !important;
+}
+</style>
+
+<!-- ═══════════════ PORTFOLIO GRID ═══════════════ -->
+<section class="section dark-bg" style="padding-top:0">
+  <div class="container">
+    <div class="portfolio-grid" style="grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:28px">
+      <!-- Project 1: Parquet Ticinese -->
+      <div class="portfolio-card reveal reveal-d1" data-category="web" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)">
+        <div class="portfolio-thumb">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop" alt="Parquet Ticinese - Premium flooring website" loading="lazy">
+          <div class="portfolio-live">LIVE</div>
+        </div>
+        <div class="portfolio-info" style="padding:28px">
+          <h3 style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:6px">Parquet Ticinese</h3>
+          <div class="portfolio-type" style="font-size:.78rem;color:var(--cyan);font-weight:600;margin-bottom:12px">Premium Flooring</div>
+          <p style="font-size:.9rem;color:var(--text-dim);line-height:1.7;margin-bottom:16px">Elegant website with parallax scrolling for a premium flooring company. Product showcase with high-quality photography, catalog integration, and contact system for quotes. Optimized conversion for B2B clientele in Switzerland.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--cyan-dim);color:var(--cyan);border-radius:var(--radius-full);font-weight:600">React</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--cyan-dim);color:var(--cyan);border-radius:var(--radius-full);font-weight:600">Tailwind CSS</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--cyan-dim);color:var(--cyan);border-radius:var(--radius-full);font-weight:600">Framer Motion</span>
+          </div>
+          <a href="https://pavimenti-ticino.netlify.app" target="_blank" rel="noopener" class="portfolio-link">Visit Website &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Project 2: Helvetia Prestige Realty -->
+      <div class="portfolio-card reveal reveal-d2" data-category="web" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)">
+        <div class="portfolio-thumb">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&h=400&fit=crop" alt="Helvetia Prestige - Luxury real estate" loading="lazy">
+          <div class="portfolio-live">LIVE</div>
+        </div>
+        <div class="portfolio-info" style="padding:28px">
+          <h3 style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:6px">Helvetia Prestige Realty</h3>
+          <div class="portfolio-type" style="font-size:.78rem;color:var(--cyan);font-weight:600;margin-bottom:12px">Luxury Real Estate</div>
+          <p style="font-size:.9rem;color:var(--text-dim);line-height:1.7;margin-bottom:16px">Sophisticated real estate platform for exclusive properties. Advanced filtering system, 3D virtual tours, premium property presentation with detailed information. Client dashboard, inventory administration and international payment integration.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--purple-soft);color:var(--purple);border-radius:var(--radius-full);font-weight:600">Vue.js</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--purple-soft);color:var(--purple);border-radius:var(--radius-full);font-weight:600">Node.js</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--purple-soft);color:var(--purple);border-radius:var(--radius-full);font-weight:600">MongoDB</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--purple-soft);color:var(--purple);border-radius:var(--radius-full);font-weight:600">Stripe API</span>
+          </div>
+          <a href="https://luxury-realestate-lugano.netlify.app" target="_blank" rel="noopener" class="portfolio-link">Visit Website &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Project 3: Dr. Bianchi Dental Clinic -->
+      <div class="portfolio-card reveal reveal-d3" data-category="web" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)">
+        <div class="portfolio-thumb">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&h=400&fit=crop" alt="Dental clinic in Lugano" loading="lazy">
+          <div class="portfolio-live">LIVE</div>
+        </div>
+        <div class="portfolio-info" style="padding:28px">
+          <h3 style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:6px">Dr. Bianchi Dental Clinic</h3>
+          <div class="portfolio-type" style="font-size:.78rem;color:var(--cyan);font-weight:600;margin-bottom:12px">Dental Practice</div>
+          <p style="font-size:.9rem;color:var(--text-dim);line-height:1.7;margin-bottom:16px">Professional website for a dental practice with integrated online booking system. Treatment presentation, clinical photo gallery, professional bios, patient testimonials. Optimized for local SEO to attract new patients in Switzerland.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--green-soft);color:var(--green);border-radius:var(--radius-full);font-weight:600">Next.js</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--green-soft);color:var(--green);border-radius:var(--radius-full);font-weight:600">Booking API</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--green-soft);color:var(--green);border-radius:var(--radius-full);font-weight:600">SEO Schema</span>
+          </div>
+          <a href="https://dental-lugano-luxury.netlify.app" target="_blank" rel="noopener" class="portfolio-link">Visit Website &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Project 4: Fidelis Fiduciaria -->
+      <div class="portfolio-card reveal reveal-d1" data-category="web" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)">
+        <div class="portfolio-thumb">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop" alt="Fiduciary firm in Ticino" loading="lazy">
+          <div class="portfolio-live">LIVE</div>
+        </div>
+        <div class="portfolio-info" style="padding:28px">
+          <h3 style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:6px">Fidelis Fiduciaria</h3>
+          <div class="portfolio-type" style="font-size:.78rem;color:var(--cyan);font-weight:600;margin-bottom:12px">Fiduciary Services</div>
+          <p style="font-size:.9rem;color:var(--text-dim);line-height:1.7;margin-bottom:16px">Corporate website for fiduciary services company with focus on authority, compliance and professionalism. Structured service presentation, expert team profiles, news and thought leadership articles. Minimalist and elegant design for wealth management clientele.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--orange-soft);color:var(--orange);border-radius:var(--radius-full);font-weight:600">Hugo</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--orange-soft);color:var(--orange);border-radius:var(--radius-full);font-weight:600">Contentful</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--orange-soft);color:var(--orange);border-radius:var(--radius-full);font-weight:600">Netlify</span>
+          </div>
+          <a href="https://fiduciaria-lugano.netlify.app" target="_blank" rel="noopener" class="portfolio-link">Visit Website &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Project 5: Maison Lune -->
+      <div class="portfolio-card reveal reveal-d2" data-category="web" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)">
+        <div class="portfolio-thumb">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop" alt="Aesthetic center in Lugano" loading="lazy">
+          <div class="portfolio-live">LIVE</div>
+        </div>
+        <div class="portfolio-info" style="padding:28px">
+          <h3 style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:6px">Maison Lune</h3>
+          <div class="portfolio-type" style="font-size:.78rem;color:var(--cyan);font-weight:600;margin-bottom:12px">Luxury Aesthetic Center</div>
+          <p style="font-size:.9rem;color:var(--text-dim);line-height:1.7;margin-bottom:16px">Premium digital experience for exclusive aesthetic center. Sophisticated design with high-end photography, detailed treatment descriptions, booking system, client testimonials. Social media integration and newsletter for loyalty and continuous customer engagement.</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--cyan-soft);color:var(--cyan);border-radius:var(--radius-full);font-weight:600">React</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--cyan-soft);color:var(--cyan);border-radius:var(--radius-full);font-weight:600">Firebase</span>
+            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--cyan-soft);color:var(--cyan);border-radius:var(--radius-full);font-weight:600">Stripe</span>
+          </div>
+          <a href="https://estetica-lugano-luxury.netlify.app" target="_blank" rel="noopener" class="portfolio-link">Visit Website &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Instagram Profile 1: Parquet Ticinese -->
+      <div class="portfolio-card reveal reveal-d1" data-category="social" style="padding:24px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+          <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg, #8B4513, #D2691E);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">📸</div>
+          <div>
+            <div style="font-family:var(--font);font-weight:600;color:var(--white);font-size:.95rem">@parquetticinese</div>
+            <div style="font-size:.75rem;color:var(--text-dim)">Premium Flooring</div>
+          </div>
+          <div style="margin-left:auto;padding:6px 16px;background:var(--gradient-btn);border-radius:var(--radius-full);font-size:.72rem;font-weight:600;color:var(--white)">Follow</div>
+        </div>
+        <div style="font-size:.82rem;color:var(--text);margin-bottom:14px;line-height:1.5">Premium floors in Ticino. Lugano Showroom. 🏠✨</div>
+        <div style="display:flex;justify-content:space-around;text-align:center;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:14px">
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">847</div><div style="font-size:.65rem;color:var(--text-dim)">posts</div></div>
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">3.2K</div><div style="font-size:.65rem;color:var(--text-dim)">followers</div></div>
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">156</div><div style="font-size:.65rem;color:var(--text-dim)">following</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;border-radius:8px;overflow:hidden">
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1612536315141-6ef81c3fa286?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+        </div>
+        <div style="text-align:center;margin-top:14px">
+          <span style="font-size:.72rem;color:var(--cyan);font-weight:600">Managed by The Social Media Lab</span>
+        </div>
+      </div>
+
+      <!-- Instagram Profile 2: Helvetia Prestige -->
+      <div class="portfolio-card reveal reveal-d2" data-category="social" style="padding:24px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+          <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg, #1a1a3e, #c9a84c);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">🏢</div>
+          <div>
+            <div style="font-family:var(--font);font-weight:600;color:var(--white);font-size:.95rem">@helvetiaprestige</div>
+            <div style="font-size:.75rem;color:var(--text-dim)">Luxury Real Estate</div>
+          </div>
+          <div style="margin-left:auto;padding:6px 16px;background:var(--gradient-btn);border-radius:var(--radius-full);font-size:.72rem;font-weight:600;color:var(--white)">Follow</div>
+        </div>
+        <div style="font-size:.82rem;color:var(--text);margin-bottom:14px;line-height:1.5">Exclusive properties in Ticino. International portfolio. 🏠💎</div>
+        <div style="display:flex;justify-content:space-around;text-align:center;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:14px">
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">512</div><div style="font-size:.65rem;color:var(--text-dim)">posts</div></div>
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">5.8K</div><div style="font-size:.65rem;color:var(--text-dim)">followers</div></div>
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">234</div><div style="font-size:.65rem;color:var(--text-dim)">following</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;border-radius:8px;overflow:hidden">
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1500462918059-b1a0cb1cbf72?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1512207736139-f12e84563e36?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1560599810-8f91b1efb039?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1549887534-7158b0e91ee7?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1597070269849-7a53cc39872c?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+        </div>
+        <div style="text-align:center;margin-top:14px">
+          <span style="font-size:.72rem;color:var(--cyan);font-weight:600">Managed by The Social Media Lab</span>
+        </div>
+      </div>
+
+      <!-- Instagram Profile 3: Dr. Bianchi Dental -->
+      <div class="portfolio-card reveal reveal-d3" data-category="social" style="padding:24px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+          <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg, #e8f4fd, #87ceeb);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">😁</div>
+          <div>
+            <div style="font-family:var(--font);font-weight:600;color:var(--white);font-size:.95rem">@drbianchi.dental</div>
+            <div style="font-size:.75rem;color:var(--text-dim)">Dental Practice</div>
+          </div>
+          <div style="margin-left:auto;padding:6px 16px;background:var(--gradient-btn);border-radius:var(--radius-full);font-size:.72rem;font-weight:600;color:var(--white)">Follow</div>
+        </div>
+        <div style="font-size:.82rem;color:var(--text);margin-bottom:14px;line-height:1.5">Brilliant smiles in Lugano. Cutting-edge technology. ✨🦷</div>
+        <div style="display:flex;justify-content:space-around;text-align:center;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:14px">
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">623</div><div style="font-size:.65rem;color:var(--text-dim)">posts</div></div>
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">4.1K</div><div style="font-size:.65rem;color:var(--text-dim)">followers</div></div>
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">189</div><div style="font-size:.65rem;color:var(--text-dim)">following</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;border-radius:8px;overflow:hidden">
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1532587191753-3dd28ecc6dd0?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1635378713361-f1b91c30ee2f?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1606811841689-23db3d821bda?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1628840042765-356cda07f4ee?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1607990591846-5efb37b31ced?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+        </div>
+        <div style="text-align:center;margin-top:14px">
+          <span style="font-size:.72rem;color:var(--cyan);font-weight:600">Managed by The Social Media Lab</span>
+        </div>
+      </div>
+
+      <!-- Instagram Profile 4: Fidelis Fiduciaria -->
+      <div class="portfolio-card reveal reveal-d1" data-category="social" style="padding:24px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+          <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg, #1a1a3e, #c9a84c);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">💼</div>
+          <div>
+            <div style="font-family:var(--font);font-weight:600;color:var(--white);font-size:.95rem">@fidelis.fiduciaria</div>
+            <div style="font-size:.75rem;color:var(--text-dim)">Fiduciary Services</div>
+          </div>
+          <div style="margin-left:auto;padding:6px 16px;background:var(--gradient-btn);border-radius:var(--radius-full);font-size:.72rem;font-weight:600;color:var(--white)">Follow</div>
+        </div>
+        <div style="font-size:.82rem;color:var(--text);margin-bottom:14px;line-height:1.5">Trust and professionalism for generations. Wealth management. 🏦</div>
+        <div style="display:flex;justify-content:space-around;text-align:center;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:14px">
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">391</div><div style="font-size:.65rem;color:var(--text-dim)">posts</div></div>
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">2.9K</div><div style="font-size:.65rem;color:var(--text-dim)">followers</div></div>
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">142</div><div style="font-size:.65rem;color:var(--text-dim)">following</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;border-radius:8px;overflow:hidden">
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1560264357-8d9766822fba?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+        </div>
+        <div style="text-align:center;margin-top:14px">
+          <span style="font-size:.72rem;color:var(--cyan);font-weight:600">Managed by The Social Media Lab</span>
+        </div>
+      </div>
+
+      <!-- Instagram Profile 5: Maison Lune Beauty -->
+      <div class="portfolio-card reveal reveal-d2" data-category="social" style="padding:24px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:var(--transition)">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px">
+          <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg, #fce4ec, #f8bbd0);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0">💄</div>
+          <div>
+            <div style="font-family:var(--font);font-weight:600;color:var(--white);font-size:.95rem">@maisonlune.beauty</div>
+            <div style="font-size:.75rem;color:var(--text-dim)">Aesthetic Center</div>
+          </div>
+          <div style="margin-left:auto;padding:6px 16px;background:var(--gradient-btn);border-radius:var(--radius-full);font-size:.72rem;font-weight:600;color:var(--white)">Follow</div>
+        </div>
+        <div style="font-size:.82rem;color:var(--text);margin-bottom:14px;line-height:1.5">Authentic beauty and conscious luxury. Spa & Wellness. ✨🌙</div>
+        <div style="display:flex;justify-content:space-around;text-align:center;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:14px">
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">756</div><div style="font-size:.65rem;color:var(--text-dim)">posts</div></div>
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">6.4K</div><div style="font-size:.65rem;color:var(--text-dim)">followers</div></div>
+          <div><div style="font-family:var(--font);font-weight:700;color:var(--white);font-size:.9rem">267</div><div style="font-size:.65rem;color:var(--text-dim)">following</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;border-radius:8px;overflow:hidden">
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1552693938-d5dbe7d3a9a5?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1565958011504-98d7c35c3ce9?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+          <div style="aspect-ratio:1;overflow:hidden"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=200&h=200&fit=crop" style="width:100%;height:100%;object-fit:cover" loading="lazy" alt="Post"></div>
+        </div>
+        <div style="text-align:center;margin-top:14px">
+          <span style="font-size:.72rem;color:var(--cyan);font-weight:600">Managed by The Social Media Lab</span>
+        </div>
+      </div>
+
+      <!-- Call-to-Action Card -->
+      <div class="reveal reveal-d3" style="background:var(--gradient-soft);border:1px solid rgba(0,212,255,0.15);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;height:100%;min-height:300px;padding:40px;text-align:center;flex-direction:column;gap:16px">
+        <div style="font-size:2.5rem">&#128640;</div>
+        <h3 style="font-family:var(--font);color:var(--white);font-size:1.15rem;font-weight:600">Your Project Next?</h3>
+        <p style="color:var(--text);font-size:.88rem;line-height:1.7">It could be the next one in our portfolio. Let's talk and transform your vision into digital reality.</p>
+        <a href="/en/contact.html" class="btn-grad btn-sm">Let's Start &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ RESULTS / STATS ═══════════════ -->
+<section class="section gradient-bg">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Measured Results</div>
+      <h2 class="section-title">The Numbers Behind Our <span class="grad">Projects</span></h2>
+    </div>
+    <div class="stats-row reveal">
+      <div>
+        <div class="stat-num">47<span style="color:var(--cyan)">+</span></div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div>
+        <div class="stat-num">98<span style="color:var(--cyan)">%</span></div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+      <div>
+        <div class="stat-num">3<span style="color:var(--cyan)">x</span></div>
+        <div class="stat-label">Average Client ROI</div>
+      </div>
+      <div>
+        <div class="stat-num">180<span style="color:var(--cyan)">%</span></div>
+        <div class="stat-label">Conversion Increase</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Want a Project Like These?</h2>
+      <p>Whether you need a website, an e-commerce platform or a complete digital strategy, our team is ready to bring your vision to life with the same commitment and attention to detail as these projects.</p>
+      <div class="cta-btns">
+        <a href="/en/contact.html" class="btn-grad">Get a Quote &rarr;</a>
+        <a href="/en/packages.html" class="btn-ghost">See Packages</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/en/" class="nav-brand">
+          <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+          <div class="nav-name">The Social Media <span>Lab</span></div>
+        </a>
+        <p>Digital marketing agency powered by neuromarketing. Strategies that speak to the brain, results that speak to the numbers.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/thesocialmedialab.ch?igsh=MXJ4ejFpaGt6eGFoOQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/company/the-social-media-lab-ch/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.facebook.com/thesocialmedialabagency/" target="_blank" rel="noopener" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/en/services.html">Social Media Management</a>
+        <a href="/en/services.html">Web Design</a>
+        <a href="/en/services.html">Neuromarketing</a>
+        <a href="/en/services.html">Content Creation</a>
+        <a href="/en/services.html">SEO & AEO</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/en/about.html">About</a>
+        <a href="/en/portfolio.html">Portfolio</a>
+        <a href="/en/academy.html">Academy</a>
+        <a href="/en/packages.html">Packages</a>
+        <a href="/en/contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Languages</h4>
+        <a href="/portfolio.html">&#127470;&#127481; Italiano</a>
+        <a href="/en/portfolio.html">&#127468;&#127463; English</a>
+        <a href="/es/portfolio.html">&#127466;&#127480; Español</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Social Media Lab — Lugano, Switzerland. All rights reserved.</p>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+<script>
+/* === Scroll Progress === */
+const sp=document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{const h=document.documentElement;sp.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+
+/* === Navbar Scroll === */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+
+/* === Mobile Menu === */
+const mt=document.getElementById('mobileToggle'),mm=document.getElementById('mobileMenu');
+mt.addEventListener('click',()=>{mm.classList.toggle('open');const s=mt.querySelectorAll('span');if(mm.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{s[0].style.transform='';s[1].style.opacity='1';s[2].style.transform=''}});
+
+/* === Custom Cursor === */
+const cur=document.getElementById('cursor');
+if(window.innerWidth>1024){document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('active'));el.addEventListener('mouseleave',()=>cur.classList.remove('active'))})}
+
+/* === Reveal on Scroll === */
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* === Canvas Particles === */
+(function(){
+  const c=document.getElementById('particles'),ctx=c.getContext('2d');
+  let w,h,particles=[];
+  function resize(){w=c.width=window.innerWidth;h=c.height=window.innerHeight}
+  resize();window.addEventListener('resize',resize);
+  class P{
+    constructor(){this.reset()}
+    reset(){this.x=Math.random()*w;this.y=Math.random()*h;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.r=Math.random()*1.5+.5;this.a=Math.random()*.4+.1}
+    update(){this.x+=this.vx;this.y+=this.vy;if(this.x>w||this.x<0||this.y>h||this.y<0)this.reset()}
+  }
+  for(let i=0;i<30;i++)particles.push(new P());
+  function draw(){ctx.clearRect(0,0,w,h);ctx.fillStyle='rgba(0,212,255,.2)';particles.forEach(p=>{p.update();ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()});requestAnimationFrame(draw)}
+  draw();
+})();
+
+/* === Portfolio Filter === */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.getAttribute('data-filter') || btn.textContent.trim().toLowerCase();
+    document.querySelectorAll('.portfolio-card').forEach(card => {
+      const cat = card.getAttribute('data-category') || '';
+      if (filter === 'all') {
+        card.style.display = '';
+      } else {
+        card.style.display = cat.includes(filter) || cat === filter ? '' : 'none';
+      }
+    });
+  });
+});
+</script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

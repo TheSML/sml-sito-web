@@ -1,0 +1,24 @@
+{
+  "hero": {
+    "badge": "Neuromarketing + Social Media",
+    "title_line1": "Trasformiamo la",
+    "title_line2": "Scienza del Cervello in Strategia Social",
+    "subtitle": "Non facciamo solo marketing. Applichiamo neuroscienze e psicologia cognitiva per creare contenuti che il tuo pubblico non può ignorare. L'unica agenzia in Ticino che unisce neuromarketing, gestione social e formazione professionale.",
+    "cta1_text": "Scopri i Pacchetti",
+    "cta1_link": "/pacchetti.html",
+    "cta2_text": "Vedi Portfolio",
+    "cta2_link": "/portfolio.html"
+  },
+  "stats": [
+    { "number": "47+", "label": "Progetti Completati" },
+    { "number": "98%", "label": "Clienti Soddisfatti" },
+    { "number": "3x", "label": "ROI Medio" },
+    { "number": "4", "label": "Lingue Parlate" }
+  ],
+  "cta_section": {
+    "title": "Pronto a Trasformare la Tua Presenza Digitale?",
+    "description": "Scopri come il neuromarketing può rivoluzionare la tua strategia social. Prenota una consulenza gratuita.",
+    "button_text": "Prenota Consulenza Gratuita",
+    "button_link": "/contatti.html"
+  }
+}

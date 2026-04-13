@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Academy | The Social Media Lab — Cursos de Formación Digital y Neuromarketing</title>
+<meta name="description" content="SML Academy: cursos profesionales en aula y online. Dominio de Social Media, Fundamentos de Neuromarketing, IA para Marketing. Certificación incluida. Formación para empresas.">
+<meta name="keywords" content="cursos social media marketing, formación neuromarketing, academy marketing digital, cursos online, formación IA marketing, certificación digital, training empresarial">
+<link rel="canonical" href="https://thesocialmedialab.ch/es/academy.html">
+<link rel="alternate" hreflang="it" href="https://thesocialmedialab.ch/academy.html">
+<link rel="alternate" hreflang="en" href="https://thesocialmedialab.ch/en/academy.html">
+<link rel="alternate" hreflang="es" href="https://thesocialmedialab.ch/es/academy.html">
+<link rel="alternate" hreflang="x-default" href="https://thesocialmedialab.ch/academy.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Academy | The Social Media Lab">
+<meta property="og:description" content="Cursos profesionales: Dominio de Social Media, Neuromarketing, IA para Marketing. Aula, online, certificación. Aprende de los mejores.">
+<meta property="og:url" content="https://thesocialmedialab.ch/es/academy.html">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- Schema.org Organization -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"EducationalOrganization",
+  "name":"The Social Media Lab Academy",
+  "url":"https://thesocialmedialab.ch/es/academy.html",
+  "description":"Academy de formación profesional en social media marketing, neuromarketing e inteligencia artificial para marketing.",
+  "educationalCredentialAwarded":"Certificación Profesional",
+  "areaServed":"ES",
+  "numberOfStudents":500,
+  "hasOfferCatalog":{
+    "@type":"OfferCatalog",
+    "name":"Cursos Profesionales",
+    "itemListElement":[
+      {"@type":"Course","name":"Dominio de Social Media","url":"https://thesocialmedialab.ch/es/academy.html#sml"},
+      {"@type":"Course","name":"Fundamentos de Neuromarketing","url":"https://thesocialmedialab.ch/es/academy.html#neo"},
+      {"@type":"Course","name":"IA para Marketing","url":"https://thesocialmedialab.ch/es/academy.html#ai"}
+    ]
+  }
+}
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Background Mesh -->
+<div class="bg-mesh"></div>
+
+<!-- Canvas Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/es/" class="nav-brand">
+      <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+      <div class="nav-name">The Social Media <span>Lab</span></div>
+    </a>
+    <div class="nav-center">
+      <a href="/es/">Inicio</a>
+      <a href="/es/quienes-somos.html">Quiénes Somos</a>
+      <a href="/es/servicios.html">Servicios</a>
+      <a href="/es/portfolio.html">Portafolio</a>
+      <a href="/es/academy.html" class="active">Academy</a>
+      <a href="/es/paquetes.html">Paquetes</a>
+      <a href="/es/contacto.html">Contacto</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-lang">
+        <a href="/academy.html">IT</a>
+        <a href="/en/academy.html">EN</a>
+        <a href="/es/academy.html" class="active">ES</a>
+      </div>
+      <a href="/es/contacto.html" class="nav-cta">Solicitar Presupuesto</a>
+    </div>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/es/">Inicio</a>
+    <a href="/es/quienes-somos.html">Quiénes Somos</a>
+    <a href="/es/servicios.html">Servicios</a>
+    <a href="/es/portfolio.html">Portafolio</a>
+    <a href="/es/academy.html" class="active">Academy</a>
+    <a href="/es/paquetes.html">Paquetes</a>
+    <a href="/es/contacto.html">Contacto</a>
+    <div class="mobile-lang">
+      <a href="/academy.html">IT</a>
+      <a href="/en/academy.html">EN</a>
+      <a href="/es/academy.html" class="active">ES</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════ PAGE HEADER ═══════════════ -->
+<section class="page-header">
+  <div class="container">
+    <div class="breadcrumb reveal">
+      <a href="/es/">Inicio</a>
+      <span class="sep">/</span>
+      <span>Academy</span>
+    </div>
+    <h1 style="font-family:var(--font);font-size:3rem;font-weight:700;color:var(--white);margin-bottom:16px" class="reveal">SML <span class="grad">Academy</span></h1>
+    <p style="font-size:1.05rem;color:var(--text);max-width:700px;margin:0 auto;line-height:1.8" class="reveal">Cursos profesionales diseñados para quien quiere dominar el marketing digital. Formación en aula, online on-demand, con certificación internacional. Aprende de nuestros expertos con 20+ años de experiencia.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ POR QUÉ FORMARSE ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Los Beneficios</div>
+      <h2 class="section-title">Por Qué <span class="grad">Formarse</span> con Nosotros</h2>
+      <p class="section-desc">Tres buenas razones para elegir la Academy de The Social Media Lab</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-d1">
+        <div class="service-icon">💪</div>
+        <h3>Competencias Prácticas e Inmediatamente Aplicables</h3>
+        <p>No teoría abstracta: cada lección se basa en casos reales, estrategias que funcionan, herramientas que usamos diariamente. Terminas el curso y puedes aplicar inmediatamente lo aprendido.</p>
+        <span class="service-tag">Hands-on</span>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-icon">🎓</div>
+        <h3>Certificación Internacional</h3>
+        <p>Cada curso viene acompañado de certificación profesional reconocida. Agrega credenciales a tu CV y demuestra competencias verificadas en el mercado laboral digital.</p>
+        <span class="service-tag">Certificado</span>
+      </div>
+      <div class="service-card reveal reveal-d3">
+        <div class="service-icon">🤝</div>
+        <h3>Apoyo Continuo y Comunidad</h3>
+        <p>No estás solo: accede a una comunidad exclusiva de alumnos, webinars bonus mensuales, recursos actualizados y apoyo post-curso. Guglielmo y el equipo siguen a tu disposición.</p>
+        <span class="service-tag">Lifetime</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CURSOS ═══════════════ -->
+<section class="section dark-bg" id="cursos">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Formación</div>
+      <h2 class="section-title">Nuestros <span class="grad">Cursos</span></h2>
+      <p class="section-desc">Tres programas intensivos para dominar el marketing digital de 2026</p>
+    </div>
+    <div class="academy-grid" style="grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:28px">
+
+      <!-- Curso 1: Dominio de Social Media -->
+      <div class="academy-card reveal reveal-d1" id="sml" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:var(--transition)">
+        <span class="academy-badge badge-live">En Aula</span>
+        <h3 style="font-family:var(--font);font-size:1.25rem;font-weight:600;color:var(--white);margin-bottom:12px">Dominio de Social Media</h3>
+        <p style="font-size:.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:20px">Curso intensivo de 3 días para dominar completamente la gestión de redes sociales. Desde la estrategia al plan editorial, desde la creación de contenidos hasta la publicidad avanzada y análisis de datos. Para pequeños empresarios, profesionales y equipos corporativos.</p>
+
+        <div style="background:var(--surface2);padding:20px;border-radius:var(--radius);margin-bottom:20px">
+          <h4 style="font-family:var(--font);font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:12px">Módulos del Curso:</h4>
+          <ul style="list-style:none;font-size:.85rem;color:var(--text-dim);line-height:2">
+            <li>✓ Estrategias Social Media e ICP (Ideal Customer Profile)</li>
+            <li>✓ Creación Plan Editorial y Calendario de Contenidos</li>
+            <li>✓ Copywriting para Social y Engagement</li>
+            <li>✓ Videos Reels, TikTok y Contenidos en Corto Formato</li>
+            <li>✓ Publicidad: Meta Ads, TikTok Ads, LinkedIn Ads</li>
+            <li>✓ Análisis Avanzados y Reportes</li>
+          </ul>
+        </div>
+
+        <div class="academy-meta" style="display:flex;gap:14px;font-size:.82rem;color:var(--text-dim);flex-wrap:wrap;margin-bottom:20px">
+          <span>📅 3 días consecutivos</span>
+          <span>🎯 Avanzado</span>
+          <span>👥 Máx. 12 participantes</span>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:16px;background:var(--surface2);border-radius:var(--radius);margin-bottom:20px">
+          <div>
+            <div style="font-size:.8rem;color:var(--text-dim);margin-bottom:4px">Precio</div>
+            <div style="font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--white)">CHF 1'490</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:.8rem;color:var(--cyan);font-weight:600;margin-bottom:4px">Próxima Fecha</div>
+            <div style="font-size:.9rem;color:var(--white)">Junio 2026</div>
+          </div>
+        </div>
+
+        <a href="/es/contacto.html" class="btn-grad" style="width:100%;text-align:center;justify-content:center">Inscribirse Ahora &rarr;</a>
+      </div>
+
+      <!-- Curso 2: Fundamentos de Neuromarketing -->
+      <div class="academy-card reveal reveal-d2" id="neo" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:var(--transition)">
+        <span class="academy-badge badge-online">Online</span>
+        <h3 style="font-family:var(--font);font-size:1.25rem;font-weight:600;color:var(--white);margin-bottom:12px">Fundamentos de Neuromarketing</h3>
+        <p style="font-size:.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:20px">Descubre cómo funciona el cerebro del consumidor y aprende a usar este conocimiento para crear mensajes irresistibles. 6 módulos on-demand que puedes seguir a tu ritmo, con videos de lecciones, casos de estudio y ejercicios prácticos.</p>
+
+        <div style="background:var(--surface2);padding:20px;border-radius:var(--radius);margin-bottom:20px">
+          <h4 style="font-family:var(--font);font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:12px">Módulos del Curso:</h4>
+          <ul style="list-style:none;font-size:.85rem;color:var(--text-dim);line-height:2">
+            <li>✓ Introducción al Neuromarketing y Neurociencias</li>
+            <li>✓ Sesgos Cognitivos y Heurística Mental</li>
+            <li>✓ Disparadores Emocionales y Persuasión Ética</li>
+            <li>✓ Storytelling Basado en Neurociencia</li>
+            <li>✓ Copy y Diseño que Atraen Atención</li>
+            <li>✓ Medición de Comportamientos y Conversiones</li>
+          </ul>
+        </div>
+
+        <div class="academy-meta" style="display:flex;gap:14px;font-size:.82rem;color:var(--text-dim);flex-wrap:wrap;margin-bottom:20px">
+          <span>📚 6 módulos (10-15 horas)</span>
+          <span>🎯 Intermedio</span>
+          <span>⏰ On-demand, acceso de por vida</span>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:16px;background:var(--surface2);border-radius:var(--radius);margin-bottom:20px">
+          <div>
+            <div style="font-size:.8rem;color:var(--text-dim);margin-bottom:4px">Precio</div>
+            <div style="font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--white)">CHF 890</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:.8rem;color:var(--cyan);font-weight:600;margin-bottom:4px">Disponibilidad</div>
+            <div style="font-size:.9rem;color:var(--white)">Inmediata</div>
+          </div>
+        </div>
+
+        <a href="/es/contacto.html" class="btn-grad" style="width:100%;text-align:center;justify-content:center">Comenzar el Curso &rarr;</a>
+      </div>
+
+      <!-- Curso 3: IA para Marketing -->
+      <div class="academy-card reveal reveal-d3" id="ai" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 28px;transition:var(--transition)">
+        <span class="academy-badge badge-ai">IA</span>
+        <h3 style="font-family:var(--font);font-size:1.25rem;font-weight:600;color:var(--white);margin-bottom:12px">IA para Marketing</h3>
+        <p style="font-size:.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:20px">Aprende a usar inteligencia artificial para automatizar, analizar y optimizar tus estrategias de marketing. Curso práctico de 2 días con ChatGPT, Midjourney, herramientas de análisis predictivos y automaciones de marketing.</p>
+
+        <div style="background:var(--surface2);padding:20px;border-radius:var(--radius);margin-bottom:20px">
+          <h4 style="font-family:var(--font);font-size:.95rem;font-weight:600;color:var(--white);margin-bottom:12px">Módulos del Curso:</h4>
+          <ul style="list-style:none;font-size:.85rem;color:var(--text-dim);line-height:2">
+            <li>✓ Fundamentos de IA: Cómo Funcionan los Modelos Generativos</li>
+            <li>✓ Creación de Contenidos con ChatGPT y Claude</li>
+            <li>✓ Diseño Visual con Midjourney y DALL-E 3</li>
+            <li>✓ Automatización: Make, Zapier, N8N para Marketing</li>
+            <li>✓ Analytics Predictivos y Bases de Machine Learning</li>
+            <li>✓ Estrategias IA-First para 2026</li>
+          </ul>
+        </div>
+
+        <div class="academy-meta" style="display:flex;gap:14px;font-size:.82rem;color:var(--text-dim);flex-wrap:wrap;margin-bottom:20px">
+          <span>📅 2 días intensivos</span>
+          <span>🎯 Todos los niveles</span>
+          <span>💻 Práctico y aplicativo</span>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:16px;background:var(--surface2);border-radius:var(--radius);margin-bottom:20px">
+          <div>
+            <div style="font-size:.8rem;color:var(--text-dim);margin-bottom:4px">Precio</div>
+            <div style="font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--white)">CHF 990</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:.8rem;color:var(--cyan);font-weight:600;margin-bottom:4px">Próxima Fecha</div>
+            <div style="font-size:.9rem;color:var(--white)">Mayo 2026</div>
+          </div>
+        </div>
+
+        <a href="/es/contacto.html" class="btn-grad" style="width:100%;text-align:center;justify-content:center">Reserva Tu Lugar &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PARA LAS EMPRESAS ═══════════════ -->
+<section class="section gradient-bg">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Equipos & Empresas</div>
+      <h2 class="section-title">Formación <span class="grad">Corporativa</span></h2>
+      <p class="section-desc">Trae la formación directamente a tu equipo</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:48px 40px;text-align:center;max-width:800px;margin:0 auto" class="reveal">
+      <h3 style="font-family:var(--font);font-size:1.35rem;font-weight:600;color:var(--white);margin-bottom:16px">Cursos Personalizados para Tu Empresa</h3>
+      <p style="font-size:.95rem;color:var(--text-dim);line-height:1.8;margin-bottom:24px">No todos los equipos tienen las mismas necesidades. Ofrecemos cursos completamente personalizados en los temas que importan a tu empresa: social media, neuromarketing, IA, SEO/AEO, creación de contenidos. En aula en tu sede o remotamente.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:20px">
+        <div style="flex:1;min-width:200px;padding:14px;background:var(--surface2);border-radius:var(--radius)">
+          <div style="font-family:var(--font);font-size:1.3rem;font-weight:700;color:var(--cyan);margin-bottom:4px">5-20</div>
+          <div style="font-size:.75rem;color:var(--text-dim)">Participantes por curso</div>
+        </div>
+        <div style="flex:1;min-width:200px;padding:14px;background:var(--surface2);border-radius:var(--radius)">
+          <div style="font-family:var(--font);font-size:1.3rem;font-weight:700;color:var(--cyan);margin-bottom:4px">1-5</div>
+          <div style="font-size:.75rem;color:var(--text-dim)">Días de formación</div>
+        </div>
+        <div style="flex:1;min-width:200px;padding:14px;background:var(--surface2);border-radius:var(--radius)">
+          <div style="font-family:var(--font);font-size:1.3rem;font-weight:700;color:var(--cyan);margin-bottom:4px">CHF 2'490</div>
+          <div style="font-size:.75rem;color:var(--text-dim)">A partir de</div>
+        </div>
+      </div>
+      <a href="/es/contacto.html" class="btn-grad">Solicitar Presupuesto de Formación &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ EL FORMADOR ═══════════════ -->
+<section class="section dark-bg">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Nuestro Equipo</div>
+      <h2 class="section-title">Quién Te <span class="grad">Enseñará</span></h2>
+      <p class="section-desc">Más de 20 años de experiencia a tu disposición</p>
+    </div>
+    <div class="team-grid" style="max-width:900px;margin:0 auto">
+      <div class="team-card reveal reveal-d1" style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);overflow:hidden;transition:var(--transition);text-align:center;padding:48px 32px 40px">
+        <div class="team-photo" style="width:140px;height:140px;border-radius:50%;overflow:hidden;margin:0 auto 24px;position:relative;padding:3px;background:var(--gradient)">
+          <img src="/img/guglielmo-poli.jpg" alt="Guglielmo Poli - Head of Training" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+        </div>
+        <h3 style="font-family:var(--font);font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:4px">Guglielmo Poli</h3>
+        <div class="team-role" style="font-size:.82rem;color:var(--cyan);font-weight:500;margin-bottom:20px">Co-Fundador &amp; Head of Training</div>
+        <p style="font-size:.88rem;color:var(--text-dim);line-height:1.7;margin-bottom:24px">Más de 20 años de experiencia en formación profesional y desarrollo de talentos. Habla italiano, inglés, español y francés. Ha formado a más de 500 profesionales en marketing digital, desde pequeñas empresas hasta multinacionales. Su enfoque es práctico, envolvente y enfocado en resultados tangibles.</p>
+        <div class="team-social" style="display:flex;justify-content:center;gap:10px">
+          <a href="https://www.instagram.com/thesocialmedialab.ch?igsh=MXJ4ejFpaGt6eGFoOQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/in/guglielmo-poli-4b4211398/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://wa.me/41782303582" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Preguntas Frecuentes</div>
+      <h2 class="section-title">Todo Lo Que <span class="grad">Debes Saber</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>¿Cómo funciona la certificación?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>Todos los cursos vienen acompañados de certificación profesional internacional. Al terminar, recibirás un certificado digital (y en papel si lo deseas) que acredita la completación del curso y las competencias adquiridas. Es reconocido en el mercado laboral y puedes agregarlo a tu LinkedIn.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>¿Cuál es la diferencia entre cursos presenciales y online?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>Los cursos presenciales (Dominio de Social Media, IA para Marketing) son intensivos, interactivos e ideales para quien quiere sumergirse completamente. Los cursos online on-demand (Fundamentos de Neuromarketing) te permiten aprender a tu ritmo, con acceso de por vida a todos los materiales. Elige según tu estilo de aprendizaje.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>¿Puedo seguir los cursos sin experiencia previa?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>Sí, absolutamente. Nuestros cursos están diseñados para personas de todos los niveles. Dominio de Social Media e IA para Marketing comienzan desde lo básico y avanzan hacia técnicas avanzadas. Fundamentos de Neuromarketing es indicado para quien tiene conocimiento básico de marketing.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>¿Qué curso elegir si soy una pequeña empresa?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>Recomendamos comenzar con Dominio de Social Media para aprender a gestionar tus canales de forma estratégica y medible. Luego agrega Fundamentos de Neuromarketing para entender cómo funciona tu cliente. Finalmente, aprovecha la IA con el tercer curso para automatizar y escalar. O elige la formación corporativa personalizada.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">
+          <h3>¿Ofrecen descuentos para grupos o empresas?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>Sí. Para grupos de 5 o más personas ofrecemos descuentos exclusivos. Las empresas pueden solicitar cursos personalizados con precios negociables. Contáctanos directamente para discutir tus necesidades específicas y las mejores opciones de formación.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Comienza Tu Camino de Formación</h2>
+      <p>Elige el curso que es para ti, inscríbete hoy y comienza a aprender de los mejores profesionales de marketing digital. Tu nueva carrera en digital comienza aquí.</p>
+      <div class="cta-btns">
+        <a href="/es/contacto.html" class="btn-grad">Inscribirse Ahora &rarr;</a>
+        <a href="#cursos" class="btn-ghost">Ver los Cursos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/es/" class="nav-brand">
+          <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+          <div class="nav-name">The Social Media <span>Lab</span></div>
+        </a>
+        <p>Agencia de social media marketing basada en neuromarketing. Estrategias que hablan al cerebro, resultados que hablan a los números.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/thesocialmedialab.ch?igsh=MXJ4ejFpaGt6eGFoOQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="https://www.linkedin.com/company/the-social-media-lab-ch/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a href="https://www.facebook.com/thesocialmedialabagency/" target="_blank" rel="noopener" aria-label="Facebook">fb</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href="/es/servicios.html">Gestión de Social Media</a>
+        <a href="/es/servicios.html">Sitios Web</a>
+        <a href="/es/servicios.html">Neuromarketing</a>
+        <a href="/es/servicios.html">Creación de Contenidos</a>
+        <a href="/es/servicios.html">SEO & AEO</a>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="/es/quienes-somos.html">Quiénes Somos</a>
+        <a href="/es/portfolio.html">Portafolio</a>
+        <a href="/es/academy.html">Academy</a>
+        <a href="/es/paquetes.html">Paquetes</a>
+        <a href="/es/contacto.html">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Idiomas</h4>
+        <a href="/academy.html">&#127470;&#127481; Italiano</a>
+        <a href="/en/academy.html">&#127468;&#127463; English</a>
+        <a href="/es/academy.html">&#127466;&#127480; Español</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Social Media Lab — Morbio Inferiore, Ticino. Todos los derechos reservados.</p>
+      <a href="#">Política de Privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+<script>
+/* === Scroll Progress === */
+const sp=document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{const h=document.documentElement;sp.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
+
+/* === Navbar Scroll === */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+
+/* === Mobile Menu === */
+const mt=document.getElementById('mobileToggle'),mm=document.getElementById('mobileMenu');
+mt.addEventListener('click',()=>{mm.classList.toggle('open');const s=mt.querySelectorAll('span');if(mm.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{s[0].style.transform='';s[1].style.opacity='1';s[2].style.transform=''}});
+
+/* === Custom Cursor === */
+const cur=document.getElementById('cursor');
+if(window.innerWidth>1024){document.addEventListener('mousemove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>cur.classList.add('active'));el.addEventListener('mouseleave',()=>cur.classList.remove('active'))})}
+
+/* === Reveal on Scroll === */
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* === FAQ Accordion === */
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')})});
+
+/* === Canvas Particles === */
+(function(){
+  const c=document.getElementById('particles'),ctx=c.getContext('2d');
+  let w,h,particles=[];
+  function resize(){w=c.width=window.innerWidth;h=c.height=window.innerHeight}
+  resize();window.addEventListener('resize',resize);
+  class P{
+    constructor(){this.reset()}
+    reset(){this.x=Math.random()*w;this.y=Math.random()*h;this.vx=(Math.random()-.5)*.3;this.vy=(Math.random()-.5)*.3;this.r=Math.random()*1.5+.5;this.a=Math.random()*.4+.1}
+    update(){this.x+=this.vx;this.y+=this.vy;if(this.x>w||this.x<0||this.y>h||this.y<0)this.reset()}
+  }
+  for(let i=0;i<30;i++)particles.push(new P());
+  function draw(){ctx.clearRect(0,0,w,h);ctx.fillStyle='rgba(0,212,255,.2)';particles.forEach(p=>{p.update();ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill()});requestAnimationFrame(draw)}
+  draw();
+})();
+</script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
