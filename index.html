@@ -79,6 +79,7 @@
 }
 </script>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="/js/cms-loader.js" defer></script>
 </head>
 <body>
 
@@ -145,13 +146,13 @@
       <div class="hero-content">
         <div class="hero-badge">
           <div class="hero-badge-dot"></div>
-          <span>Neuromarketing + Social Media</span>
+          <span data-cms="hero.badge">Neuromarketing + Social Media</span>
         </div>
-        <h1>Trasformiamo la <span class="grad">Scienza del Cervello</span> in Strategia Social<span class="typing-cursor"></span></h1>
-        <p class="hero-sub">Non facciamo solo marketing. Applichiamo neuroscienze e psicologia cognitiva per creare contenuti che il tuo pubblico <strong>non può ignorare</strong>. L'unica agenzia in Ticino che unisce neuromarketing, gestione social e formazione professionale.</p>
+        <h1><span data-cms="hero.title_line1">Trasformiamo la</span> <span class="grad" data-cms="hero.title_line2">Scienza del Cervello in Strategia Social</span><span class="typing-cursor"></span></h1>
+        <p class="hero-sub" data-cms="hero.subtitle">Non facciamo solo marketing. Applichiamo neuroscienze e psicologia cognitiva per creare contenuti che il tuo pubblico <strong>non può ignorare</strong>. L'unica agenzia in Ticino che unisce neuromarketing, gestione social e formazione professionale.</p>
         <div class="hero-btns">
-          <a href="/pacchetti.html" class="btn-grad">Scopri i Pacchetti &rarr;</a>
-          <a href="/portfolio.html" class="btn-ghost">Vedi Portfolio</a>
+          <a href="/pacchetti.html" class="btn-grad" data-cms-href="hero.cta1_link"><span data-cms="hero.cta1_text">Scopri i Pacchetti</span> &rarr;</a>
+          <a href="/portfolio.html" class="btn-ghost" data-cms-href="hero.cta2_link" data-cms="hero.cta2_text">Vedi Portfolio</a>
         </div>
         <div class="hero-proof">
           <div class="hero-proof-item">
