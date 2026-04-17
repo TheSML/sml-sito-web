@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+<script type="text/javascript" src="https://embeds.iubenda.com/widgets/43e4ec29-9545-47ca-8620-d02f096670a9.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pacchetti | The Social Media Lab — Agenzia Social Media Marketing Ticino</title>
@@ -59,6 +60,25 @@
 
 @media(max-width: 768px) {
   .pricing-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pricing grid: 4 columns desktop, 2 tablet, 1 mobile */
+.pricing-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media(max-width: 1024px) {
+  .pricing-grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 640px) {
+  .pricing-grid-4 {
     grid-template-columns: 1fr;
   }
 }
@@ -177,20 +197,16 @@
       <h2 style="font-family:var(--font);font-size:2.2rem;font-weight:700;color:var(--white)">Piani Trasparenti e Completi</h2>
     </div>
     
-    <div class="services-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: stretch;">
+    <div class="services-grid pricing-grid-4" style="align-items: start;">
       
       <!-- STARTER -->
-      <div class="service-card pricing-card-enhanced reveal reveal-d1" style="padding: 48px 28px 36px;position:relative">
-        <div style="position:absolute;top:0;left:0;right:0;background:linear-gradient(90deg,#FF6B6B 0%,#FF3D3D 50%,#FF6B6B 100%);color:#fff;padding:8px 14px;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-align:center;text-transform:uppercase;box-shadow:0 4px 14px rgba(255,61,61,0.25);white-space:nowrap">⚡ −50% Offerta Limitata</div>
+      <div class="service-card pricing-card-enhanced reveal reveal-d1" style="padding: 36px 28px;">
         <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Starter</div>
         <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">Per iniziare</div>
-
+        
         <div style="margin-bottom:6px">
-          <div style="font-family:var(--font);font-size:1rem;font-weight:500;color:var(--text-dim);text-decoration:line-through;text-decoration-color:#FF6B6B;margin-bottom:4px">
-            CHF 2'490
-          </div>
           <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
-            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 1'245 <span style="font-size:.85rem;color:var(--text-dim);font-weight:500">+ IVA</span>
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 2'490
           </div>
         </div>
         <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">Setup una tantum + primo mese gratis</div>
@@ -204,17 +220,13 @@
         <div style="font-size:.68rem;font-weight:700;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px">Cosa è Incluso</div>
         
         <ul style="list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:8px">
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:8px 10px;font-size:.85rem;color:var(--white);background:linear-gradient(90deg,rgba(124,58,237,0.15),rgba(0,180,216,0.08));border-left:3px solid var(--cyan);border-radius:4px;font-weight:600">
-            <span style="color:var(--cyan);flex-shrink:0;font-weight:700">★</span>
-            <span>Strategia di Neuromarketing <span style="font-size:.7rem;color:var(--cyan);font-weight:500">Basic</span></span>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Landing page (1 pagina)</span>
           </li>
           <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
             <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
-            <span>Sito Web Vetrina (1 Pagina)</span>
-          </li>
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
-            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
-            <span>2 Canali social con strategia e content creation</span>
+            <span>1 canale social</span>
           </li>
           <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
             <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
@@ -234,50 +246,37 @@
           </li>
         </ul>
         
-        <a href="https://buy.stripe.com/14A28r3wo8jF8m24b6gfu1W" target="_blank" rel="noopener" style="display:block;width:100%;text-align:center;padding:14px;background:transparent;color:var(--white);border:1.5px solid var(--border-light);border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.borderColor='var(--cyan)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='var(--border-light)';this.style.color='var(--white)'">Scegli Starter</a>
-        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:10px;color:var(--text-dim);font-size:.78rem;margin-top:10px;transition:var(--transition)" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">Hai dubbi? Contattaci prima →</a>
+        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:14px;background:transparent;color:var(--white);border:1.5px solid var(--border-light);border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.borderColor='var(--cyan)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='var(--border-light)';this.style.color='var(--white)'">Scegli Starter</a>
       </div>
       
       <!-- PROFESSIONAL (POPULAR) -->
-      <div class="service-card pricing-card-enhanced popular reveal reveal-d2" style="padding: 48px 28px 36px;position:relative">
-        <div style="position:absolute;top:0;left:0;right:0;background:linear-gradient(90deg,#7c3aed 0%,#00b4d8 50%,#7c3aed 100%);color:#fff;padding:8px 14px;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-align:center;text-transform:uppercase;box-shadow:0 4px 14px rgba(124,58,237,0.3);white-space:nowrap">⭐ Il Più Scelto −60%</div>
+      <div class="service-card pricing-card-enhanced popular reveal reveal-d2" style="padding: 36px 28px;">
         <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Professional</div>
         <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">La scelta migliore</div>
-
+        
         <div style="margin-bottom:6px">
-          <div style="font-family:var(--font);font-size:1rem;font-weight:500;color:var(--text-dim);text-decoration:line-through;text-decoration-color:#FF6B6B;margin-bottom:4px">
-            CHF 4'990
-          </div>
           <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
-            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 1'999 <span style="font-size:.85rem;color:var(--text-dim);font-weight:500">+ IVA</span>
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 4'990
           </div>
         </div>
         <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">Setup una tantum + primo mese gratis</div>
-
+        
         <div style="display:flex;align-items:center;gap:6px;background:var(--cyan-dim);border:1px solid var(--cyan-dim);border-radius:var(--radius);padding:10px 14px;margin:16px 0 24px;font-size:.78rem;color:var(--cyan);font-weight:500">
           <span style="font-size:1rem">💰</span> Poi CHF 690/mese
         </div>
-
+        
         <div style="height:1px;background:var(--border);margin:0 0 24px"></div>
-
+        
         <div style="font-size:.68rem;font-weight:700;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px">Cosa è Incluso</div>
-
+        
         <ul style="list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:8px">
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:8px 10px;font-size:.85rem;color:var(--white);background:linear-gradient(90deg,rgba(124,58,237,0.15),rgba(0,180,216,0.08));border-left:3px solid var(--cyan);border-radius:4px;font-weight:600">
-            <span style="color:var(--cyan);flex-shrink:0;font-weight:700">★</span>
-            <span>Strategia di Neuromarketing <span style="font-size:.7rem;color:var(--cyan);font-weight:500">Pro</span></span>
+          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Sito multi-pagina (6 pagine)</span>
           </li>
           <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
             <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
-            <span>Sito multi-pagina (5 pagine)</span>
-          </li>
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
-            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
-            <span>Ottimizzazione SEO + AEO (AI)</span>
-          </li>
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
-            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
-            <span>2 Canali social con strategia e content creation</span>
+            <span>2 canali social</span>
           </li>
           <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
             <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
@@ -288,30 +287,26 @@
             <span>Stories e Reels</span>
           </li>
           <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
-            <span style="color:rgba(255,255,255,0.15);flex-shrink:0">✗</span>
-            <span style="opacity:.5">Video professionale</span>
+            <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
+            <span>Reportistica + SEO</span>
           </li>
           <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
             <span style="color:rgba(255,255,255,0.15);flex-shrink:0">✗</span>
-            <span style="opacity:.5">Campagne Ads</span>
+            <span style="opacity:.5">Fotografia Pro</span>
           </li>
         </ul>
         
-        <a href="https://buy.stripe.com/fZubJ12skczVeKq8rmgfu1X" target="_blank" rel="noopener" style="display:block;width:100%;text-align:center;padding:14px;background:linear-gradient(135deg, #00b4d8, #7c3aed);color:white;border:none;border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,180,216,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">Scegli Professional</a>
-        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:10px;color:var(--text-dim);font-size:.78rem;margin-top:10px;transition:var(--transition)" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">Hai dubbi? Contattaci prima →</a>
+        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:14px;background:linear-gradient(135deg, #00b4d8, #7c3aed);color:white;border:none;border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,180,216,0.3)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">Scegli Professional</a>
       </div>
       
       <!-- BUSINESS -->
-      <div class="service-card pricing-card-enhanced reveal reveal-d3" style="padding: 48px 28px 36px;position:relative">
+      <div class="service-card pricing-card-enhanced reveal reveal-d3" style="padding: 36px 28px;">
         <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Business</div>
         <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">Per crescere</div>
-
+        
         <div style="margin-bottom:6px">
-          <div style="font-family:var(--font);font-size:1rem;font-weight:500;color:var(--text-dim);text-decoration:line-through;text-decoration-color:#FF6B6B;margin-bottom:4px">
-            CHF 7'990
-          </div>
           <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
-            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 3'999 <span style="font-size:.85rem;color:var(--text-dim);font-weight:500">+ IVA</span>
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 7'990
           </div>
         </div>
         <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">Setup una tantum + primo mese gratis</div>
@@ -325,10 +320,6 @@
         <div style="font-size:.68rem;font-weight:700;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px">Cosa è Incluso</div>
         
         <ul style="list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:8px">
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:8px 10px;font-size:.85rem;color:var(--white);background:linear-gradient(90deg,rgba(124,58,237,0.15),rgba(0,180,216,0.08));border-left:3px solid var(--cyan);border-radius:4px;font-weight:600">
-            <span style="color:var(--cyan);flex-shrink:0;font-weight:700">★</span>
-            <span>Strategia di Neuromarketing <span style="font-size:.7rem;color:var(--cyan);font-weight:500">Pro</span></span>
-          </li>
           <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
             <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
             <span>Sito premium (10 pagine + blog)</span>
@@ -355,21 +346,17 @@
           </li>
         </ul>
         
-        <a href="https://buy.stripe.com/8x28wP3wogQbaua0YUgfu1Y" target="_blank" rel="noopener" style="display:block;width:100%;text-align:center;padding:14px;background:transparent;color:var(--white);border:1.5px solid var(--border-light);border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.borderColor='var(--cyan)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='var(--border-light)';this.style.color='var(--white)'">Scegli Business</a>
-        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:10px;color:var(--text-dim);font-size:.78rem;margin-top:10px;transition:var(--transition)" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">Hai dubbi? Contattaci prima →</a>
+        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:14px;background:transparent;color:var(--white);border:1.5px solid var(--border-light);border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.borderColor='var(--cyan)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='var(--border-light)';this.style.color='var(--white)'">Scegli Business</a>
       </div>
       
       <!-- ENTERPRISE -->
-      <div class="service-card pricing-card-enhanced reveal reveal-d3" style="padding: 48px 28px 36px;position:relative">
+      <div class="service-card pricing-card-enhanced reveal reveal-d3" style="padding: 36px 28px;">
         <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Enterprise</div>
         <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">Soluzione completa</div>
-
+        
         <div style="margin-bottom:6px">
-          <div style="font-family:var(--font);font-size:1rem;font-weight:500;color:var(--text-dim);text-decoration:line-through;text-decoration-color:#FF6B6B;margin-bottom:4px">
-            CHF 12'490
-          </div>
           <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
-            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 5'490 <span style="font-size:.85rem;color:var(--text-dim);font-weight:500">+ IVA</span>
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 12'490<span style="font-size:1rem;color:var(--text-dim)">+</span>
           </div>
         </div>
         <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">Setup una tantum + primo mese gratis</div>
@@ -383,10 +370,6 @@
         <div style="font-size:.68rem;font-weight:700;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px">Cosa è Incluso</div>
         
         <ul style="list-style:none;margin-bottom:20px;display:flex;flex-direction:column;gap:8px">
-          <li style="display:flex;align-items:flex-start;gap:8px;padding:8px 10px;font-size:.85rem;color:var(--white);background:linear-gradient(90deg,rgba(124,58,237,0.15),rgba(0,180,216,0.08));border-left:3px solid var(--cyan);border-radius:4px;font-weight:600">
-            <span style="color:var(--cyan);flex-shrink:0;font-weight:700">★</span>
-            <span>Strategia di Neuromarketing <span style="font-size:.7rem;color:var(--cyan);font-weight:500">Premium</span></span>
-          </li>
           <li style="display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:var(--text)">
             <span style="color:var(--green);flex-shrink:0;font-weight:700">✓</span>
             <span>Sito custom (design illimitato)</span>
@@ -413,8 +396,7 @@
           </li>
         </ul>
         
-        <a href="https://buy.stripe.com/bJe4gzaYQ57t31I4b6gfu1Z" target="_blank" rel="noopener" style="display:block;width:100%;text-align:center;padding:14px;background:transparent;color:var(--white);border:1.5px solid var(--border-light);border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.borderColor='var(--cyan)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='var(--border-light)';this.style.color='var(--white)'">Scegli Enterprise</a>
-        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:10px;color:var(--text-dim);font-size:.78rem;margin-top:10px;transition:var(--transition)" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-dim)'">Hai dubbi? Contattaci prima →</a>
+        <a href="/contatti.html" style="display:block;width:100%;text-align:center;padding:14px;background:transparent;color:var(--white);border:1.5px solid var(--border-light);border-radius:var(--radius-full);font-family:var(--font);font-size:.88rem;font-weight:600;transition:var(--transition);cursor:pointer;margin-top:auto" onmouseover="this.style.borderColor='var(--cyan)';this.style.color='var(--cyan)'" onmouseout="this.style.borderColor='var(--border-light)';this.style.color='var(--white)'">Scegli Enterprise</a>
       </div>
       
     </div>
@@ -489,7 +471,7 @@
       <h2 style="font-family:var(--font);font-size:2.2rem;font-weight:700;color:var(--white)">Processo in 4 Step</h2>
     </div>
     
-    <div class="stats-row reveal reveal-d1" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;max-width:100%">
+    <div class="stats-row reveal reveal-d1" style="text-align:center;max-width:100%">
       <div>
         <div style="width:64px;height:64px;background:var(--card);border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-size:1.4rem;font-weight:700;color:var(--cyan);margin:0 auto 16px;margin-bottom:16px;transition:var(--transition)">1</div>
         <h3 style="font-family:var(--font);font-size:1rem;font-weight:600;color:var(--white);margin-bottom:6px">Consulenza Iniziale</h3>
@@ -664,7 +646,7 @@
       </div>
     </div>
   </div>
-<div style="text-align:center;padding:16px 0;font-size:0.75rem;opacity:0.5;border-top:1px solid rgba(255,255,255,0.08);margin-top:8px">Designed by <a href="https://thesocialmedia-lab.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;font-weight:600">The Social Media Lab</a></div></footer>
+</footer>
 
 <!-- Scripts -->
 <script>
