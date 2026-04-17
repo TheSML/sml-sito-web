@@ -517,6 +517,8 @@ if(window.innerWidth>1024){document.addEventListener('mousemove',e=>{cur.style.l
 /* === Reveal on Scroll === */
 const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+/* Fallback: when tab becomes visible, re-trigger observer for unrevealed elements */
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){document.querySelectorAll('.reveal:not(.visible)').forEach(el=>{io.unobserve(el);io.observe(el)})}},{once:true});
 
 /* === Canvas Particles === */
 (function(){
