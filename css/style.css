@@ -257,9 +257,11 @@ a{text-decoration:none;color:inherit}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @keyframes gradient-shift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
-.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease);animation:revealFallback .8s ease 3s forwards}
+.reveal.visible{opacity:1;transform:translateY(0);animation:none}
+.reveal-d1{transition-delay:.1s;animation-delay:3.1s}.reveal-d2{transition-delay:.2s;animation-delay:3.2s}.reveal-d3{transition-delay:.3s;animation-delay:3.3s}.reveal-d4{transition-delay:.4s;animation-delay:3.4s}
+@keyframes revealFallback{to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important;transition:none!important;animation:none!important}}
 
 /* ═══════════════ RESPONSIVE ═══════════════ */
 @media(max-width:1024px){
