@@ -208,7 +208,6 @@
           <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px">
             <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--orange-soft);color:var(--orange);border-radius:var(--radius-full);font-weight:600">Hugo</span>
             <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--orange-soft);color:var(--orange);border-radius:var(--radius-full);font-weight:600">Contentful</span>
-            <span style="display:inline-block;font-size:.7rem;padding:4px 10px;background:var(--orange-soft);color:var(--orange);border-radius:var(--radius-full);font-weight:600">Netlify</span>
           </div>
           <a href="https://fiduciaria.thesocialmedia-lab.com" target="_blank" rel="noopener" class="portfolio-link">Visita il Sito &rarr;</a>
         </div>
@@ -531,17 +530,5 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     });
   });
 });
-</script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-</body>
+</script></body>
 </html>
