@@ -38,18 +38,7 @@
 }
 
 .pricing-card-enhanced.popular::before {
-  content: 'MOST POPULAR';
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, #00b4d8, #7c3aed);
-  color: white;
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 6px 18px;
-  border-radius: 9999px;
-  letter-spacing: 0.08em;
+  display: none;
 }
 
 .pricing-features-grid {
@@ -62,6 +51,18 @@
 @media(max-width: 768px) {
   .pricing-features-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 1100px) {
+  .pricing-grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media(max-width: 600px) {
+  .pricing-grid-4 {
+    grid-template-columns: 1fr !important;
   }
 }
 </style>
@@ -179,16 +180,18 @@
       <h2 style="font-family:var(--font);font-size:2.2rem;font-weight:700;color:var(--white)">Transparent and Complete Plans</h2>
     </div>
 
-    <div class="services-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: start;">
+    <div class="services-grid pricing-grid-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: start;">
 
       <!-- STARTER -->
-      <div class="service-card pricing-card-enhanced reveal reveal-d1" style="padding: 36px 28px;">
+      <div class="service-card pricing-card-enhanced reveal reveal-d1" style="padding: 36px 28px;position:relative">
+        <div style="position:absolute;top:-14px;right:20px;background:linear-gradient(135deg,#FF6B6B 0%,#FF3D3D 100%);color:#fff;padding:6px 14px;border-radius:var(--radius-full);font-size:.72rem;font-weight:700;letter-spacing:.06em;box-shadow:0 4px 14px rgba(255,61,61,0.35)">-50% OFFER</div>
         <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Starter</div>
         <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">To get started</div>
 
         <div style="margin-bottom:6px">
+          <div style="font-family:var(--font);font-size:1rem;font-weight:500;color:var(--text-dim);text-decoration:line-through;text-decoration-color:#FF6B6B;margin-bottom:4px">CHF 2'490</div>
           <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
-            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 2'490
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 1'245 <span style="font-size:.85rem;color:var(--text-dim);font-weight:500">+ VAT</span>
           </div>
         </div>
         <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">One-time setup + first month free</div>
@@ -232,13 +235,15 @@
       </div>
 
       <!-- PROFESSIONAL (POPULAR) -->
-      <div class="service-card pricing-card-enhanced popular reveal reveal-d2" style="padding: 36px 28px;">
+      <div class="service-card pricing-card-enhanced popular reveal reveal-d2" style="padding: 48px 28px 36px;position:relative">
+        <div style="position:absolute;top:0;left:0;right:0;background:linear-gradient(90deg,#7c3aed 0%,#00b4d8 50%,#7c3aed 100%);color:#fff;padding:8px 14px;font-size:.72rem;font-weight:700;letter-spacing:.15em;text-align:center;text-transform:uppercase;box-shadow:0 4px 14px rgba(124,58,237,0.3)">Most Popular · -60% Offer</div>
         <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Professional</div>
         <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">The best choice</div>
 
         <div style="margin-bottom:6px">
+          <div style="font-family:var(--font);font-size:1rem;font-weight:500;color:var(--text-dim);text-decoration:line-through;text-decoration-color:#FF6B6B;margin-bottom:4px">CHF 4'990</div>
           <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
-            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 4'990
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 1'999 <span style="font-size:.85rem;color:var(--text-dim);font-weight:500">+ VAT</span>
           </div>
         </div>
         <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">One-time setup + first month free</div>
@@ -282,13 +287,15 @@
       </div>
 
       <!-- BUSINESS -->
-      <div class="service-card pricing-card-enhanced reveal reveal-d3" style="padding: 36px 28px;">
+      <div class="service-card pricing-card-enhanced reveal reveal-d3" style="padding: 48px 28px 36px;position:relative">
+        <div style="position:absolute;top:-14px;right:20px;background:linear-gradient(135deg,#FF6B6B 0%,#FF3D3D 100%);color:#fff;padding:6px 14px;border-radius:var(--radius-full);font-size:.72rem;font-weight:700;letter-spacing:.06em;box-shadow:0 4px 14px rgba(255,61,61,0.35)">-50% OFFER</div>
         <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Business</div>
         <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">To grow</div>
 
         <div style="margin-bottom:6px">
+          <div style="font-family:var(--font);font-size:1rem;font-weight:500;color:var(--text-dim);text-decoration:line-through;text-decoration-color:#FF6B6B;margin-bottom:4px">CHF 7'990</div>
           <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
-            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 7'990
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 3'999 <span style="font-size:.85rem;color:var(--text-dim);font-weight:500">+ VAT</span>
           </div>
         </div>
         <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">One-time setup + first month free</div>
@@ -332,13 +339,15 @@
       </div>
 
       <!-- ENTERPRISE -->
-      <div class="service-card pricing-card-enhanced reveal reveal-d3" style="padding: 36px 28px;">
+      <div class="service-card pricing-card-enhanced reveal reveal-d3" style="padding: 48px 28px 36px;position:relative">
+        <div style="position:absolute;top:-14px;right:20px;background:linear-gradient(135deg,#FF6B6B 0%,#FF3D3D 100%);color:#fff;padding:6px 14px;border-radius:var(--radius-full);font-size:.72rem;font-weight:700;letter-spacing:.06em;box-shadow:0 4px 14px rgba(255,61,61,0.35)">-56% OFFER</div>
         <div style="font-family:var(--font);font-size:1.15rem;font-weight:600;color:var(--white);margin-bottom:4px">Enterprise</div>
         <div style="font-size:.78rem;color:var(--text-dim);margin-bottom:20px">Complete solution</div>
 
         <div style="margin-bottom:6px">
+          <div style="font-family:var(--font);font-size:1rem;font-weight:500;color:var(--text-dim);text-decoration:line-through;text-decoration-color:#FF6B6B;margin-bottom:4px">CHF 12'490</div>
           <div style="font-family:var(--font);font-size:2.6rem;font-weight:700;color:var(--white)">
-            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 12'490<span style="font-size:1rem;color:var(--text-dim)">+</span>
+            <span style="color:var(--cyan);font-size:1.2rem">CHF</span> 5'490 <span style="font-size:.85rem;color:var(--text-dim);font-weight:500">+ VAT</span>
           </div>
         </div>
         <div style="font-size:.75rem;color:var(--text-dim);margin-bottom:16px">One-time setup + first month free</div>
