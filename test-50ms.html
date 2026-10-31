@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script src="/js/cookie.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test dei 50 millisecondi | The Social Media Lab</title>
+<meta name="description" content="Il tuo sito supera il test dei 50 millisecondi? 3 domande, 30 secondi: vedi subito il punteggio della tua presenza online e, se vuoi, ricevi la bozza gratuita della tua nuova homepage.">
+<link rel="canonical" href="https://thesocialmedia-lab.com/test-50ms.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Test dei 50 millisecondi | The Social Media Lab">
+<meta property="og:description" content="Il tuo sito supera il test dei 50 millisecondi? 3 domande, 30 secondi: vedi subito il punteggio della tua presenza online e, se vuoi, ricevi la bozza gratuita della tua nuova homepage.">
+<meta property="og:image" content="https://thesocialmedia-lab.com/img/og-image.jpg">
+<meta property="og:url" content="https://thesocialmedia-lab.com/test-50ms.html">
+<meta property="og:locale" content="it_CH">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/sml-logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+try{if(localStorage.getItem('sml_cc')==='no')fbq('consent','revoke')}catch(e){}fbq('init','994962172718425');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=994962172718425&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Background Mesh -->
+<div class="bg-mesh"></div>
+
+<!-- Canvas Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+      <div class="nav-name">The Social Media <span>Lab</span></div>
+    </a>
+    <div class="nav-center">
+      <a href="/">Home</a>
+      <a href='/chi-siamo'>Chi Siamo</a>
+      <a href='/servizi'>Servizi</a>
+      <a href='/portfolio'>Portfolio</a>
+      <a href='/academy'>Academy</a>
+      <a href='/pacchetti'>Pacchetti</a>
+      <a href='/contatti'>Contatti</a>
+    </div>
+    <div class="nav-right">
+      
+      <a class='nav-cta' href='/test-50ms'>Test gratuito</a>
+    </div>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href='/chi-siamo'>Chi Siamo</a>
+    <a href='/servizi'>Servizi</a>
+    <a href='/portfolio'>Portfolio</a>
+    <a href='/academy'>Academy</a>
+    <a href='/pacchetti'>Pacchetti</a>
+    <a href='/contatti'>Contatti</a>
+    
+  </div>
+</nav>
+
+<style>
+.t50{position:relative;z-index:1;padding:130px 0 80px}
+.t50-wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.t50-intro{text-align:center;margin-bottom:28px}
+.t50-intro .eyebrow{font-size:.72rem;font-weight:600;color:var(--cyan);letter-spacing:.2em;text-transform:uppercase;margin-bottom:12px}
+.t50-intro h1{font-family:var(--font);font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.15;font-weight:700;color:var(--white);margin-bottom:14px}
+.t50-intro p{font-size:1rem;color:var(--text);max-width:560px;margin:0 auto}
+.t50-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:32px;backdrop-filter:blur(12px)}
+@media(max-width:600px){.t50-card{padding:22px 16px}}
+.t50-bar{height:6px;background:var(--bg2);border-radius:99px;overflow:hidden;margin-bottom:10px}
+.t50-bar span{display:block;height:100%;width:0;background:var(--gradient);transition:width .35s var(--ease)}
+.t50-step-n{font-size:.75rem;color:var(--text-dim);margin-bottom:18px}
+.t50-q{display:none}
+.t50-q.active{display:block;animation:t50in .35s var(--ease)}
+@keyframes t50in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.t50-q h2{font-family:var(--font);font-size:1.35rem;font-weight:600;color:var(--white);margin-bottom:18px;line-height:1.35}
+.t50-opts{display:grid;gap:10px}
+.t50-opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;padding:15px 18px;background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--radius);color:var(--text-bright);font-family:var(--body);font-size:.95rem;cursor:pointer;transition:var(--transition)}
+.t50-opt:hover{border-color:rgba(0,212,255,.4)}
+.t50-opt.sel{border-color:var(--cyan);background:var(--cyan-dim)}
+.t50-opt i{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--text-dim);flex-shrink:0;font-style:normal}
+.t50-opt.sel i{border-color:var(--cyan);background:radial-gradient(circle,var(--cyan) 45%,transparent 50%)}
+.t50-url{margin-top:14px;display:none}
+.t50-nav{display:flex;justify-content:space-between;align-items:center;margin-top:22px;gap:12px}
+.t50-back{background:none;border:none;color:var(--text-dim);font-size:.85rem;cursor:pointer;padding:8px 0}
+.t50-back[hidden]{visibility:hidden;display:inline}
+.t50-next{padding:13px 28px;background:var(--gradient-btn);color:#fff;border:none;border-radius:var(--radius-full);font-family:var(--font);font-weight:600;font-size:.9rem;cursor:pointer}
+.t50-next:disabled{opacity:.4;cursor:not-allowed}
+.t50-consent{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;color:var(--text);margin:6px 0 4px;line-height:1.5}
+.t50-consent input{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:var(--cyan)}
+.t50-consent a{color:var(--cyan);text-decoration:underline}
+.t50-err{color:#ff8a8a;font-size:.82rem;margin-top:8px;min-height:1em}
+.t50-res{display:none;text-align:center}
+.t50-res.active{display:block;animation:t50in .4s var(--ease)}
+.t50-ring{width:170px;height:170px;margin:4px auto 10px;position:relative}
+.t50-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.t50-ring .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--font);color:var(--white)}
+.t50-ring .num b{font-size:2.8rem;line-height:1}
+.t50-ring .num small{font-size:.78rem;color:var(--text-dim)}
+.t50-verdict{font-family:var(--font);font-size:1.3rem;font-weight:600;color:var(--white);margin-bottom:6px}
+.t50-res>p{color:var(--text);font-size:.95rem;max-width:520px;margin:0 auto 22px}
+.t50-spots{text-align:left;display:grid;gap:12px;margin:0 0 24px}
+.t50-spot{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:var(--radius);padding:14px 16px}
+.t50-spot strong{display:block;color:var(--white);font-size:.95rem;margin-bottom:4px}
+.t50-spot span{font-size:.86rem;color:var(--text)}
+.t50-next-box{background:var(--gradient-soft);border:1px solid rgba(0,212,255,.2);border-radius:var(--radius-lg);padding:22px;text-align:left}
+.t50-next-box h3{font-family:var(--font);color:var(--white);font-size:1.1rem;margin-bottom:8px}
+.t50-next-box p{font-size:.9rem;color:var(--text);margin-bottom:14px}
+.t50-wa{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:var(--radius-full);background:#25d366;color:#06240f;font-weight:600;font-size:.9rem}
+.t50-offer{margin-top:20px;text-align:left;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px}
+.t50-offer h3{font-family:var(--font);color:var(--white);font-size:1.1rem;margin-bottom:14px}
+.t50-offer-grid{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+@media(max-width:620px){.t50-offer-grid{grid-template-columns:1fr}}
+.t50-offer-card{border:1px solid rgba(0,212,255,.2);border-radius:var(--radius);padding:16px}
+.t50-offer-tag{display:inline-block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
+.t50-offer-card strong{display:block;color:var(--white);font-size:1rem}
+.t50-offer-price{font-family:var(--font);font-weight:700;font-size:1.5rem;color:var(--white);margin:6px 0 8px}
+.t50-offer-price small{display:block;font-family:inherit;font-weight:400;font-size:.75rem;color:var(--text-dim)}
+.t50-offer-card p{font-size:.85rem;color:var(--text);margin:0}
+.t50-offer-note{font-size:.82rem;color:var(--text-dim);margin:14px 0 10px}
+.t50-offer-link{color:var(--cyan);font-weight:600;font-size:.9rem}
+.t50-foot{text-align:center;font-size:.78rem;color:var(--text-dim);margin-top:18px}
+.t50-foot a{color:var(--cyan)}
+</style>
+
+<!-- Netlify Forms: modulo statico per il rilevamento dei campi in fase di deploy -->
+<form hidden method='post' name='test-50ms' data-netlify="true" netlify-honeypot="bot-field">
+  <input name="settore"><input name="sito"><input name="sito_url"><input name="canale"><input name="google"><input name="mobile"><input name="obiettivo"><input name="tempi">
+  <input name="nome"><input name="attivita"><input name="localita"><input name="email"><input name="telefono"><input name="lingua"><input name="consenso">
+  <input name="punteggio"><input name="temperatura"><input name="punti_ciechi"><input name="utm_source"><input name="utm_medium"><input name="utm_campaign"><input name="utm_content"><input name="bot-field">
+</form>
+
+<section class="t50">
+  <div class="t50-wrap">
+    <div class="t50-intro" id="t50Intro">
+      <div class="eyebrow">Test gratuito · 3 domande · 30 secondi</div>
+      <h1>Il tuo sito supera il test dei <span class="grad">50 millisecondi</span>?</h1>
+      <p>Uno studio della Carleton University ha misurato che un visitatore giudica una pagina web in circa 50 millisecondi. Rispondi a 3 domande e vedi subito il tuo punteggio, senza lasciare dati. Poi, se vuoi, ricevi gratis la bozza del tuo nuovo sito.</p>
+    </div>
+
+    <div class="t50-card">
+      <div id="t50Quiz">
+        <div class="t50-bar"><span id="t50Bar"></span></div>
+        <div class="t50-step-n" id="t50StepN">Domanda 1 di 3</div>
+
+        <div class="t50-q active" data-key="settore">
+          <h2>Che attività hai?</h2>
+          <div class="t50-opts">
+            <button type="button" class="t50-opt" data-v="Ristorazione"><i></i>Ristorazione, bar, hotel</button>
+            <button type="button" class="t50-opt" data-v="Salute e benessere"><i></i>Salute, benessere, estetica</button>
+            <button type="button" class="t50-opt" data-v="Artigiano ed edilizia"><i></i>Artigiano, edilizia, impianti</button>
+            <button type="button" class="t50-opt" data-v="Studio professionale"><i></i>Studio professionale (fiduciaria, legale, consulenza)</button>
+            <button type="button" class="t50-opt" data-v="Commercio"><i></i>Negozio o commercio</button>
+            <button type="button" class="t50-opt" data-v="Turismo"><i></i>Turismo e tempo libero</button>
+            <button type="button" class="t50-opt" data-v="Altro"><i></i>Altro</button>
+          </div>
+        </div>
+
+        <div class="t50-q" data-key="sito">
+          <h2>Hai un sito web?</h2>
+          <div class="t50-opts">
+            <button type="button" class="t50-opt" data-v="recente"><i></i>Sì, recente</button>
+            <button type="button" class="t50-opt" data-v="vecchio"><i></i>Sì, ma ha più di 3 anni</button>
+            <button type="button" class="t50-opt" data-v="solo social"><i></i>Solo una pagina Facebook o Instagram</button>
+            <button type="button" class="t50-opt" data-v="no"><i></i>No</button>
+          </div>
+          <div class="form-group t50-url" id="t50UrlBox">
+            <label for="t50Url">Indirizzo del tuo sito (facoltativo)</label>
+            <input type="text" id="t50Url" placeholder="www.tuaattivita.ch" autocomplete="url">
+          </div>
+        </div>
+
+        <div class="t50-q" data-key="google">
+          <h2>Se cerchi su Google il nome della tua attività e la città, cosa compare?</h2>
+          <div class="t50-opts">
+            <button type="button" class="t50-opt" data-v="sito"><i></i>Il mio sito</button>
+            <button type="button" class="t50-opt" data-v="scheda"><i></i>Solo la scheda Google</button>
+            <button type="button" class="t50-opt" data-v="niente"><i></i>Niente</button>
+            <button type="button" class="t50-opt" data-v="non so"><i></i>Non lo so</button>
+          </div>
+        </div>
+
+        <div class="t50-nav">
+          <button type="button" class="t50-back" id="t50Back" hidden>&larr; Indietro</button>
+          <button type="button" class="t50-next" id="t50Next" disabled>Avanti &rarr;</button>
+        </div>
+      </div>
+
+      <div class="t50-res" id="t50Res">
+        <div class="t50-ring">
+          <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="10"/><circle id="t50Arc" cx="60" cy="60" r="52" fill="none" stroke="url(#t50g)" stroke-width="10" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" style="transition:stroke-dashoffset 1.2s ease"/><defs><linearGradient id="t50g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00d4ff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+          <div class="num"><b id="t50Score">0</b><small>su 100</small></div>
+        </div>
+        <div class="t50-verdict" id="t50Verdict"></div>
+        <p id="t50Lead"></p>
+        <div class="t50-spots" id="t50Spots"></div>
+        <div class="t50-next-box" id="t50Lead1">
+          <h3>Vuoi vedere come potrebbe essere il tuo sito?</h3>
+          <p>Prepariamo gratis la bozza della nuova homepage della tua attività e te la mandiamo su WhatsApp. Ci servono solo due dati.</p>
+          <div class="form-row">
+            <div class="form-group"><label for="fNome">Nome</label><input type="text" id="fNome" autocomplete="given-name"></div>
+            <div class="form-group"><label for="fTel">Cellulare (WhatsApp)</label><input type="tel" id="fTel" autocomplete="tel" placeholder="+41 79 …"></div>
+          </div>
+          <label class="t50-consent"><input type="checkbox" id="fOk"> <span>Acconsento a essere ricontattato da The Social Media Lab su WhatsApp o per telefono per ricevere la bozza gratuita. Ho letto l'<a href='/privacy' target='_blank'>informativa privacy</a>.</span></label>
+          <input type="text" id="fBot" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          <div class="t50-err" id="t50Err"></div>
+          <button type="button" class="t50-next" id="t50Send">Voglio la bozza gratuita &rarr;</button>
+        </div>
+        <div class="t50-next-box" id="t50Lead2" style="display:none">
+          <h3>Fatto: la tua bozza è in preparazione</h3>
+          <p id="t50NextTxt"></p>
+          <a class="t50-wa" id="t50Wa" href="https://wa.me/393401784206" target="_blank" rel="noopener">Scrivici su WhatsApp &rarr;</a>
+        </div>
+        <div class="t50-offer">
+          <h3>Se la bozza ti piace, ecco cosa costa</h3>
+          <div class="t50-offer-grid">
+            <div class="t50-offer-card">
+              <span class="t50-offer-tag">Il sito</span>
+              <strong>Sito Express</strong>
+              <div class="t50-offer-price">CHF 590 <small>IVA inclusa, una volta sola</small></div>
+              <p>Sito professionale online in 7 giorni: testi scritti da noi, pensato per il telefono, scheda Google, dominio e hosting per il primo anno.</p>
+            </div>
+            <div class="t50-offer-card">
+              <span class="t50-offer-tag">I social</span>
+              <strong>Gestione Social Starter</strong>
+              <div class="t50-offer-price">CHF 390 <small>al mese + IVA</small></div>
+              <p>Affidi i social a noi: strategia di neuromarketing, 8 post al mese, pubblicazione, risposte ai commenti e report. Tu approvi in 10 minuti al mese su WhatsApp.</p>
+            </div>
+          </div>
+          <p class="t50-offer-note">Insieme al Sito Express la gestione social parte senza costi di avvio, con un impegno minimo di 3 mesi. La bozza resta gratuita: se non ti convince, non paghi niente.</p>
+          <a class='t50-offer-link' href='/sito-express'>Tutti i dettagli &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <div class="t50-foot">Nessun impegno. Il punteggio lo vedi senza lasciare dati; nome e WhatsApp servono solo per la bozza. <a href='/privacy'>Privacy</a></div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const qs=[...document.querySelectorAll('.t50-q')];
+  const total=qs.length; let i=0; const a={};
+  const bar=document.getElementById('t50Bar'), stepN=document.getElementById('t50StepN');
+  const next=document.getElementById('t50Next'), back=document.getElementById('t50Back');
+  const urlBox=document.getElementById('t50UrlBox');
+  const utm={}; const sp=new URLSearchParams(location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_content'].forEach(k=>utm[k]=sp.get(k)||'');
+  let started=false; let moved=false;
+
+  function go(delta){ const n=i+delta; if(n<0) return; if(n>=total){ finish(); return; } i=n; show(i); }
+  function show(n){
+    qs.forEach((q,k)=>q.classList.toggle('active',k===n));
+    bar.style.width=(n/total*100)+'%';
+    stepN.textContent='Domanda '+(n+1)+' di '+total;
+    back.hidden=n===0;
+    const key=qs[n].dataset.key;
+    next.textContent=n===total-1?'Vedi il mio punteggio →':'Avanti →';
+    next.disabled=!a[key];
+    if(moved) window.scrollTo({top:document.querySelector('.t50-card').offsetTop-110,behavior:'smooth'});
+    moved=true;
+  }
+  qs.forEach(q=>{
+    q.querySelectorAll('.t50-opt').forEach(b=>b.addEventListener('click',()=>{
+      q.querySelectorAll('.t50-opt').forEach(x=>x.classList.remove('sel'));
+      b.classList.add('sel'); a[q.dataset.key]=b.dataset.v; next.disabled=false;
+      if(!started){started=true; if(window.fbq) fbq('trackCustom','TestIniziato');}
+      if(q.dataset.key==='sito'){
+        const hasSite=(b.dataset.v==='recente'||b.dataset.v==='vecchio');
+        urlBox.style.display=hasSite?'block':'none';
+        if(hasSite) return;
+      }
+      setTimeout(()=>go(1),260);
+    }));
+  });
+  back.addEventListener('click',()=>go(-1));
+  next.addEventListener('click',()=>{ if(a[qs[i].dataset.key]) go(1); });
+
+  function score(){
+    let s=0;
+    s+={recente:50,vecchio:25,'solo social':10,no:0}[a.sito]||0;
+    s+={sito:40,scheda:20,niente:0,'non so':8}[a.google]||0;
+    if(a.sito==='recente'&&a.google==='sito') s+=10;
+    return Math.max(0,Math.min(100,s));
+  }
+  function spots(){
+    const L=[];
+    if(a.sito==='no') L.push(['Per chi non ti conosce, non esisti','Chi cerca un’attività come la tua su Google trova solo i concorrenti che hanno un sito.']);
+    if(a.sito==='solo social') L.push(['I social non bastano a chi ti cerca','Una pagina social parla a chi ti segue già. Chi ti cerca su Google per la prima volta non la trova o non si fida.']);
+    if(a.sito==='vecchio') L.push(['Un sito datato si legge come «trascurato»','Nei primi 50 millisecondi il cervello giudica l’aspetto, non i contenuti: un sito di qualche anno fa abbassa la fiducia prima che il cliente legga il tuo nome.']);
+    if(a.google==='niente'||a.google==='non so') L.push(['Cercandoti, non trovano te','Chi ha sentito parlare di te e ti cerca per verificare deve trovarti subito, con indirizzo, orari e un modo per contattarti.']);
+    if(a.google==='scheda') L.push(['Hai la vetrina, manca il negozio','La scheda Google porta la gente fino alla porta, ma senza un sito non può vedere cosa fai, quanto vali e perché scegliere te.']);
+    const fall=[['Il telefono decide','La maggior parte delle ricerche di attività locali parte da uno smartphone: se il sito non si legge bene in pochi secondi, il cliente chiama un altro.'],['Un solo invito all’azione','I siti che convertono chiedono una cosa sola e la rendono facilissima: chiamare, scrivere su WhatsApp, prenotare.'],['Le recensioni in vista','Le recensioni positive sono la prova più forte per chi non ti conosce: devono vedersi subito, non in fondo alla pagina.']];
+    let k=0; while(L.length<3 && k<fall.length) L.push(fall[k++]);
+    return L.slice(0,3);
+  }
+  function verdict(s){
+    if(s<40) return ['Allarme rosso','Oggi la tua presenza online lascia andare clienti che ti stanno già cercando.'];
+    if(s<70) return ['Da migliorare','Hai una base, ma nei primi secondi stai perdendo una parte dei clienti che ti cercano.'];
+    return ['Buona base','La tua presenza online regge. Con qualche intervento mirato può portarti più contatti.'];
+  }
+  function esc(t){return t.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+  let S=0, SP=[];
+  function finish(){
+    S=score(); SP=spots();
+    if(window.fbq) fbq('trackCustom','TestCompletato',{content_category:a.settore||'',punteggio:S});
+    document.getElementById('t50Quiz').style.display='none';
+    document.getElementById('t50Intro').style.display='none';
+    const r=document.getElementById('t50Res'); r.classList.add('active');
+    const [vt,vl]=verdict(S);
+    document.getElementById('t50Verdict').textContent=vt;
+    document.getElementById('t50Lead').textContent=vl+' Ecco i 3 punti ciechi principali.';
+    document.getElementById('t50Spots').innerHTML=SP.map(x=>'<div class="t50-spot"><strong>'+esc(x[0])+'</strong><span>'+esc(x[1])+'</span></div>').join('');
+    window.scrollTo({top:0,behavior:'smooth'});
+    let n=0; const el=document.getElementById('t50Score'); const arc=document.getElementById('t50Arc');
+    setTimeout(()=>{arc.style.strokeDashoffset=String(326.7*(1-S/100));},100);
+    const tick=setInterval(()=>{n+=Math.max(1,Math.round(S/40)); if(n>=S){n=S;clearInterval(tick);} el.textContent=n;},30);
+  }
+
+  const send=document.getElementById('t50Send');
+  send.addEventListener('click',async()=>{
+    const v=id=>document.getElementById(id).value.trim();
+    const err=document.getElementById('t50Err'); err.textContent='';
+    const d={nome:v('fNome'),telefono:v('fTel')};
+    if(!d.nome){err.textContent='Scrivi il tuo nome.';return;}
+    if(d.telefono.replace(/\D/g,'').length<9){err.textContent='Inserisci un numero di cellulare valido.';return;}
+    if(!document.getElementById('fOk').checked){err.textContent='Per mandarti la bozza serve il tuo consenso.';return;}
+    const [vt]=verdict(S);
+    const body=new URLSearchParams({'form-name':'test-50ms','bot-field':document.getElementById('fBot').value,
+      settore:a.settore||'',sito:a.sito||'',sito_url:document.getElementById('t50Url').value.trim(),google:a.google||'',
+      nome:d.nome,telefono:d.telefono,consenso:'si',lingua:'Italiano',
+      punteggio:String(S),temperatura:'NUOVO CONTATTO - scrivere su WhatsApp entro 1 ora',punti_ciechi:SP.map(x=>x[0]).join(' | '),...utm});
+    send.disabled=true; send.textContent='Invio in corso…';
+    try{ await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()}); }catch(e){}
+    if(window.fbq) fbq('track','Lead',{content_name:'Test 50 ms',content_category:a.settore||''});
+    document.getElementById('t50Lead1').style.display='none';
+    document.getElementById('t50Lead2').style.display='block';
+    document.getElementById('t50NextTxt').textContent='Grazie '+d.nome+'. Entro 48 ore lavorative ti scriviamo su WhatsApp per mostrarti la bozza della tua nuova homepage. Se vuoi accelerare, scrivici tu adesso: ci raccontiamo la tua attività in due messaggi.';
+    const waTxt='Ciao, sono '+d.nome+'. Ho appena fatto il test dei 50 millisecondi: punteggio '+S+'/100 ('+vt+').\n'+
+      'Settore: '+(a.settore||'-')+' · Sito: '+(a.sito||'-')+' · Google: '+(a.google||'-')+'\n'+
+      'Vorrei ricevere la bozza gratuita della mia homepage.';
+    document.getElementById('t50Wa').href='https://wa.me/393401784206?text='+encodeURIComponent(waTxt);
+  });
+  show(0);
+})();
+</script>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:36px;height:36px;background:var(--gradient-btn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:700;font-size:.65rem;color:var(--white)">SML</div>
+          <div style="font-family:var(--font);font-weight:600;color:var(--white)">The Social Media <span style="color:var(--cyan)">Lab</span></div>
+        </div>
+        <p>Agenzia di social media marketing in Ticino specializzata in neuromarketing, siti web e formazione digitale.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thesocialmedialab.ch" target="_blank" title="Instagram">📷</a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Naviga</h4>
+        <a href="/">Home</a>
+        <a href='/chi-siamo'>Chi Siamo</a>
+        <a href='/servizi'>Servizi</a>
+        <a href='/portfolio'>Portfolio</a>
+      </div>
+      <div class="footer-col">
+        <h4>Servizi</h4>
+        <a href='/pacchetti'>Pacchetti</a>
+        <a href='/academy'>Academy</a>
+        <a href='/contatti'>Contatti</a>
+        <a href='/privacy'>Privacy e note legali</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <a href="mailto:info@thesocialmedia-lab.com">Email</a>
+        <a href="tel:+41782303582">Telefono</a>
+        <a href="https://instagram.com/thesocialmedialab.ch">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Social Media Lab. Tutti i diritti riservati.</p>
+      <div>
+        <a href='/privacy'>Privacy</a> • <a href='/privacy#impressum'>Note legali</a> • <a href='/privacy#cookie'>Cookie</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// Mobile Menu Toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+if(mobileToggle){
+  mobileToggle.addEventListener('click',()=>{
+    mobileMenu.classList.toggle('open');
+    mobileToggle.classList.toggle('active');
+  });
+}
+
+// Scroll Progress
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  if(scrollProgress) scrollProgress.style.width = scrolled + '%';
+});
+
+// Custom Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove',e=>{
+  if(cursor){
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  }
+});
+
+document.addEventListener('mousedown',()=>{
+  if(cursor) cursor.classList.add('active');
+});
+
+document.addEventListener('mouseup',()=>{
+  if(cursor) cursor.classList.remove('active');
+});
+
+// Nav Scrolled Effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY > 50){
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Reveal Animation
+const revealElements = document.querySelectorAll('.reveal');
+const revealOnScroll = ()=>{
+  revealElements.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight * 0.9){
+      el.classList.add('visible');
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item=>{
+  const question = item.querySelector('.faq-q');
+  question.addEventListener('click',()=>{
+    faqItems.forEach(i=>i.classList.remove('open'));
+    item.classList.add('open');
+  });
+});
+
+// Particles Canvas (simple version)
+const canvas = document.getElementById('particles');
+if(canvas && canvas.getContext){
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  let particles = [];
+  
+  class Particle {
+    constructor(){
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 1.5;
+      this.speedX = (Math.random() - 0.5) * 0.5;
+      this.speedY = (Math.random() - 0.5) * 0.5;
+      this.opacity = Math.random() * 0.5;
+    }
+    update(){
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if(this.x > canvas.width) this.x = 0;
+      if(this.x < 0) this.x = canvas.width;
+      if(this.y > canvas.height) this.y = 0;
+      if(this.y < 0) this.y = canvas.height;
+    }
+    draw(){
+      ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  
+  for(let i = 0; i < 50; i++){
+    particles.push(new Particle());
+  }
+  
+  const animateParticles = ()=>{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p=>{
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  };
+  animateParticles();
+  
+  window.addEventListener('resize',()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+}
+</script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

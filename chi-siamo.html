@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+<script src="/js/cookie.js" defer></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Chi Siamo | The Social Media Lab — Agenzia Neuromarketing Ticino</title>
 <meta name="description" content="Conosci il team di The Social Media Lab: Alejandra Moya, neuromarketing expert, e Guglielmo Poli, formatore internazionale. Scopri la nostra storia, valori e metodo.">
 <meta name="keywords" content="The Social Media Lab chi siamo, Alejandra Moya neuromarketing, Guglielmo Poli formatore, agenzia marketing Ticino, team marketing digitale">
-<link rel="canonical" href="https://thesocialmedialab.ch/chi-siamo.html">
-<link rel="alternate" hreflang="it" href="https://thesocialmedialab.ch/chi-siamo.html">
-<link rel="alternate" hreflang="en" href="https://thesocialmedialab.ch/en/about.html">
-<link rel="alternate" hreflang="es" href="https://thesocialmedialab.ch/es/quienes-somos.html">
+<link rel="canonical" href="https://thesocialmedia-lab.com/chi-siamo.html">
+<link rel="alternate" hreflang="it" href="https://thesocialmedia-lab.com/chi-siamo.html">
+<link rel="alternate" hreflang="en" href="https://thesocialmedia-lab.com/en/about.html">
+<link rel="alternate" hreflang="es" href="https://thesocialmedia-lab.com/es/quienes-somos.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Chi Siamo | The Social Media Lab">
 <meta property="og:description" content="La storia di The Social Media Lab: neuromarketing + formazione internazionale = risultati straordinari.">
-<meta property="og:url" content="https://thesocialmedialab.ch/chi-siamo.html">
+<meta property="og:url" content="https://thesocialmedia-lab.com/chi-siamo.html">
 <meta property="og:locale" content="it_CH">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,11 +29,11 @@
   "@type":"AboutPage",
   "name":"Chi Siamo — The Social Media Lab",
   "description":"Scopri la storia, il team e il metodo di The Social Media Lab, l'agenzia che unisce neuromarketing con formazione professionale.",
-  "url":"https://thesocialmedialab.ch/chi-siamo.html",
+  "url":"https://thesocialmedia-lab.com/chi-siamo.html",
   "mainEntity":{
     "@type":"Organization",
     "name":"The Social Media Lab",
-    "url":"https://thesocialmedialab.ch/",
+    "url":"https://thesocialmedia-lab.com/",
     "description":"Agenzia di social media marketing basata sul neuromarketing in Ticino.",
     "founder":[
       {
@@ -46,8 +47,8 @@
         "@type":"Person",
         "name":"Guglielmo Poli",
         "jobTitle":"Co-Founder & Head of Training",
-        "description":"Esperto di formazione professionale con 20+ anni di esperienza internazionale. Parla italiano, inglese, spagnolo e francese.",
-        "knowsLanguage":["it","en","es","fr"]
+        "description":"Esperto di formazione professionale con 20+ anni di esperienza internazionale. Parla italiano, spagnolo e inglese.",
+        "knowsLanguage":["it","en","es"]
       }
     ],
     "address":{"@type":"PostalAddress","addressLocality":"Morbio Inferiore","addressRegion":"Ticino","addressCountry":"CH"},
@@ -85,6 +86,17 @@
 }
 </style>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+try{if(localStorage.getItem('sml_cc')==='no')fbq('consent','revoke')}catch(e){}fbq('init','994962172718425');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=994962172718425&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
 </head>
 <body>
 
@@ -109,20 +121,20 @@
     </a>
     <div class="nav-center">
       <a href="/">Home</a>
-      <a href="/chi-siamo.html" class="active">Chi Siamo</a>
-      <a href="/servizi.html">Servizi</a>
-      <a href="/portfolio.html">Portfolio</a>
-      <a href="/academy.html">Academy</a>
-      <a href="/pacchetti.html">Pacchetti</a>
-      <a href="/contatti.html">Contatti</a>
+      <a class='active' href='/chi-siamo'>Chi Siamo</a>
+      <a href='/servizi'>Servizi</a>
+      <a href='/portfolio'>Portfolio</a>
+      <a href='/academy'>Academy</a>
+      <a href='/pacchetti'>Pacchetti</a>
+      <a href='/contatti'>Contatti</a>
     </div>
     <div class="nav-right">
       <div class="nav-lang">
-        <a href="/chi-siamo.html" class="active">IT</a>
-        <a href="/en/about.html">EN</a>
-        <a href="/es/quienes-somos.html">ES</a>
+        <a class='active' href='/chi-siamo'>IT</a>
+        <a href='/en/about'>EN</a>
+        <a href='/es/quienes-somos'>ES</a>
       </div>
-      <a href="/contatti.html" class="nav-cta">Richiedi Preventivo</a>
+      <a class='nav-cta' href='/test-50ms'>Test gratuito</a>
     </div>
     <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -130,16 +142,16 @@
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <a href="/">Home</a>
-    <a href="/chi-siamo.html" class="active">Chi Siamo</a>
-    <a href="/servizi.html">Servizi</a>
-    <a href="/portfolio.html">Portfolio</a>
-    <a href="/academy.html">Academy</a>
-    <a href="/pacchetti.html">Pacchetti</a>
-    <a href="/contatti.html">Contatti</a>
+    <a class='active' href='/chi-siamo'>Chi Siamo</a>
+    <a href='/servizi'>Servizi</a>
+    <a href='/portfolio'>Portfolio</a>
+    <a href='/academy'>Academy</a>
+    <a href='/pacchetti'>Pacchetti</a>
+    <a href='/contatti'>Contatti</a>
     <div class="mobile-lang">
-      <a href="/chi-siamo.html" class="active">IT</a>
-      <a href="/en/about.html">EN</a>
-      <a href="/es/quienes-somos.html">ES</a>
+      <a class='active' href='/chi-siamo'>IT</a>
+      <a href='/en/about'>EN</a>
+      <a href='/es/quienes-somos'>ES</a>
     </div>
   </div>
 </nav>
@@ -229,7 +241,7 @@
         <div class="team-social">
           <a href="https://www.instagram.com/thesocialmedialab.ch?igsh=MXJ4ejFpaGt6eGFoOQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
           <a href="https://www.linkedin.com/in/alejandra-amaya-b56714233/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-          <a href="https://wa.me/41782303582" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          <a href="https://wa.me/393401784206" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
         </div>
       </div>
       <div class="team-card reveal reveal-d2">
@@ -239,12 +251,12 @@
         <h3>Guglielmo Poli</h3>
         <div class="team-role">Co-Founder &amp; Head of Training</div>
         <p style="margin-bottom:16px">Con oltre 20 anni di esperienza internazionale nella formazione professionale, Guglielmo ha insegnato in aula e online in Svizzera, Italia, Spagna e oltre. Ha certificazioni di Master Trainer e specializzazioni in adult learning methodology e instructional design. Appassionato di informatica fin da bambino, è un attento osservatore dell'intelligenza artificiale — sia sotto il profilo tecnologico che filosofico — e integra questa sensibilità nell'approccio formativo del laboratorio.</p>
-        <p style="margin-bottom:16px">Ha lavorato con multinazionali, PMI e università, trasformando sempre competenze complesse in percorsi formativi concreti e immediatamente applicabili. Parla italiano, inglese, spagnolo e francese con fluenza — una rarità nel marketing digitale svizzero.</p>
+        <p style="margin-bottom:16px">Ha lavorato con multinazionali, PMI e università, trasformando sempre competenze complesse in percorsi formativi concreti e immediatamente applicabili. Parla italiano, spagnolo e inglese, e ha tenuto oltre 600 seminari in quattro continenti.</p>
         <p style="margin-bottom:16px">Nel team, porta la capacità di tradurre le strategie di Alejandra in formazione pratica per i vostri team. Se comprate una strategia neuromarketing, lui garantisce che il vostro team sappia implementarla senza aiuto esterno.</p>
         <div class="team-social">
           <a href="https://www.instagram.com/thesocialmedialab.ch?igsh=MXJ4ejFpaGt6eGFoOQ%3D%3D" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
           <a href="https://www.linkedin.com/in/guglielmo-poli-4b4211398/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-          <a href="https://wa.me/41782303582" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+          <a href="https://wa.me/393401784206" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
         </div>
       </div>
     </div>
@@ -318,8 +330,8 @@
       <h2>Pronti a Scoprire Come Pensiamo i Vostri Clienti?</h2>
       <p>Contattateci per una consulenza gratuita. Vi racconteremo come il neuromarketing può trasformare il vostro business.</p>
       <div class="cta-btns">
-        <a href="/contatti.html" class="btn-grad">Richiedi Consulenza Gratuita &rarr;</a>
-        <a href="/servizi.html" class="btn-ghost">Scopri Tutti i Servizi &rarr;</a>
+        <a class='btn-grad' href='/contatti'>Richiedi Consulenza Gratuita &rarr;</a>
+        <a class='btn-ghost' href='/servizi'>Scopri Tutti i Servizi &rarr;</a>
       </div>
     </div>
   </div>
@@ -343,25 +355,25 @@
       </div>
       <div class="footer-col">
         <h4>Servizi</h4>
-        <a href="/servizi.html">Social Media Management</a>
-        <a href="/servizi.html">Siti Web</a>
-        <a href="/servizi.html">Neuromarketing</a>
-        <a href="/servizi.html">Content Creation</a>
-        <a href="/servizi.html">SEO & AEO</a>
+        <a href='/servizi'>Social Media Management</a>
+        <a href='/servizi'>Siti Web</a>
+        <a href='/servizi'>Neuromarketing</a>
+        <a href='/servizi'>Content Creation</a>
+        <a href='/servizi'>SEO & AEO</a>
       </div>
       <div class="footer-col">
         <h4>Azienda</h4>
-        <a href="/chi-siamo.html">Chi Siamo</a>
-        <a href="/portfolio.html">Portfolio</a>
-        <a href="/academy.html">Academy</a>
-        <a href="/pacchetti.html">Pacchetti</a>
-        <a href="/contatti.html">Contatti</a>
+        <a href='/chi-siamo'>Chi Siamo</a>
+        <a href='/portfolio'>Portfolio</a>
+        <a href='/academy'>Academy</a>
+        <a href='/pacchetti'>Pacchetti</a>
+        <a href='/contatti'>Contatti</a>
       </div>
       <div class="footer-col">
         <h4>Lingue</h4>
-        <a href="/chi-siamo.html">&#127470;&#127481; Italiano</a>
-        <a href="/en/about.html">&#127468;&#127463; English</a>
-        <a href="/es/quienes-somos.html">&#127466;&#127480; Espa&ntilde;ol</a>
+        <a href='/chi-siamo'>&#127470;&#127481; Italiano</a>
+        <a href='/en/about'>&#127468;&#127463; English</a>
+        <a href='/es/quienes-somos'>&#127466;&#127480; Espa&ntilde;ol</a>
       </div>
     </div>
     <div class="footer-bottom">

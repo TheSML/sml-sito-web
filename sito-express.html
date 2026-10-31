@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script src="/js/cookie.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sito Express: online in 7 giorni | The Social Media Lab</title>
+<meta name="description" content="Sito professionale per la tua attività in Ticino, online in 7 giorni. Prima vedi la bozza gratuita, poi decidi. CHF 590 IVA inclusa, tutto compreso.">
+<link rel="canonical" href="https://thesocialmedia-lab.com/sito-express.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sito Express: online in 7 giorni | The Social Media Lab">
+<meta property="og:description" content="Sito professionale per la tua attività in Ticino, online in 7 giorni. Prima vedi la bozza gratuita, poi decidi. CHF 590 IVA inclusa, tutto compreso.">
+<meta property="og:image" content="https://thesocialmedia-lab.com/img/og-image.jpg">
+<meta property="og:url" content="https://thesocialmedia-lab.com/sito-express.html">
+<meta property="og:locale" content="it_CH">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/sml-logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+try{if(localStorage.getItem('sml_cc')==='no')fbq('consent','revoke')}catch(e){}fbq('init','994962172718425');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=994962172718425&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Background Mesh -->
+<div class="bg-mesh"></div>
+
+<!-- Canvas Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+      <div class="nav-name">The Social Media <span>Lab</span></div>
+    </a>
+    <div class="nav-center">
+      <a href="/">Home</a>
+      <a href='/chi-siamo'>Chi Siamo</a>
+      <a href='/servizi'>Servizi</a>
+      <a href='/portfolio'>Portfolio</a>
+      <a href='/academy'>Academy</a>
+      <a href='/pacchetti'>Pacchetti</a>
+      <a href='/contatti'>Contatti</a>
+    </div>
+    <div class="nav-right">
+      
+      <a class='nav-cta' href='/test-50ms'>Test gratuito</a>
+    </div>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href='/chi-siamo'>Chi Siamo</a>
+    <a href='/servizi'>Servizi</a>
+    <a href='/portfolio'>Portfolio</a>
+    <a href='/academy'>Academy</a>
+    <a href='/pacchetti'>Pacchetti</a>
+    <a href='/contatti'>Contatti</a>
+    
+  </div>
+</nav>
+
+<style>
+.sx-hero{position:relative;z-index:1;padding:150px 0 70px;text-align:center}
+.sx-hero .eyebrow{display:inline-block;font-size:.72rem;font-weight:600;color:var(--cyan);letter-spacing:.18em;text-transform:uppercase;padding:6px 14px;border:1px solid rgba(0,212,255,.25);border-radius:99px;margin-bottom:18px}
+.sx-hero h1{font-family:var(--font);font-size:clamp(2rem,5.5vw,3.4rem);line-height:1.1;font-weight:700;color:var(--white);max-width:820px;margin:0 auto 18px}
+.sx-hero p{font-size:1.08rem;color:var(--text);max-width:620px;margin:0 auto 28px}
+.sx-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.sx-price-tag{margin-top:22px;font-size:.9rem;color:var(--text-dim)}
+.sx-price-tag b{color:var(--white);font-family:var(--font);font-size:1.15rem}
+.sx-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.sx-item{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px}
+.sx-item strong{display:block;color:var(--white);font-family:var(--font);margin-bottom:6px}
+.sx-item span{font-size:.88rem;color:var(--text)}
+.sx-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;counter-reset:s}
+.sx-step{position:relative;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 20px 20px}
+.sx-step::before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--gradient-btn);color:#fff;font-family:var(--font);font-weight:700;margin-bottom:12px}
+.sx-step strong{display:block;color:var(--white);font-family:var(--font);margin-bottom:6px}
+.sx-step span{font-size:.88rem;color:var(--text)}
+.sx-two{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:start}
+@media(max-width:860px){.sx-two{grid-template-columns:1fr}}
+.sx-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:30px}
+@media(max-width:600px){.sx-card{padding:22px 18px}}
+.sx-card h3{font-family:var(--font);color:var(--white);font-size:1.3rem;margin-bottom:12px}
+.sx-card ul{list-style:none;display:grid;gap:9px;margin:14px 0}
+.sx-card li{display:flex;gap:10px;font-size:.92rem;color:var(--text)}
+.sx-card li::before{content:'✓';color:var(--cyan);font-weight:700}
+.sx-card li.no::before{content:'–';color:var(--text-dim)}
+.sx-price{border-color:rgba(0,212,255,.3);background:linear-gradient(160deg,rgba(0,212,255,.07),rgba(139,92,246,.06))}
+.sx-amount{font-family:var(--font);font-size:3rem;font-weight:700;color:var(--white);line-height:1}
+.sx-amount small{font-size:1rem;color:var(--text-dim);font-weight:500}
+.sx-note{font-size:.8rem;color:var(--text-dim);margin-top:12px;line-height:1.6}
+.sx-guarantee{text-align:center;max-width:760px;margin:0 auto}
+.sx-guarantee h2{font-family:var(--font);color:var(--white);font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:12px}
+.sx-guarantee p{color:var(--text);font-size:1rem}
+.sx-demos{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+.sx-demos a{padding:10px 16px;border:1px solid var(--border-light);border-radius:99px;font-size:.85rem;color:var(--text-bright)}
+.sx-demos a:hover{border-color:var(--cyan);color:var(--white)}
+.sx-h2{font-family:var(--font);color:var(--white);font-size:clamp(1.6rem,4vw,2.2rem);text-align:center;margin-bottom:10px}
+.sx-sub{text-align:center;color:var(--text);max-width:620px;margin:0 auto 34px}
+</style>
+
+<section class="sx-hero">
+  <div class="container">
+    <div class="eyebrow">Sito Express · prezzo di lancio</div>
+    <h1>Il tuo sito professionale, <span class="grad">online in 7 giorni</span></h1>
+    <p>Prima vedi la bozza della tua nuova homepage, poi decidi. Testi scritti da noi, pensato per il telefono, trovabile su Google. Tu ci dedichi 20 minuti.</p>
+    <div class="sx-btns">
+      <a class='btn-grad' href='/test-50ms'>Ricevi la bozza gratuita &rarr;</a>
+      <a href="https://wa.me/393401784206?text=Ciao%2C%20vorrei%20informazioni%20sul%20Sito%20Express" target="_blank" rel="noopener" class="btn-ghost">Scrivici su WhatsApp</a>
+    </div>
+    <div class="sx-price-tag"><b>CHF 590</b> IVA inclusa · tutto compreso · nessun abbonamento obbligatorio</div>
+  </div>
+</section>
+
+<section class="section dark-bg">
+  <div class="container">
+    <h2 class="sx-h2">Come funziona</h2>
+    <p class="sx-sub">Quattro passi, nessuna sorpresa. Paghi solo se la bozza ti convince.</p>
+    <div class="sx-steps">
+      <div class="sx-step"><strong>Test di 60 secondi</strong><span>Rispondi a 7 domande sulla tua attività e sulla tua presenza online.</span></div>
+      <div class="sx-step"><strong>Bozza gratuita in 48 ore</strong><span>Prepariamo la homepage della tua attività, con il tuo nome e i tuoi servizi.</span></div>
+      <div class="sx-step"><strong>15 minuti insieme</strong><span>Te la mostriamo in videochiamata e la adattiamo a quello che ti serve.</span></div>
+      <div class="sx-step"><strong>Online in 7 giorni</strong><span>Dal ricevimento dei tuoi materiali, con un giro di revisioni incluso.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="sx-h2">Progettato per i primi <span class="grad">50 millisecondi</span></h2>
+    <p class="sx-sub">Uno studio della Carleton University ha misurato che un visitatore giudica una pagina web in circa 50 millisecondi. Per questo costruiamo ogni sito partendo da come decide il cervello del tuo cliente.</p>
+    <div class="sx-grid">
+      <div class="sx-item"><strong>Chiaro al primo sguardo</strong><span>Cosa fai e dove sei, scritto in alto, in una frase.</span></div>
+      <div class="sx-item"><strong>La fiducia in vista</strong><span>Recensioni e prove reali dove l'occhio arriva subito.</span></div>
+      <div class="sx-item"><strong>Una sola azione</strong><span>Chiamare o scrivere su WhatsApp con un tocco, da qualsiasi telefono.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-bg" id="prezzo">
+  <div class="container">
+    <div class="sx-two">
+      <div class="sx-card">
+        <h3>Cosa include</h3>
+        <ul>
+          <li>Sito di una pagina fino a 6 sezioni: apertura, servizi, chi siamo, recensioni, galleria, contatti</li>
+          <li>Testi scritti da noi dopo un'intervista di 20 minuti</li>
+          <li>Una lingua a scelta tra italiano, tedesco, francese e inglese</li>
+          <li>Pensato per il telefono, veloce, con certificato di sicurezza</li>
+          <li>Pulsanti WhatsApp e chiamata, modulo contatti, mappa</li>
+          <li>SEO di base e configurazione della scheda Google della tua attività</li>
+          <li>Informativa privacy e note legali</li>
+          <li>Dominio .ch e hosting inclusi per il primo anno</li>
+          <li>Online in 7 giorni lavorativi, un giro di revisioni</li>
+        </ul>
+        <h3 style="margin-top:22px">Non incluso</h3>
+        <ul>
+          <li class="no"><span>Più pagine, blog, prenotazioni online, e-commerce, servizio fotografico: sono nei nostri <a href='/pacchetti' style='color:var(--cyan);text-decoration:underline'>pacchetti</a></span></li>
+        </ul>
+      </div>
+      <div class="sx-card sx-price">
+        <div class="section-label" style="margin-bottom:10px">Prezzo di lancio</div>
+        <div class="sx-amount">CHF 590 <small>IVA inclusa</small></div>
+        <ul>
+          <li>Paghi solo se la bozza ti convince</li>
+          <li>Il sito e il dominio sono tuoi</li>
+          <li>Lingua aggiuntiva: CHF 190</li>
+        </ul>
+        <a class='btn-grad' href='/test-50ms' style='width:100%;justify-content:center'>Ricevi la bozza gratuita &rarr;</a>
+        <p class="sx-note">Dal secondo anno, dominio e hosting gestiti da noi costano CHF 190 all'anno, facoltativi. Realizziamo al massimo 8 Siti Express al mese, per seguirli tutti con cura.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="sx-guarantee">
+      <div class="section-label">La nostra garanzia</div>
+      <h2>Vedi prima, paghi dopo</h2>
+      <p>La bozza della tua homepage la prepariamo gratis, prima di qualsiasi impegno. Se non ti piace, non paghi niente e non ti chiederemo più nulla.</p>
+      <div class="sx-demos">
+        <a href="https://pavimenti.thesocialmedia-lab.com" target="_blank" rel="noopener">Demo · Pavimenti</a>
+        <a href="https://dental.thesocialmedia-lab.com" target="_blank" rel="noopener">Demo · Studio dentistico</a>
+        <a href="https://estetica.thesocialmedia-lab.com" target="_blank" rel="noopener">Demo · Centro estetico</a>
+        <a href="https://fiduciaria.thesocialmedia-lab.com" target="_blank" rel="noopener">Demo · Fiduciaria</a>
+        <a href="https://realestate.thesocialmedia-lab.com" target="_blank" rel="noopener">Demo · Immobiliare</a>
+      </div>
+      <p class="sx-note" style="text-align:center">Progetti dimostrativi, realizzati per mostrare il nostro stile.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section dark-bg" id="gestione">
+  <div class="container">
+    <div class="sx-two">
+      <div>
+        <div class="section-label">E dopo il sito?</div>
+        <h2 class="sx-h2" style="text-align:left">Tu fai il tuo lavoro, <span class="grad">ai social pensiamo noi</span></h2>
+        <p style="color:var(--text);margin-bottom:16px">Affidi tutto a noi: strategia basata sul neuromarketing, post, grafiche e didascalie, pubblicazione, risposte ai commenti e un report mensile di una pagina. A te chiediamo solo 10 minuti al mese per approvare il piano su WhatsApp.</p>
+      </div>
+      <div class="sx-card">
+        <h3>Gestione Social Starter</h3>
+        <div class="sx-amount" style="font-size:2.2rem">CHF 390 <small>al mese + IVA</small></div>
+        <ul>
+          <li>1 canale social, 8 post al mese</li>
+          <li>Strategia e piano editoriale</li>
+          <li>Pubblicazione e risposta ai commenti</li>
+          <li>Report mensile</li>
+          <li>Per chi ha il Sito Express: nessun costo di avvio</li>
+        </ul>
+        <p class="sx-note">Impegno minimo di 3 mesi, poi mese per mese. Più canali, storie e reel nel livello Professional da CHF 690 al mese + IVA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:40px">
+      <div class="section-label">Domande frequenti</div>
+      <h2 class="sx-h2">Risposte chiare</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q"><h3>Costa meno della media: dov'è il trucco?</h3><div class="faq-toggle">+</div></div><div class="faq-a"><p>Nessun trucco. Il perimetro è chiuso (una pagina, fino a 6 sezioni) e per la parte ripetitiva usiamo un metodo collaudato e strumenti di intelligenza artificiale. Il tempo che risparmiamo lo mettiamo su testi e struttura.</p></div></div>
+      <div class="faq-item"><div class="faq-q"><h3>Il sito è mio?</h3><div class="faq-toggle">+</div></div><div class="faq-a"><p>Sì. Il dominio è intestato a te e il sito resta tuo. Se un giorno vuoi spostarlo, ti consegniamo i file.</p></div></div>
+      <div class="faq-item"><div class="faq-q"><h3>Cosa pago dopo il primo anno?</h3><div class="faq-toggle">+</div></div><div class="faq-a"><p>Niente di obbligatorio. Se vuoi che continuiamo a gestire dominio e hosting, costa CHF 190 all'anno. Eventuali modifiche successive le quotiamo prima.</p></div></div>
+      <div class="faq-item"><div class="faq-q"><h3>Devo scrivere io i testi?</h3><div class="faq-toggle">+</div></div><div class="faq-a"><p>No. Facciamo un'intervista di 20 minuti e li scriviamo noi. A te servono solo logo e qualche foto, anche dal telefono.</p></div></div>
+      <div class="faq-item"><div class="faq-q"><h3>E se la bozza non mi piace?</h3><div class="faq-toggle">+</div></div><div class="faq-a"><p>Non paghi nulla. La bozza è gratuita e senza impegno: la paghi solo se decidi di andare online.</p></div></div>
+      <div class="faq-item"><div class="faq-q"><h3>In che lingue lo fate?</h3><div class="faq-toggle">+</div></div><div class="faq-a"><p>Italiano, tedesco, francese o inglese. La prima lingua è inclusa, ogni lingua in più costa CHF 190.</p></div></div>
+      <div class="faq-item"><div class="faq-q"><h3>Come si paga?</h3><div class="faq-toggle">+</div></div><div class="faq-a"><p>Dopo aver visto la bozza, con carta tramite un link di pagamento sicuro, oppure con bonifico su fattura. Il pagamento blocca il tuo posto nel calendario del mese.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Vuoi vedere come sarebbe il tuo sito?</h2>
+      <p>Fai il test dei 50 millisecondi: in 60 secondi hai il punteggio, entro 48 ore lavorative la bozza gratuita della tua nuova homepage.</p>
+      <div class="cta-btns"><a class='btn-grad' href='/test-50ms'>Fai il test gratuito &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:36px;height:36px;background:var(--gradient-btn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:700;font-size:.65rem;color:var(--white)">SML</div>
+          <div style="font-family:var(--font);font-weight:600;color:var(--white)">The Social Media <span style="color:var(--cyan)">Lab</span></div>
+        </div>
+        <p>Agenzia di social media marketing in Ticino specializzata in neuromarketing, siti web e formazione digitale.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thesocialmedialab.ch" target="_blank" title="Instagram">📷</a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Naviga</h4>
+        <a href="/">Home</a>
+        <a href='/chi-siamo'>Chi Siamo</a>
+        <a href='/servizi'>Servizi</a>
+        <a href='/portfolio'>Portfolio</a>
+      </div>
+      <div class="footer-col">
+        <h4>Servizi</h4>
+        <a href='/pacchetti'>Pacchetti</a>
+        <a href='/academy'>Academy</a>
+        <a href='/contatti'>Contatti</a>
+        <a href='/privacy'>Privacy e note legali</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <a href="mailto:info@thesocialmedia-lab.com">Email</a>
+        <a href="tel:+41782303582">Telefono</a>
+        <a href="https://instagram.com/thesocialmedialab.ch">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Social Media Lab. Tutti i diritti riservati.</p>
+      <div>
+        <a href='/privacy'>Privacy</a> • <a href='/privacy#impressum'>Note legali</a> • <a href='/privacy#cookie'>Cookie</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// Mobile Menu Toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+if(mobileToggle){
+  mobileToggle.addEventListener('click',()=>{
+    mobileMenu.classList.toggle('open');
+    mobileToggle.classList.toggle('active');
+  });
+}
+
+// Scroll Progress
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  if(scrollProgress) scrollProgress.style.width = scrolled + '%';
+});
+
+// Custom Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove',e=>{
+  if(cursor){
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  }
+});
+
+document.addEventListener('mousedown',()=>{
+  if(cursor) cursor.classList.add('active');
+});
+
+document.addEventListener('mouseup',()=>{
+  if(cursor) cursor.classList.remove('active');
+});
+
+// Nav Scrolled Effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY > 50){
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Reveal Animation
+const revealElements = document.querySelectorAll('.reveal');
+const revealOnScroll = ()=>{
+  revealElements.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight * 0.9){
+      el.classList.add('visible');
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item=>{
+  const question = item.querySelector('.faq-q');
+  question.addEventListener('click',()=>{
+    faqItems.forEach(i=>i.classList.remove('open'));
+    item.classList.add('open');
+  });
+});
+
+// Particles Canvas (simple version)
+const canvas = document.getElementById('particles');
+if(canvas && canvas.getContext){
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  let particles = [];
+  
+  class Particle {
+    constructor(){
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 1.5;
+      this.speedX = (Math.random() - 0.5) * 0.5;
+      this.speedY = (Math.random() - 0.5) * 0.5;
+      this.opacity = Math.random() * 0.5;
+    }
+    update(){
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if(this.x > canvas.width) this.x = 0;
+      if(this.x < 0) this.x = canvas.width;
+      if(this.y > canvas.height) this.y = 0;
+      if(this.y < 0) this.y = canvas.height;
+    }
+    draw(){
+      ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  
+  for(let i = 0; i < 50; i++){
+    particles.push(new Particle());
+  }
+  
+  const animateParticles = ()=>{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p=>{
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  };
+  animateParticles();
+  
+  window.addEventListener('resize',()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+}
+</script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
