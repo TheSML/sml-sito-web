@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script src="/js/cookie.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anteprima gratuita online · Automazioni IA per imprese · 19 novembre | The Social Media Lab</title>
+<meta name="description" content="45 minuti gratuiti su Zoom, giovedì 19 novembre 2026 alle 18:30: due automazioni con l'intelligenza artificiale mostrate dal vivo su un'azienda vera, poi le tue domande. Per titolari, professionisti e responsabili d'ufficio.">
+<link rel="canonical" href="https://thesocialmedia-lab.com/anteprima-ia">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anteprima gratuita online · Automazioni IA per imprese · 19 novembre, 18:30">
+<meta property="og:description" content="45 minuti gratuiti su Zoom: due automazioni IA mostrate dal vivo su un'azienda vera, poi le tue domande. Giovedì 19 novembre 2026, 18:30.">
+<meta property="og:image" content="https://thesocialmedia-lab.com/img/anteprima-ia-og.jpg">
+<meta property="og:url" content="https://thesocialmedia-lab.com/anteprima-ia">
+<meta property="og:locale" content="it_CH">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/sml-logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+try{if(localStorage.getItem('sml_cc')==='no')fbq('consent','revoke')}catch(e){}fbq('init','994962172718425');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=994962172718425&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Background Mesh -->
+<div class="bg-mesh"></div>
+
+<!-- Canvas Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+      <div class="nav-name">The Social Media <span>Lab</span></div>
+    </a>
+    <div class="nav-center">
+      <a href="/">Home</a>
+      <a href='/chi-siamo'>Chi Siamo</a>
+      <a href='/servizi'>Servizi</a>
+      <a href='/portfolio'>Portfolio</a>
+      <a href='/academy'>Academy</a>
+      <a href='/pacchetti'>Pacchetti</a>
+      <a href='/contatti'>Contatti</a>
+    </div>
+    <div class="nav-right">
+      
+      <a class='nav-cta' href='/test-50ms'>Test gratuito</a>
+    </div>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href='/chi-siamo'>Chi Siamo</a>
+    <a href='/servizi'>Servizi</a>
+    <a href='/portfolio'>Portfolio</a>
+    <a href='/academy'>Academy</a>
+    <a href='/pacchetti'>Pacchetti</a>
+    <a href='/contatti'>Contatti</a>
+    
+  </div>
+</nav>
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--mono:'IBM Plex Mono',ui-monospace,monospace;--line:rgba(255,255,255,.09)}
+.wk{position:relative;z-index:1}
+.wk .kicker{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:16px;display:block}
+.wk h2{font-family:var(--font);color:var(--white);font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.15;font-weight:700;letter-spacing:-.01em;max-width:760px}
+.wk .intro{color:var(--text);font-size:1.05rem;max-width:640px;margin-top:14px}
+.wk-sec{padding:96px 0;border-top:1px solid var(--line)}
+@media(max-width:700px){.wk-sec{padding:64px 0}}
+
+/* HERO */
+.wk-hero{padding:150px 0 80px}
+.wk-hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:end}
+@media(max-width:900px){.wk-hero-grid{grid-template-columns:1fr;gap:40px}}
+.wk-hero h1{font-family:var(--font);font-size:clamp(2.2rem,5.4vw,3.6rem);line-height:1.05;font-weight:700;color:var(--white);letter-spacing:-.02em}
+.wk-hero h1 em{font-style:normal;color:var(--cyan)}
+.wk-hero .lead{font-size:1.1rem;color:var(--text);max-width:600px;margin:22px 0 30px}
+.wk-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.wk-cta .note{font-size:.85rem;color:var(--text-dim)}
+.wk-ticket{margin-top:40px;display:grid;grid-template-columns:repeat(4,auto);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:680px}
+@media(max-width:640px){.wk-ticket{grid-template-columns:1fr 1fr}}
+.wk-ticket div{padding:16px 18px 16px 0;display:flex;gap:10px;align-items:flex-start}
+.wk-ticket svg{flex:none;width:18px;height:18px;color:var(--cyan);margin-top:3px}
+.wk-ticket dt{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim)}
+.wk-ticket dd{color:var(--white);font-weight:500;font-size:.95rem}
+.wk-portrait figure{margin:0}
+.wk-portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:18px;filter:saturate(.95)}
+.wk-portrait figcaption{margin-top:12px;font-size:.85rem;color:var(--text-dim)}
+.wk-portrait figcaption b{color:var(--white);font-weight:600}
+
+/* PER CHI */
+.wk-who{font-family:var(--font);font-size:clamp(1.25rem,2.6vw,1.6rem);line-height:1.45;color:var(--text-bright);max-width:900px}
+.wk-who mark{background:none;color:var(--white);border-bottom:2px solid var(--cyan)}
+
+/* LIVELLI */
+.wk-levels{margin-top:48px;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+@media(max-width:980px){.wk-levels{grid-template-columns:1fr}}
+.wk-level{padding:22px 22px 0 0;border-right:1px solid var(--line)}
+.wk-level:last-child{border-right:none}
+@media(max-width:980px){.wk-level{border-right:none;border-bottom:1px solid var(--line);padding:18px 0;display:grid;grid-template-columns:54px 1fr;gap:4px 12px}.wk-level .n{grid-row:span 2}}
+.wk-level .n{font-family:var(--mono);color:var(--text-dim);font-size:.85rem;display:block;margin-bottom:28px}
+.wk-level h3{font-family:var(--font);color:var(--white);font-size:1.02rem;margin-bottom:6px}
+.wk-level p{font-size:.88rem;color:var(--text);line-height:1.6;padding-bottom:22px}
+.wk-level.on .n{color:var(--cyan)}
+.wk-level.on h3{color:var(--cyan)}
+
+/* AUTOMAZIONI */
+.wk-list{margin-top:44px;border-top:1px solid var(--line)}
+.wk-row{display:grid;grid-template-columns:150px 1fr 1fr;gap:28px;padding:22px 0;border-bottom:1px solid var(--line);align-items:start}
+@media(max-width:820px){.wk-row{grid-template-columns:1fr;gap:6px}}
+.wk-row .area{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-dim);padding-top:4px}
+.wk-row h3{font-family:var(--font);color:var(--white);font-size:1.05rem}
+.wk-row p{font-size:.92rem;color:var(--text);line-height:1.6}
+.wk-head{display:grid;grid-template-columns:150px 1fr 1fr;gap:28px;padding:0 0 10px;font-family:var(--mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--text-dim)}
+@media(max-width:820px){.wk-head{display:none}}
+
+/* CASO REALE */
+.wk-case{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+@media(max-width:900px){.wk-case{grid-template-columns:1fr;gap:32px}}
+.wk-flow{background:#0a0f22;border:1px solid var(--line);border-radius:14px;overflow:hidden;font-family:var(--mono);font-size:.84rem}
+.wk-flow .bar{display:flex;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--line);color:var(--text-dim);font-size:.74rem}
+.wk-flow .bar b{color:var(--white);font-weight:500}
+.wk-flow ol{list-style:none;margin:0;padding:8px 0}
+.wk-flow li{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:10px 16px;color:var(--text)}
+.wk-flow li span{color:var(--text-dim)}
+.wk-flow li.out{color:var(--white);background:rgba(0,212,255,.06);border-top:1px solid var(--line)}
+.wk-flow li.out span{color:var(--cyan)}
+.wk-case p{color:var(--text);margin-top:14px}
+.wk-case>div>ul{list-style:none;margin-top:18px;display:grid;gap:10px}
+.wk-case>div>ul>li{color:var(--text);padding-left:18px;position:relative;font-size:.95rem}
+.wk-case>div>ul>li::before{content:'';position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--cyan)}
+
+/* PROGRAMMA */
+.wk-time{margin-top:44px;max-width:860px}
+.wk-t{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line)}
+.wk-t:last-child{border-bottom:1px solid var(--line)}
+@media(max-width:600px){.wk-t{grid-template-columns:1fr;gap:6px}}
+.wk-t time{font-family:var(--mono);color:var(--cyan);font-size:.95rem;padding-top:2px}
+.wk-t h3{font-family:var(--font);color:var(--white);font-size:1.12rem;margin-bottom:6px}
+.wk-t p{color:var(--text);font-size:.95rem;line-height:1.65}
+.wk-t .by{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:.8rem;color:var(--text-dim)}
+.wk-t .by img{width:26px;height:26px;border-radius:50%;object-fit:cover}
+.wk-t.ape h3{color:var(--text-bright)}
+
+/* TEAM */
+.wk-team{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media(max-width:800px){.wk-team{grid-template-columns:1fr;gap:40px}}
+.wk-p{display:grid;grid-template-columns:132px 1fr;gap:22px;align-items:start}
+.wk-p img{width:132px;height:132px;border-radius:12px;object-fit:cover;object-position:center 20%}
+.wk-p h3{font-family:var(--font);color:var(--white);font-size:1.2rem}
+.wk-p .role{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--cyan);margin:4px 0 10px}
+.wk-p p{color:var(--text);font-size:.92rem;line-height:1.65}
+@media(max-width:420px){.wk-p{grid-template-columns:1fr}}
+
+/* PREZZI */
+.wk-prices{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+@media(max-width:820px){.wk-prices{grid-template-columns:1fr}}
+.wk-price{padding:32px;display:flex;flex-direction:column}
+.wk-price+.wk-price{border-left:1px solid var(--line)}
+@media(max-width:820px){.wk-price+.wk-price{border-left:none;border-top:1px solid var(--line)}.wk-price{padding:24px}}
+.wk-price.main{background:rgba(0,212,255,.045)}
+.wk-price .mode{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan)}
+.wk-price h3{font-family:var(--font);color:var(--white);font-size:1.3rem;margin:8px 0 2px}
+.wk-price .when{color:var(--text-dim);font-size:.9rem}
+.wk-price .amt{font-family:var(--font);color:var(--white);font-size:2.6rem;font-weight:700;margin:22px 0 4px;font-variant-numeric:tabular-nums}
+.wk-price .amt small{font-size:.95rem;color:var(--text-dim);font-weight:500}
+.wk-price ul{list-style:none;margin:16px 0 26px;display:grid;gap:8px}
+.wk-price li{color:var(--text);font-size:.92rem;padding-left:18px;position:relative}
+.wk-price li::before{content:'';position:absolute;left:0;top:.7em;width:8px;height:1px;background:var(--cyan)}
+.wk-price .btn-grad,.wk-price .btn-ghost{margin-top:auto;justify-content:center}
+.wk-terms{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px}
+@media(max-width:820px){.wk-terms{grid-template-columns:1fr}}
+.wk-terms p{font-size:.9rem;color:var(--text);line-height:1.6}
+.wk-terms b{color:var(--white);font-weight:600}
+/* OFFERTA DI LANCIO */
+.wk-offer{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:9px 14px 9px 10px;border:1px solid rgba(0,212,255,.45);background:rgba(0,212,255,.08);border-radius:999px;font-size:.86rem;color:var(--white)}
+.wk-offer b{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;background:var(--cyan);color:#070b1a;padding:4px 8px;border-radius:999px}
+.wk-offer span{color:var(--text)}
+.wk-count{margin-top:26px;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+@media(max-width:420px){.wk-count{gap:14px}.wk-count .d strong{font-size:1.4rem}.wk-count .d{font-size:.62rem}}
+.wk-count .d{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim)}
+.wk-count .d strong{display:block;font-family:var(--font);font-size:1.7rem;color:var(--white);letter-spacing:0;line-height:1.1;font-variant-numeric:tabular-nums}
+.wk-count .sep{width:1px;height:34px;background:var(--line)}
+.wk-price .was{font-family:var(--mono);color:var(--text-dim);font-size:.9rem;text-decoration:line-through;margin-top:20px}
+.wk-price .was+.amt{margin-top:2px}
+.wk-price .amt.deal{color:var(--cyan)}
+.wk-price .first3{display:inline-block;margin-top:4px;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan)}
+.wk-price .then{font-size:.85rem;color:var(--text-dim);margin-top:8px}
+/* PROVA SOCIALE */
+.wk-proof{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+@media(max-width:820px){.wk-proof{grid-template-columns:1fr 1fr}}
+.wk-proof div{padding:26px 22px 26px 0;border-right:1px solid var(--line)}
+.wk-proof div:last-child{border-right:none}
+@media(max-width:820px){.wk-proof div:nth-child(2){border-right:none}.wk-proof div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.wk-proof strong{display:block;font-family:var(--font);font-size:2.2rem;font-weight:700;color:var(--white);line-height:1;letter-spacing:-.02em}
+.wk-proof strong em{font-style:normal;color:var(--cyan)}
+.wk-proof p{margin-top:10px;font-size:.9rem;color:var(--text);line-height:1.5}
+.wk-quote{margin-top:40px;max-width:820px;padding-left:22px;border-left:2px solid var(--cyan)}
+.wk-quote p{font-family:var(--font);font-size:clamp(1.1rem,2.2vw,1.35rem);line-height:1.5;color:var(--text-bright)}
+.wk-quote cite{display:block;margin-top:12px;font-style:normal;font-size:.85rem;color:var(--text-dim)}
+/* BARRA FISSA MOBILE */
+.wk-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(7,11,26,.92);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
+.wk-bar small{font-size:.78rem;color:var(--text);line-height:1.3}
+.wk-bar small b{color:var(--cyan);font-weight:600}
+.wk-bar .btn-grad{padding:11px 18px;font-size:.8rem;white-space:nowrap}
+@media(max-width:760px){.wk-bar{display:flex}.wk{padding-bottom:70px}}
+a:focus-visible,.btn-grad:focus-visible,.btn-ghost:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<style>
+.ap-free{display:inline-flex;align-items:center;gap:10px;margin:0 0 18px;padding:9px 14px 9px 10px;border:1px solid rgba(0,212,255,.45);background:rgba(0,212,255,.08);border-radius:999px;font-size:.86rem;color:var(--white)}
+.ap-free b{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;background:var(--cyan);color:#070b1a;padding:4px 8px;border-radius:999px}
+.ap-free span{color:var(--text)}
+.ap-steps{margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+@media(max-width:820px){.ap-steps{grid-template-columns:1fr}}
+.ap-steps>div{padding:26px 26px 26px 0;border-right:1px solid var(--line)}
+.ap-steps>div:last-child{border-right:none}
+@media(max-width:820px){.ap-steps>div{border-right:none;border-bottom:1px solid var(--line);padding:20px 0}}
+.ap-steps .n{font-family:var(--mono);color:var(--cyan);font-size:.85rem;display:block;margin-bottom:14px}
+.ap-steps h3{font-family:var(--font);color:var(--white);font-size:1.1rem;margin-bottom:8px}
+.ap-steps p{color:var(--text);font-size:.93rem;line-height:1.6}
+.ap-box{margin-top:44px;border:1px solid var(--line);border-radius:16px;padding:32px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center;background:rgba(0,212,255,.045)}
+@media(max-width:820px){.ap-box{grid-template-columns:1fr;padding:24px}}
+.ap-box h3{font-family:var(--font);color:var(--white);font-size:1.35rem;margin-bottom:10px}
+.ap-box p{color:var(--text);font-size:.95rem;line-height:1.6}
+.ap-box .mode{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);display:block;margin-bottom:10px}
+.ap-box .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+@media(max-width:820px){.ap-box .btns{justify-content:flex-start}}
+</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+</svg>
+
+<main class="wk">
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="wk-hero">
+  <div class="container">
+    <div class="wk-hero-grid">
+      <div>
+        <span class="kicker">Anteprima gratuita · online · giovedì 19 novembre 2026</span>
+        <h1>Guarda l'IA lavorare <em>per un'azienda vera.</em> Poi decidi.</h1>
+        <p class="lead">Quarantacinque minuti su Zoom. Ti mostro dal vivo due automazioni che mandano avanti la mia azienda ogni giorno, con i passaggi veri, non con le slide. Alla fine rispondo alle tue domande.</p>
+        <div class="ap-free"><b>Gratis</b><span>Ingresso libero, 100 posti. Il link Zoom arriva nel biglietto.</span></div>
+        <div class="wk-cta">
+          <a class="btn-grad" href="https://events.reconnectiveacademy.com/events/reconnectiveacademy/2519798" target="_blank" rel="noopener">Riserva il posto gratuito</a>
+          <span class="note">Giovedì 19.11 · 18:30 – 19:15</span>
+        </div>
+        <dl class="wk-ticket">
+          <div><svg><use href="#i-cal"/></svg><span><dt>Data</dt><dd>Gio 19 novembre</dd></span></div>
+          <div><svg><use href="#i-clock"/></svg><span><dt>Orario</dt><dd>18:30 – 19:15</dd></span></div>
+          <div><svg><use href="#i-pin"/></svg><span><dt>Dove</dt><dd>Online, su Zoom</dd></span></div>
+          <div><svg><use href="#i-users"/></svg><span><dt>Costo</dt><dd>Gratuito</dd></span></div>
+        </dl>
+      </div>
+      <div class="wk-portrait">
+        <figure>
+          <img src="/img/guglielmo-poli.jpg" alt="Guglielmo Poli" width="540" height="540">
+          <figcaption><b>Guglielmo Poli</b> conduce l'anteprima e il workshop. Usa queste automazioni ogni giorno nella propria azienda.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COSA VEDRAI ═══════════════ -->
+<section class="wk-sec">
+  <div class="container">
+    <span class="kicker">Cosa vedrai</span>
+    <h2>Due automazioni dal vivo, una domanda tua.</h2>
+    <p class="intro">Niente teoria sull'intelligenza artificiale: schermo condiviso e passaggi reali, dall'inizio alla fine.</p>
+    <div class="ap-steps">
+      <div><span class="n">01 · 18:30</span><h3>La posta smistata ogni mattina</h3><p>Alle 7:30 le email sono già divise in «da fare oggi», «da leggere» e «da archiviare», con la bozza di risposta pronta nel tuo tono. Vedi come si imposta e come si controlla.</p></div>
+      <div><span class="n">02 · 18:50</span><h3>Le fatture al fiduciario da sole</h3><p>Ogni lunedì un'attività cerca fatture e ricevute nella posta e nei portali, le rinomina, le archivia nella cartella giusta e manda il riepilogo. Vedi cosa succede davvero, in diretta.</p></div>
+      <div><span class="n">03 · 19:05</span><h3>Le tue domande</h3><p>Porta un caso del tuo lavoro: un preventivo che scrivi spesso, un documento mensile, un flusso di email. Ragioniamo insieme su cosa si può automatizzare e come.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PER CHI ═══════════════ -->
+<section class="wk-sec">
+  <div class="container">
+    <span class="kicker">Per chi è</span>
+    <p class="wk-who">Per chi manda avanti <mark>una piccola impresa o uno studio</mark> e passa troppe ore su email, preventivi, fatture e documenti. Titolari, fiduciari, studi legali, tecnici e medici, artigiani, responsabili d'ufficio. Non serve saper programmare né aver mai usato l'IA: <mark>basta il tuo lavoro di ogni giorno</mark>.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ CHI CONDUCE ═══════════════ -->
+<section class="wk-sec">
+  <div class="container">
+    <span class="kicker">Chi conduce</span>
+    <h2>The Social Media Lab, agenzia di Morbio Inferiore.</h2>
+    <div class="wk-team">
+      <div class="wk-p">
+        <img src="/img/guglielmo-poli.jpg" alt="Guglielmo Poli" width="132" height="132" loading="lazy">
+        <div>
+          <h3>Guglielmo Poli</h3>
+          <div class="role">Siti, automazioni e formazione</div>
+          <p>Laureato in Giurisprudenza, Master in gestione delle risorse umane, oltre vent'anni di formazione per adulti in quattro continenti, più di seicento seminari. Con l'IA, soprattutto Claude, gestisce i processi della propria azienda e costruisce siti e applicazioni per i clienti.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ISCRIZIONE + WORKSHOP ═══════════════ -->
+<section class="wk-sec" id="iscrizione">
+  <div class="container">
+    <span class="kicker">Riserva il posto</span>
+    <h2>Giovedì 19 novembre, 18:30. Gratis, su Zoom.</h2>
+    <p class="intro">Ti iscrivi in un minuto; il link di accesso arriva nel biglietto. Se quella sera non puoi, iscriviti lo stesso: ai registrati mandiamo la registrazione.</p>
+    <div class="wk-cta" style="margin-top:26px">
+      <a class="btn-grad" href="https://events.reconnectiveacademy.com/events/reconnectiveacademy/2519798" target="_blank" rel="noopener">Riserva il posto gratuito</a>
+      <a href="https://wa.me/393401784206?text=Ciao%2C%20vorrei%20informazioni%20sull%27anteprima%20IA%20del%2019%20novembre" target="_blank" rel="noopener" class="btn-ghost">Scrivici su WhatsApp</a>
+    </div>
+    <div class="ap-box">
+      <div>
+        <span class="mode">Il passo successivo</span>
+        <h3>Il workshop completo: 3 dicembre a Lugano, 10 dicembre online.</h3>
+        <p>Tre ore di laboratorio in cui costruisci sul tuo portatile le automazioni che vedi in anteprima, con i tuoi account e i tuoi documenti. Quindici posti in sala; alla fine dell'anteprima lo presentiamo e rispondiamo alle domande.</p>
+      </div>
+      <div class="btns">
+        <a class="btn-ghost" href="/workshop-ia">Programma del workshop</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="wk-bar" role="complementary" aria-label="Iscrizione">
+  <small><b>Anteprima gratuita</b><br>19 novembre · 18:30 · Zoom</small>
+  <a class="btn-grad" href="https://events.reconnectiveacademy.com/events/reconnectiveacademy/2519798" target="_blank" rel="noopener">Riserva</a>
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:36px;height:36px;background:var(--gradient-btn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:700;font-size:.65rem;color:var(--white)">SML</div>
+          <div style="font-family:var(--font);font-weight:600;color:var(--white)">The Social Media <span style="color:var(--cyan)">Lab</span></div>
+        </div>
+        <p>Agenzia di social media marketing in Ticino specializzata in neuromarketing, siti web e formazione digitale.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thesocialmedialab.ch" target="_blank" title="Instagram">📷</a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Naviga</h4>
+        <a href="/">Home</a>
+        <a href='/chi-siamo'>Chi Siamo</a>
+        <a href='/servizi'>Servizi</a>
+        <a href='/portfolio'>Portfolio</a>
+      </div>
+      <div class="footer-col">
+        <h4>Servizi</h4>
+        <a href='/pacchetti'>Pacchetti</a>
+        <a href='/academy'>Academy</a>
+        <a href='/contatti'>Contatti</a>
+        <a href='/privacy'>Privacy e note legali</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <a href="mailto:info@thesocialmedia-lab.com">Email</a>
+        <a href="tel:+41782303582">Telefono</a>
+        <a href="https://instagram.com/thesocialmedialab.ch">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Social Media Lab. Tutti i diritti riservati.</p>
+      <div>
+        <a href='/privacy'>Privacy</a> • <a href='/privacy#impressum'>Note legali</a> • <a href='/privacy#cookie'>Cookie</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// Mobile Menu Toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+if(mobileToggle){
+  mobileToggle.addEventListener('click',()=>{
+    mobileMenu.classList.toggle('open');
+    mobileToggle.classList.toggle('active');
+  });
+}
+
+// Scroll Progress
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  if(scrollProgress) scrollProgress.style.width = scrolled + '%';
+});
+
+// Custom Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove',e=>{
+  if(cursor){
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  }
+});
+
+document.addEventListener('mousedown',()=>{
+  if(cursor) cursor.classList.add('active');
+});
+
+document.addEventListener('mouseup',()=>{
+  if(cursor) cursor.classList.remove('active');
+});
+
+// Nav Scrolled Effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY > 50){
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Reveal Animation
+const revealElements = document.querySelectorAll('.reveal');
+const revealOnScroll = ()=>{
+  revealElements.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight * 0.9){
+      el.classList.add('visible');
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item=>{
+  const question = item.querySelector('.faq-q');
+  question.addEventListener('click',()=>{
+    faqItems.forEach(i=>i.classList.remove('open'));
+    item.classList.add('open');
+  });
+});
+
+// Particles Canvas (simple version)
+const canvas = document.getElementById('particles');
+if(canvas && canvas.getContext){
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  let particles = [];
+  
+  class Particle {
+    constructor(){
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 1.5;
+      this.speedX = (Math.random() - 0.5) * 0.5;
+      this.speedY = (Math.random() - 0.5) * 0.5;
+      this.opacity = Math.random() * 0.5;
+    }
+    update(){
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if(this.x > canvas.width) this.x = 0;
+      if(this.x < 0) this.x = canvas.width;
+      if(this.y > canvas.height) this.y = 0;
+      if(this.y < 0) this.y = canvas.height;
+    }
+    draw(){
+      ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  
+  for(let i = 0; i < 50; i++){
+    particles.push(new Particle());
+  }
+  
+  const animateParticles = ()=>{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p=>{
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  };
+  animateParticles();
+  
+  window.addEventListener('resize',()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+}
+</script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
