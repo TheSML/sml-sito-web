@@ -1,2 +1,4 @@
 /img/tt-*
   Access-Control-Allow-Origin: *
+/img/tt/*
+  Access-Control-Allow-Origin: *
