@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<script src="/js/cookie.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consulenza gratuita | The Social Media Lab — Marketing digitale in Ticino</title>
+<meta name="description" content="Richiedi una consulenza gratuita di 30 minuti, online: guardiamo insieme come ti trovano oggi i tuoi clienti e da dove partire. Per imprese e nuove idee del Ticino.">
+<link rel="canonical" href="https://thesocialmedia-lab.com/consulenza">
+<link rel="alternate" hreflang="it" href="https://thesocialmedia-lab.com/consulenza">
+<link rel="alternate" hreflang="en" href="https://thesocialmedia-lab.com/en/consultation">
+<link rel="alternate" hreflang="es" href="https://thesocialmedia-lab.com/es/consulta">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Richiedi una consulenza gratuita — The Social Media Lab">
+<meta property="og:description" content="Richiedi una consulenza gratuita di 30 minuti, online: guardiamo insieme come ti trovano oggi i tuoi clienti e da dove partire. Per imprese e nuove idee del Ticino.">
+<meta property="og:image" content="https://thesocialmedia-lab.com/img/og-image.jpg">
+<meta name="twitter:image" content="https://thesocialmedia-lab.com/img/og-image.jpg">
+<meta property="og:url" content="https://thesocialmedia-lab.com/consulenza">
+<meta property="og:locale" content="it_CH">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+try{if(localStorage.getItem('sml_cc')==='no')fbq('consent','revoke')}catch(e){}fbq('init','994962172718425');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=994962172718425&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Background Mesh -->
+<div class="bg-mesh"></div>
+
+<!-- Canvas Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+      <div class="nav-name">The Social Media <span>Lab</span></div>
+    </a>
+    <div class="nav-center">
+      <a href="/">Home</a>
+      <a href='/chi-siamo'>Chi Siamo</a>
+      <a href='/servizi'>Servizi</a>
+      <a href='/portfolio'>Portfolio</a>
+      <a href='/academy'>Academy</a>
+      <a href='/pacchetti'>Pacchetti</a>
+      <a href='/contatti'>Contatti</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-lang">
+        <a class='active' href='/consulenza'>IT</a>
+        <a href='/en/consultation'>EN</a>
+        <a href='/es/consulta'>ES</a>
+      </div>
+      <a class='nav-cta' href='/consulenza'>Consulenza gratuita</a>
+    </div>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href='/chi-siamo'>Chi Siamo</a>
+    <a href='/servizi'>Servizi</a>
+    <a href='/portfolio'>Portfolio</a>
+    <a href='/academy'>Academy</a>
+    <a href='/pacchetti'>Pacchetti</a>
+    <a href='/contatti'>Contatti</a>
+    <div class="mobile-lang">
+      <a class='active' href='/consulenza'>IT</a>
+      <a href='/en/consultation'>EN</a>
+      <a href='/es/consulta'>ES</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+.cs-wrap{position:relative;z-index:1;padding:0 0 110px}
+.cs-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+@media(max-width:900px){.cs-grid{grid-template-columns:1fr;gap:32px}}
+.cs-side h2{font-family:var(--font);color:var(--white);font-size:1.25rem;margin-bottom:22px}
+.cs-steps{list-style:none;display:grid;gap:22px;counter-reset:cs}
+.cs-steps li{position:relative;padding-left:52px;counter-increment:cs}
+.cs-steps li::before{content:counter(cs);position:absolute;left:0;top:0;width:36px;height:36px;border:1px solid var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:600;color:var(--cyan);font-size:.9rem}
+.cs-steps strong{display:block;color:var(--white);font-family:var(--font);font-size:1rem;margin-bottom:4px}
+.cs-steps span{color:var(--text);font-size:.92rem;line-height:1.55}
+.cs-who{margin-top:34px;padding-top:26px;border-top:1px solid var(--border);display:flex;gap:16px;align-items:center}
+.cs-who img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.cs-who p{color:var(--text);font-size:.88rem;line-height:1.55}
+.cs-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:34px 30px}
+@media(max-width:560px){.cs-form{padding:24px 18px}}
+.cs-form fieldset{border:none;padding:0;margin:0 0 22px;min-width:0}
+.cs-form legend,.cs-lab{display:block;font-size:.8rem;font-weight:600;color:var(--text-bright);margin-bottom:9px;letter-spacing:.02em;padding:0}
+.cs-lab small,.cs-form legend small{font-weight:400;color:var(--text-dim);margin-left:6px}
+.cs-seg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.cs-seg{grid-template-columns:1fr}}
+.cs-seg label,.cs-chips label{position:relative;cursor:pointer}
+.cs-seg input,.cs-chips input{position:absolute;opacity:0;width:1px;height:1px}
+.cs-seg span{display:flex;align-items:center;min-height:62px;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg2);color:var(--text-bright);font-family:var(--font);font-size:.92rem;font-weight:500;line-height:1.3;transition:var(--transition)}
+.cs-seg input:checked+span{border-color:var(--cyan);box-shadow:0 0 0 3px var(--cyan-dim);color:var(--white)}
+.cs-seg input:focus-visible+span,.cs-chips input:focus-visible+span{outline:2px solid var(--cyan);outline-offset:2px}
+.cs-chips{display:flex;flex-wrap:wrap;gap:8px}
+.cs-chips span{display:inline-block;padding:9px 14px;border:1px solid var(--border);border-radius:var(--radius-full);background:var(--bg2);color:var(--text);font-size:.84rem;transition:var(--transition)}
+.cs-chips input:checked+span{border-color:var(--cyan);color:var(--white);background:var(--cyan-dim)}
+.cs-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.cs-row{grid-template-columns:1fr}}
+.cs-f{margin-bottom:18px}
+.cs-f input,.cs-f textarea{width:100%;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);color:var(--white);font-family:var(--body);font-size:.92rem;outline:none;transition:var(--transition)}
+.cs-f input:focus,.cs-f textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px var(--cyan-dim)}
+.cs-f textarea{min-height:92px;resize:vertical}
+.cs-when{display:grid;gap:10px}
+.cs-cons{display:flex;gap:10px;align-items:flex-start;color:var(--text);font-size:.84rem;line-height:1.5;margin:6px 0 18px;cursor:pointer}
+.cs-cons input{margin-top:3px;accent-color:#00d4ff;width:16px;height:16px;flex:none}
+.cs-cons a{color:var(--cyan);text-decoration:underline;text-underline-offset:3px}
+.cs-note{color:var(--text-dim);font-size:.84rem;line-height:1.55;margin-bottom:16px}
+.cs-err{display:none;color:#ffb4a8;font-size:.86rem;margin-top:12px}
+.cs-ok{display:none;background:var(--card);border:1px solid var(--cyan);border-radius:var(--radius-xl);padding:40px 30px}
+.cs-ok h2{font-family:var(--font);color:var(--white);font-size:1.4rem;margin-bottom:14px}
+.cs-ok p{color:var(--text);line-height:1.65;margin-bottom:12px}
+.cs-ok a{color:var(--cyan)}
+.cs-hp{position:absolute;left:-9999px}
+</style>
+
+<!-- ═══════════════ PAGE HEADER ═══════════════ -->
+<section class="page-header" style="padding-bottom:56px">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span>Consulenza gratuita</span>
+    </div>
+    <h1 style="font-family:var(--font);font-size:clamp(2rem,5vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:16px">Richiedi una <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">consulenza gratuita</span></h1>
+    <p style="font-size:1.05rem;color:var(--text);max-width:600px;margin:0 auto">30 minuti online per capire come ti trovano oggi i tuoi clienti e da dove partire. Senza impegno.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ CONSULENZA ═══════════════ -->
+<section class="cs-wrap">
+  <div class="container">
+    <div class="cs-grid">
+      <div class="cs-side">
+        <h2>Come funziona</h2>
+        <ol class="cs-steps">
+          <li><strong>Compili il modulo</strong><span>Due minuti: ci racconti la tua azienda o la tua idea.</span></li>
+          <li><strong>Ti scriviamo entro un giorno lavorativo</strong><span>Fissiamo insieme l'orario. Intanto guardiamo la tua presenza online.</span></li>
+          <li><strong>30 minuti online con Guglielmo</strong><span>Cosa funziona, cosa manca e le prime tre priorità. Se ha senso lavorare insieme, ricevi una proposta su misura.</span></li>
+        </ol>
+        <div class="cs-who">
+          <img src="/img/guglielmo-poli.jpg" alt="Guglielmo Poli" width="64" height="64">
+          <p>Guglielmo Poli conduce la consulenza. Si occupa di strategia, siti e visibilità su Google per The Social Media Lab.</p>
+        </div>
+      </div>
+      <div>
+        <form class="cs-form" id="csForm" name="consulenza" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/consulenza?ok=1">
+          <input type="hidden" name="form-name" value="consulenza">
+          <p class="cs-hp"><label>Non compilare<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <input type="hidden" name="lingua" value="it">
+          <input type="hidden" name="fonte" id="csFonte" value="sito">
+          <input type="hidden" name="bisogni" id="csBisogni">
+          <input type="hidden" name="giorni" id="csGiorni">
+          <input type="hidden" name="orari" id="csOrari">
+          <fieldset>
+            <legend>Da dove parti?</legend>
+            <div class="cs-seg">
+              <label><input type="radio" name="tipo" value="azienda" checked><span>La mia azienda è già attiva</span></label>
+              <label><input type="radio" name="tipo" value="idea"><span>Ho un'idea o sto avviando un'attività</span></label>
+            </div>
+          </fieldset>
+          <div class="cs-row">
+            <div class="cs-f"><label class="cs-lab" for="csNome">Nome e cognome</label><input type="text" id="csNome" name="nome" autocomplete="name" required></div>
+            <div class="cs-f"><label class="cs-lab" for="csEmail">Email</label><input type="email" id="csEmail" name="email" autocomplete="email" required></div>
+          </div>
+          <div class="cs-row">
+            <div class="cs-f"><label class="cs-lab" for="csTel">Telefono<small>facoltativo, se preferisci essere richiamato</small></label><input type="tel" id="csTel" name="telefono" autocomplete="tel"></div>
+            <div class="cs-f"><label class="cs-lab" for="csAz"><span id="csAzL" data-a="Nome dell&#x27;azienda" data-b="Hai già un nome per il progetto?">Nome dell'azienda</span><small id="csAzH" data-a="se c&#x27;è già" data-b="facoltativo">se c'è già</small></label><input type="text" id="csAz" name="azienda" autocomplete="organization"></div>
+          </div>
+          <div class="cs-f"><label class="cs-lab" for="csAtt"><span id="csAttL" data-a="Di cosa si occupa la tua azienda?" data-b="Raccontaci la tua idea in poche righe">Di cosa si occupa la tua azienda?</span></label><textarea id="csAtt" name="attivita" required placeholder="Per esempio: studio di fisioterapia a Mendrisio, tre collaboratori." data-a="Per esempio: studio di fisioterapia a Mendrisio, tre collaboratori." data-b="Per esempio: voglio aprire uno studio di consulenza a Lugano nel 2027."></textarea></div>
+          <fieldset>
+            <legend>Su cosa vorresti lavorare?<small>puoi scegliere più voci</small></legend>
+            <div class="cs-chips"><label><input type="checkbox" data-g="bisogni" value="Farmi trovare su Google"><span>Farmi trovare su Google</span></label><label><input type="checkbox" data-g="bisogni" value="Un sito che porti richieste"><span>Un sito che porti richieste</span></label><label><input type="checkbox" data-g="bisogni" value="Gestire i social"><span>Gestire i social</span></label><label><input type="checkbox" data-g="bisogni" value="Una strategia di marketing digitale"><span>Una strategia di marketing digitale</span></label><label><input type="checkbox" data-g="bisogni" value="Pubblicità online"><span>Pubblicità online</span></label><label><input type="checkbox" data-g="bisogni" value="Creare un marchio da zero"><span>Creare un marchio da zero</span></label><label><input type="checkbox" data-g="bisogni" value="Trovare nuovi clienti"><span>Trovare nuovi clienti</span></label><label><input type="checkbox" data-g="bisogni" value="Non lo so ancora, voglio un consiglio"><span>Non lo so ancora, voglio un consiglio</span></label></div>
+          </fieldset>
+          <div class="cs-f"><label class="cs-lab" for="csLinks">Hai già un sito o dei profili social?</label><input type="text" id="csLinks" name="link" placeholder="Incolla qui i link"></div>
+          <fieldset>
+            <legend>Quando preferisci incontrarci?</legend>
+            <div class="cs-when">
+              <div class="cs-chips"><label><input type="checkbox" data-g="giorni" value="Lun"><span>Lun</span></label><label><input type="checkbox" data-g="giorni" value="Mar"><span>Mar</span></label><label><input type="checkbox" data-g="giorni" value="Mer"><span>Mer</span></label><label><input type="checkbox" data-g="giorni" value="Gio"><span>Gio</span></label><label><input type="checkbox" data-g="giorni" value="Ven"><span>Ven</span></label></div>
+              <div class="cs-chips"><label><input type="checkbox" data-g="orari" value="Mattina"><span>Mattina</span></label><label><input type="checkbox" data-g="orari" value="Pomeriggio"><span>Pomeriggio</span></label><label><input type="checkbox" data-g="orari" value="Dopo le 17"><span>Dopo le 17</span></label></div>
+            </div>
+          </fieldset>
+          <label class="cs-cons"><input type="checkbox" name="consenso" value="si" required><span>Ho letto l'<a href="/privacy" target="_blank" rel="noopener">informativa sulla privacy</a> e acconsento a essere ricontattato per questa richiesta.</span></label>
+          <p class="cs-note">Entro un giorno lavorativo ti scriviamo per fissare l'incontro. Nessun impegno: se poi ha senso lavorare insieme, ti prepariamo una proposta su misura.</p>
+          <button type="submit" class="form-submit" id="csBtn" data-sending="Invio in corso…">Richiedi la consulenza</button>
+          <p class="cs-err" id="csErr" role="alert">Non siamo riusciti a inviare il modulo. Riprova tra poco oppure scrivici a info@thesocialmedia-lab.com.</p>
+        </form>
+        <div class="cs-ok" id="csOk" role="status" tabindex="-1">
+          <h2>Grazie, abbiamo ricevuto la tua richiesta.</h2>
+          <p>Entro un giorno lavorativo ti scriviamo per fissare la consulenza. Nel frattempo diamo un'occhiata alla tua presenza online, così all'incontro partiamo subito dal concreto.</p>
+          <p>Per qualcosa di urgente scrivici su WhatsApp al <a href="https://wa.me/393401784206" target="_blank" rel="noopener">+39 340 178 4206</a>.</p>
+          <p style="color:var(--text-bright);margin-bottom:0">Alejandra e Guglielmo, The Social Media Lab</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var f=document.getElementById('csForm'),ok=document.getElementById('csOk');if(!f)return;
+  var q=new URLSearchParams(location.search);
+  function done(){f.style.display='none';ok.style.display='block';ok.focus();try{ok.scrollIntoView({block:'center'})}catch(e){}}
+  if(q.get('ok')==='1'){done();return;}
+  var fonte=(q.get('fonte')||q.get('utm_source')||'').replace(/[^a-z0-9_-]/gi,'').slice(0,30);
+  if(fonte)document.getElementById('csFonte').value=fonte.toLowerCase();
+  function sw(el,k){if(el&&el.dataset[k]!=null)el.textContent=el.dataset[k];}
+  function tipo(){
+    var k=f.querySelector('input[name=tipo]:checked').value==='idea'?'b':'a';
+    sw(document.getElementById('csAzL'),k);sw(document.getElementById('csAzH'),k);sw(document.getElementById('csAttL'),k);
+    var ta=document.getElementById('csAtt');ta.placeholder=ta.dataset[k];
+  }
+  if(q.get('tipo')==='idea'){f.querySelector('input[name=tipo][value=idea]').checked=true;}
+  f.querySelectorAll('input[name=tipo]').forEach(function(r){r.addEventListener('change',tipo);});tipo();
+  function join(g){return Array.prototype.map.call(f.querySelectorAll('input[data-g='+g+']:checked'),function(i){return i.value;}).join(', ');}
+  f.addEventListener('submit',function(ev){
+    document.getElementById('csBisogni').value=join('bisogni');
+    document.getElementById('csGiorni').value=join('giorni');
+    document.getElementById('csOrari').value=join('orari');
+    if(!window.fetch)return;
+    ev.preventDefault();
+    var b=document.getElementById('csBtn'),lab=b.textContent,er=document.getElementById('csErr');
+    b.disabled=true;b.textContent=b.dataset.sending;er.style.display='none';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+      .then(function(r){if(!r.ok)throw new Error(r.status);try{if(window.fbq)fbq('track','Lead');}catch(e){}done();})
+      .catch(function(){b.disabled=false;b.textContent=lab;er.style.display='block';});
+  });
+})();
+</script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:36px;height:36px;background:var(--gradient-btn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:700;font-size:.65rem;color:var(--white)">SML</div>
+          <div style="font-family:var(--font);font-weight:600;color:var(--white)">The Social Media <span style="color:var(--cyan)">Lab</span></div>
+        </div>
+        <p>Agenzia di social media marketing in Ticino specializzata in neuromarketing, siti web e formazione digitale.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thesocialmedialab.ch" target="_blank" title="Instagram">📷</a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Naviga</h4>
+        <a href="/">Home</a>
+        <a href='/chi-siamo'>Chi Siamo</a>
+        <a href='/servizi'>Servizi</a>
+        <a href='/portfolio'>Portfolio</a>
+      </div>
+      <div class="footer-col">
+        <h4>Servizi</h4>
+        <a href='/pacchetti'>Pacchetti</a>
+        <a href='/academy'>Academy</a>
+        <a href='/contatti'>Contatti</a>
+        <a href='/privacy'>Privacy e note legali</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contatti</h4>
+        <a href="mailto:info@thesocialmedia-lab.com">Email</a>
+        <a href="tel:+41782303582">Telefono</a>
+        <a href="https://instagram.com/thesocialmedialab.ch">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Social Media Lab. Tutti i diritti riservati.</p>
+      <div>
+        <a href='/privacy'>Privacy</a> • <a href='/privacy#impressum'>Note legali</a> • <a href='/privacy#cookie'>Cookie</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// Mobile Menu Toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+if(mobileToggle){
+  mobileToggle.addEventListener('click',()=>{
+    mobileMenu.classList.toggle('open');
+    mobileToggle.classList.toggle('active');
+  });
+}
+
+// Scroll Progress
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  if(scrollProgress) scrollProgress.style.width = scrolled + '%';
+});
+
+// Custom Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove',e=>{
+  if(cursor){
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  }
+});
+
+document.addEventListener('mousedown',()=>{
+  if(cursor) cursor.classList.add('active');
+});
+
+document.addEventListener('mouseup',()=>{
+  if(cursor) cursor.classList.remove('active');
+});
+
+// Nav Scrolled Effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY > 50){
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Reveal Animation
+const revealElements = document.querySelectorAll('.reveal');
+const revealOnScroll = ()=>{
+  revealElements.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight * 0.9){
+      el.classList.add('visible');
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item=>{
+  const question = item.querySelector('.faq-q');
+  question.addEventListener('click',()=>{
+    faqItems.forEach(i=>i.classList.remove('open'));
+    item.classList.add('open');
+  });
+});
+
+// Particles Canvas (simple version)
+const canvas = document.getElementById('particles');
+if(canvas && canvas.getContext){
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  let particles = [];
+  
+  class Particle {
+    constructor(){
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 1.5;
+      this.speedX = (Math.random() - 0.5) * 0.5;
+      this.speedY = (Math.random() - 0.5) * 0.5;
+      this.opacity = Math.random() * 0.5;
+    }
+    update(){
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if(this.x > canvas.width) this.x = 0;
+      if(this.x < 0) this.x = canvas.width;
+      if(this.y > canvas.height) this.y = 0;
+      if(this.y < 0) this.y = canvas.height;
+    }
+    draw(){
+      ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+  
+  for(let i = 0; i < 50; i++){
+    particles.push(new Particle());
+  }
+  
+  const animateParticles = ()=>{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p=>{
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  };
+  animateParticles();
+  
+  window.addEventListener('resize',()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+}
+</script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

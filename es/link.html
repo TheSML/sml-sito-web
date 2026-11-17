@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Social Media Lab — Enlaces</title>
+<meta name="description" content="Estrategia digital para las empresas del Ticino. Que te encuentren. Que te elijan.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://thesocialmedia-lab.com/es/link">
+<link rel="alternate" hreflang="it" href="https://thesocialmedia-lab.com/link">
+<link rel="alternate" hreflang="en" href="https://thesocialmedia-lab.com/en/link">
+<link rel="alternate" hreflang="es" href="https://thesocialmedia-lab.com/es/link">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Social Media Lab">
+<meta property="og:description" content="Estrategia digital para las empresas del Ticino. Que te encuentren. Que te elijan.">
+<meta property="og:image" content="https://thesocialmedia-lab.com/img/og-image.jpg">
+<meta property="og:url" content="https://thesocialmedia-lab.com/es/link">
+<link rel="icon" href="/img/sml-logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+body{cursor:auto}
+.lk{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:56px 20px 40px;max-width:480px;margin:0 auto;text-align:center}
+.lk img.logo{width:92px;height:92px;border-radius:50%}
+.lk h1{font-family:var(--font);color:var(--white);font-size:1.3rem;font-weight:600;margin:18px 0 6px}
+.lk h1 span{color:var(--cyan)}
+.lk .tag{color:var(--text);font-size:.95rem}
+.lk .claim{font-family:var(--font);color:var(--white);font-size:1.05rem;font-weight:500;margin:14px 0 30px}
+.lk a.big{display:block;width:100%;padding:18px 20px;border-radius:18px;margin-bottom:12px;font-family:var(--font);font-size:1.02rem;font-weight:600;color:var(--white);transition:var(--transition)}
+.lk a.big small{display:block;font-family:var(--body);font-weight:400;font-size:.82rem;opacity:.85;margin-top:4px}
+.lk a.b1{background:var(--gradient-btn)}
+.lk a.b2{border:1.5px solid var(--cyan);background:rgba(0,212,255,.06)}
+.lk a.big:hover{transform:translateY(-2px);box-shadow:0 10px 28px var(--cyan-glow)}
+.lk .more{width:100%;margin-top:14px;display:grid;gap:10px}
+.lk .more a{display:block;padding:13px 18px;border:1px solid var(--border-light);border-radius:14px;color:var(--text-bright);font-size:.92rem;transition:var(--transition)}
+.lk .more a:hover{border-color:var(--cyan);color:var(--cyan)}
+.lk .lang{margin-top:auto;padding-top:34px;color:var(--text-dim);font-size:.8rem;letter-spacing:.06em}
+.lk .lang a{color:var(--text-dim)} .lk .lang span[aria-current]{color:var(--white)}
+</style>
+
+</head>
+<body>
+<div class="bg-mesh"></div>
+<main class="lk">
+  <img class="logo" src="/img/sml-logo.svg" alt="The Social Media Lab" width="92" height="92">
+  <h1>The Social Media <span>Lab</span></h1>
+  <p class="tag">Estrategia digital para las empresas del Ticino</p>
+  <p class="claim">Que te encuentren. Que te elijan.</p>
+  <a class="big b1" href="/es/consulta?tipo=azienda" data-f>Solicita una consulta gratuita<small>30 minutos online, sin compromiso</small></a>
+  <a class="big b2" href="/es/consulta?tipo=idea" data-f>¿Tienes una idea de negocio? Hablemos<small>De la idea a un proyecto visible online</small></a>
+  <div class="more">
+    <a href="/es/servicios">Qué hacemos</a>
+    <a href="https://wa.me/393401784206" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+    <a href="/es/">Ir al sitio web</a>
+  </div>
+  <p class="lang"><a href="/link" data-keep>IT</a> · <a href="/en/link" data-keep>EN</a> · <span aria-current="true">ES</span></p>
+</main>
+<script>
+(function(){
+  var f=(new URLSearchParams(location.search).get('fonte')||'instagram').replace(/[^a-z0-9_-]/gi,'').slice(0,30).toLowerCase();
+  document.querySelectorAll('a[data-f]').forEach(function(a){a.href+='&fonte='+f;});
+  document.querySelectorAll('a[data-keep]').forEach(function(a){a.href+='?fonte='+f;});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consulta gratuita | The Social Media Lab — Marketing digital en Ticino</title>
+<meta name="description" content="Solicita una consulta gratuita de 30 minutos, online: vemos juntos cómo te encuentran hoy tus clientes y por dónde empezar. Para empresas y nuevas ideas del Ticino.">
+<link rel="canonical" href="https://thesocialmedia-lab.com/es/consulta">
+<link rel="alternate" hreflang="it" href="https://thesocialmedia-lab.com/consulenza">
+<link rel="alternate" hreflang="en" href="https://thesocialmedia-lab.com/en/consultation">
+<link rel="alternate" hreflang="es" href="https://thesocialmedia-lab.com/es/consulta">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Solicita una consulta gratuita — The Social Media Lab">
+<meta property="og:description" content="Solicita una consulta gratuita de 30 minutos, online: vemos juntos cómo te encuentran hoy tus clientes y por dónde empezar. Para empresas y nuevas ideas del Ticino.">
+<meta property="og:url" content="https://thesocialmedia-lab.com/es/consulta">
+<meta property="og:locale" content="es_ES">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+
+<!-- Background Mesh -->
+<div class="bg-mesh"></div>
+
+<!-- Canvas Particles -->
+<canvas id="particles"></canvas>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/es/" class="nav-brand">
+      <img src="/img/sml-logo.svg" alt="The Social Media Lab" style="width:42px;height:42px;border-radius:50%">
+      <div class="nav-name">The Social Media <span>Lab</span></div>
+    </a>
+    <div class="nav-center">
+      <a href="/es/">Inicio</a>
+      <a href='/es/quienes-somos'>Quiénes Somos</a>
+      <a href='/es/servicios'>Servicios</a>
+      <a href="/es/portafolio.html">Portafolio</a>
+      <a href='/es/academy'>Academy</a>
+      <a href='/es/paquetes'>Paquetes</a>
+      <a href='/es/contacto'>Contacto</a>
+    </div>
+    <div class="nav-right">
+      <div class="nav-lang">
+        <a href='/consulenza'>IT</a>
+        <a href='/en/consultation'>EN</a>
+        <a class='active' href='/es/consulta'>ES</a>
+      </div>
+      <a class='nav-cta' href='/es/consulta'>Consulta gratuita</a>
+    </div>
+    <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/es/">Inicio</a>
+    <a href='/es/quienes-somos'>Quiénes Somos</a>
+    <a href='/es/servicios'>Servicios</a>
+    <a href="/es/portafolio.html">Portafolio</a>
+    <a href='/es/academy'>Academy</a>
+    <a href='/es/paquetes'>Paquetes</a>
+    <a href='/es/contacto'>Contacto</a>
+    <div class="mobile-lang">
+      <a href='/consulenza'>IT</a>
+      <a href='/en/consultation'>EN</a>
+      <a class='active' href='/es/consulta'>ES</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+.cs-wrap{position:relative;z-index:1;padding:0 0 110px}
+.cs-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+@media(max-width:900px){.cs-grid{grid-template-columns:1fr;gap:32px}}
+.cs-side h2{font-family:var(--font);color:var(--white);font-size:1.25rem;margin-bottom:22px}
+.cs-steps{list-style:none;display:grid;gap:22px;counter-reset:cs}
+.cs-steps li{position:relative;padding-left:52px;counter-increment:cs}
+.cs-steps li::before{content:counter(cs);position:absolute;left:0;top:0;width:36px;height:36px;border:1px solid var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:600;color:var(--cyan);font-size:.9rem}
+.cs-steps strong{display:block;color:var(--white);font-family:var(--font);font-size:1rem;margin-bottom:4px}
+.cs-steps span{color:var(--text);font-size:.92rem;line-height:1.55}
+.cs-who{margin-top:34px;padding-top:26px;border-top:1px solid var(--border);display:flex;gap:16px;align-items:center}
+.cs-who img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.cs-who p{color:var(--text);font-size:.88rem;line-height:1.55}
+.cs-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:34px 30px}
+@media(max-width:560px){.cs-form{padding:24px 18px}}
+.cs-form fieldset{border:none;padding:0;margin:0 0 22px;min-width:0}
+.cs-form legend,.cs-lab{display:block;font-size:.8rem;font-weight:600;color:var(--text-bright);margin-bottom:9px;letter-spacing:.02em;padding:0}
+.cs-lab small,.cs-form legend small{font-weight:400;color:var(--text-dim);margin-left:6px}
+.cs-seg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.cs-seg{grid-template-columns:1fr}}
+.cs-seg label,.cs-chips label{position:relative;cursor:pointer}
+.cs-seg input,.cs-chips input{position:absolute;opacity:0;width:1px;height:1px}
+.cs-seg span{display:flex;align-items:center;min-height:62px;padding:12px 16px;border:1px solid var(--border);border-radius:var(--radius);background:var(--bg2);color:var(--text-bright);font-family:var(--font);font-size:.92rem;font-weight:500;line-height:1.3;transition:var(--transition)}
+.cs-seg input:checked+span{border-color:var(--cyan);box-shadow:0 0 0 3px var(--cyan-dim);color:var(--white)}
+.cs-seg input:focus-visible+span,.cs-chips input:focus-visible+span{outline:2px solid var(--cyan);outline-offset:2px}
+.cs-chips{display:flex;flex-wrap:wrap;gap:8px}
+.cs-chips span{display:inline-block;padding:9px 14px;border:1px solid var(--border);border-radius:var(--radius-full);background:var(--bg2);color:var(--text);font-size:.84rem;transition:var(--transition)}
+.cs-chips input:checked+span{border-color:var(--cyan);color:var(--white);background:var(--cyan-dim)}
+.cs-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.cs-row{grid-template-columns:1fr}}
+.cs-f{margin-bottom:18px}
+.cs-f input,.cs-f textarea{width:100%;padding:12px 16px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);color:var(--white);font-family:var(--body);font-size:.92rem;outline:none;transition:var(--transition)}
+.cs-f input:focus,.cs-f textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px var(--cyan-dim)}
+.cs-f textarea{min-height:92px;resize:vertical}
+.cs-when{display:grid;gap:10px}
+.cs-cons{display:flex;gap:10px;align-items:flex-start;color:var(--text);font-size:.84rem;line-height:1.5;margin:6px 0 18px;cursor:pointer}
+.cs-cons input{margin-top:3px;accent-color:#00d4ff;width:16px;height:16px;flex:none}
+.cs-cons a{color:var(--cyan);text-decoration:underline;text-underline-offset:3px}
+.cs-note{color:var(--text-dim);font-size:.84rem;line-height:1.55;margin-bottom:16px}
+.cs-err{display:none;color:#ffb4a8;font-size:.86rem;margin-top:12px}
+.cs-ok{display:none;background:var(--card);border:1px solid var(--cyan);border-radius:var(--radius-xl);padding:40px 30px}
+.cs-ok h2{font-family:var(--font);color:var(--white);font-size:1.4rem;margin-bottom:14px}
+.cs-ok p{color:var(--text);line-height:1.65;margin-bottom:12px}
+.cs-ok a{color:var(--cyan)}
+.cs-hp{position:absolute;left:-9999px}
+</style>
+
+<!-- ═══════════════ PAGE HEADER ═══════════════ -->
+<section class="page-header" style="padding-bottom:56px">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/es/">Inicio</a>
+      <span class="sep">/</span>
+      <span>Consulta gratuita</span>
+    </div>
+    <h1 style="font-family:var(--font);font-size:clamp(2rem,5vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:16px">Solicita una <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">consulta gratuita</span></h1>
+    <p style="font-size:1.05rem;color:var(--text);max-width:600px;margin:0 auto">30 minutos online para entender cómo te encuentran hoy tus clientes y por dónde empezar. Sin compromiso.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ CONSULENZA ═══════════════ -->
+<section class="cs-wrap">
+  <div class="container">
+    <div class="cs-grid">
+      <div class="cs-side">
+        <h2>Cómo funciona</h2>
+        <ol class="cs-steps">
+          <li><strong>Rellenas el formulario</strong><span>Dos minutos: nos cuentas tu empresa o tu idea.</span></li>
+          <li><strong>Te escribimos en un día laborable</strong><span>Fijamos juntos el horario. Mientras tanto miramos tu presencia online.</span></li>
+          <li><strong>30 minutos online con Guglielmo</strong><span>Qué funciona, qué falta y las tres primeras prioridades. Si tiene sentido trabajar juntos, recibes una propuesta a medida.</span></li>
+        </ol>
+        <div class="cs-who">
+          <img src="/img/guglielmo-poli.jpg" alt="Guglielmo Poli" width="64" height="64">
+          <p>Guglielmo Poli dirige la consulta. Se ocupa de estrategia, sitios web y visibilidad en Google en The Social Media Lab.</p>
+        </div>
+      </div>
+      <div>
+        <form class="cs-form" id="csForm" name="consulenza" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/es/consulta?ok=1">
+          <input type="hidden" name="form-name" value="consulenza">
+          <p class="cs-hp"><label>Non compilare<input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <input type="hidden" name="lingua" value="es">
+          <input type="hidden" name="fonte" id="csFonte" value="sito">
+          <input type="hidden" name="bisogni" id="csBisogni">
+          <input type="hidden" name="giorni" id="csGiorni">
+          <input type="hidden" name="orari" id="csOrari">
+          <fieldset>
+            <legend>¿Desde dónde partes?</legend>
+            <div class="cs-seg">
+              <label><input type="radio" name="tipo" value="azienda" checked><span>Mi empresa ya está activa</span></label>
+              <label><input type="radio" name="tipo" value="idea"><span>Tengo una idea o estoy empezando un negocio</span></label>
+            </div>
+          </fieldset>
+          <div class="cs-row">
+            <div class="cs-f"><label class="cs-lab" for="csNome">Nombre y apellidos</label><input type="text" id="csNome" name="nome" autocomplete="name" required></div>
+            <div class="cs-f"><label class="cs-lab" for="csEmail">Email</label><input type="email" id="csEmail" name="email" autocomplete="email" required></div>
+          </div>
+          <div class="cs-row">
+            <div class="cs-f"><label class="cs-lab" for="csTel">Teléfono<small>opcional, si prefieres que te llamemos</small></label><input type="tel" id="csTel" name="telefono" autocomplete="tel"></div>
+            <div class="cs-f"><label class="cs-lab" for="csAz"><span id="csAzL" data-a="Nombre de la empresa" data-b="¿Ya tienes un nombre para el proyecto?">Nombre de la empresa</span><small id="csAzH" data-a="si ya existe" data-b="opcional">si ya existe</small></label><input type="text" id="csAz" name="azienda" autocomplete="organization"></div>
+          </div>
+          <div class="cs-f"><label class="cs-lab" for="csAtt"><span id="csAttL" data-a="¿A qué se dedica tu empresa?" data-b="Cuéntanos tu idea en pocas líneas">¿A qué se dedica tu empresa?</span></label><textarea id="csAtt" name="attivita" required placeholder="Por ejemplo: centro de fisioterapia en Mendrisio, tres colaboradores." data-a="Por ejemplo: centro de fisioterapia en Mendrisio, tres colaboradores." data-b="Por ejemplo: quiero abrir una consultoría en Lugano en 2027."></textarea></div>
+          <fieldset>
+            <legend>¿En qué te gustaría trabajar?<small>puedes elegir varias opciones</small></legend>
+            <div class="cs-chips"><label><input type="checkbox" data-g="bisogni" value="Que me encuentren en Google"><span>Que me encuentren en Google</span></label><label><input type="checkbox" data-g="bisogni" value="Un sitio web que traiga solicitudes"><span>Un sitio web que traiga solicitudes</span></label><label><input type="checkbox" data-g="bisogni" value="Gestionar las redes sociales"><span>Gestionar las redes sociales</span></label><label><input type="checkbox" data-g="bisogni" value="Una estrategia de marketing digital"><span>Una estrategia de marketing digital</span></label><label><input type="checkbox" data-g="bisogni" value="Publicidad online"><span>Publicidad online</span></label><label><input type="checkbox" data-g="bisogni" value="Crear una marca desde cero"><span>Crear una marca desde cero</span></label><label><input type="checkbox" data-g="bisogni" value="Conseguir nuevos clientes"><span>Conseguir nuevos clientes</span></label><label><input type="checkbox" data-g="bisogni" value="Aún no lo sé, quiero un consejo"><span>Aún no lo sé, quiero un consejo</span></label></div>
+          </fieldset>
+          <div class="cs-f"><label class="cs-lab" for="csLinks">¿Ya tienes sitio web o perfiles sociales?</label><input type="text" id="csLinks" name="link" placeholder="Pega aquí los enlaces"></div>
+          <fieldset>
+            <legend>¿Cuándo prefieres que nos reunamos?</legend>
+            <div class="cs-when">
+              <div class="cs-chips"><label><input type="checkbox" data-g="giorni" value="Lun"><span>Lun</span></label><label><input type="checkbox" data-g="giorni" value="Mar"><span>Mar</span></label><label><input type="checkbox" data-g="giorni" value="Mié"><span>Mié</span></label><label><input type="checkbox" data-g="giorni" value="Jue"><span>Jue</span></label><label><input type="checkbox" data-g="giorni" value="Vie"><span>Vie</span></label></div>
+              <div class="cs-chips"><label><input type="checkbox" data-g="orari" value="Mañana"><span>Mañana</span></label><label><input type="checkbox" data-g="orari" value="Tarde"><span>Tarde</span></label><label><input type="checkbox" data-g="orari" value="Después de las 17"><span>Después de las 17</span></label></div>
+            </div>
+          </fieldset>
+          <label class="cs-cons"><input type="checkbox" name="consenso" value="si" required><span>He leído la <a href="/privacy" target="_blank" rel="noopener">información sobre privacidad</a> y acepto que me contacten por esta solicitud.</span></label>
+          <p class="cs-note">En un día laborable te escribimos para fijar la reunión. Sin compromiso: si tiene sentido trabajar juntos, te preparamos una propuesta a medida.</p>
+          <button type="submit" class="form-submit" id="csBtn" data-sending="Enviando…">Solicitar la consulta</button>
+          <p class="cs-err" id="csErr" role="alert">No hemos podido enviar el formulario. Inténtalo de nuevo en unos minutos o escríbenos a info@thesocialmedia-lab.com.</p>
+        </form>
+        <div class="cs-ok" id="csOk" role="status" tabindex="-1">
+          <h2>Gracias, hemos recibido tu solicitud.</h2>
+          <p>En un día laborable te escribimos para fijar la consulta. Mientras tanto echamos un vistazo a tu presencia online, así en la reunión empezamos por lo concreto.</p>
+          <p>Para algo urgente escríbenos por WhatsApp al <a href="https://wa.me/393401784206" target="_blank" rel="noopener">+39 340 178 4206</a>.</p>
+          <p style="color:var(--text-bright);margin-bottom:0">Alejandra y Guglielmo, The Social Media Lab</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var f=document.getElementById('csForm'),ok=document.getElementById('csOk');if(!f)return;
+  var q=new URLSearchParams(location.search);
+  function done(){f.style.display='none';ok.style.display='block';ok.focus();try{ok.scrollIntoView({block:'center'})}catch(e){}}
+  if(q.get('ok')==='1'){done();return;}
+  var fonte=(q.get('fonte')||q.get('utm_source')||'').replace(/[^a-z0-9_-]/gi,'').slice(0,30);
+  if(fonte)document.getElementById('csFonte').value=fonte.toLowerCase();
+  function sw(el,k){if(el&&el.dataset[k]!=null)el.textContent=el.dataset[k];}
+  function tipo(){
+    var k=f.querySelector('input[name=tipo]:checked').value==='idea'?'b':'a';
+    sw(document.getElementById('csAzL'),k);sw(document.getElementById('csAzH'),k);sw(document.getElementById('csAttL'),k);
+    var ta=document.getElementById('csAtt');ta.placeholder=ta.dataset[k];
+  }
+  if(q.get('tipo')==='idea'){f.querySelector('input[name=tipo][value=idea]').checked=true;}
+  f.querySelectorAll('input[name=tipo]').forEach(function(r){r.addEventListener('change',tipo);});tipo();
+  function join(g){return Array.prototype.map.call(f.querySelectorAll('input[data-g='+g+']:checked'),function(i){return i.value;}).join(', ');}
+  f.addEventListener('submit',function(ev){
+    document.getElementById('csBisogni').value=join('bisogni');
+    document.getElementById('csGiorni').value=join('giorni');
+    document.getElementById('csOrari').value=join('orari');
+    if(!window.fetch)return;
+    ev.preventDefault();
+    var b=document.getElementById('csBtn'),lab=b.textContent,er=document.getElementById('csErr');
+    b.disabled=true;b.textContent=b.dataset.sending;er.style.display='none';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+      .then(function(r){if(!r.ok)throw new Error(r.status);try{if(window.fbq)fbq('track','Lead');}catch(e){}done();})
+      .catch(function(){b.disabled=false;b.textContent=lab;er.style.display='block';});
+  });
+})();
+</script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <div style="width:36px;height:36px;background:var(--gradient-btn);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font);font-weight:700;font-size:.65rem;color:var(--white)">SML</div>
+          <div style="font-family:var(--font);font-weight:600;color:var(--white)">The Social Media <span style="color:var(--cyan)">Lab</span></div>
+        </div>
+        <p>Agencia de social media marketing en Ticino especializada en neuromarketing, sitios web y formación digital.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/thesocialmedialab.ch" target="_blank" title="Instagram">📷</a>
+          <a href="https://linkedin.com" target="_blank" title="LinkedIn">💼</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navega</h4>
+        <a href="/es/">Inicio</a>
+        <a href='/es/quienes-somos'>Quiénes Somos</a>
+        <a href='/es/servicios'>Servicios</a>
+        <a href="/es/portafolio.html">Portafolio</a>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <a href='/es/paquetes'>Paquetes</a>
+        <a href='/es/academy'>Academy</a>
+        <a href='/es/contacto'>Contacto</a>
+        <a href='/privacy'>Política de Privacidad</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:info@thesocialmedia-lab.com">Email</a>
+        <a href="tel:+41782303582">Teléfono</a>
+        <a href="https://instagram.com/thesocialmedialab.ch">Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 The Social Media Lab. Todos los derechos reservados.</p>
+      <div>
+        <a href='/privacy'>Privacidad</a> • <a href='/privacy#impressum'>Aviso legal</a> • <a href='/privacy#cookie'>Cookies</a>
+      </div>
+    </div>
+  </div>
+<div style="text-align:center;padding:16px 0;font-size:0.75rem;opacity:0.5;border-top:1px solid rgba(255,255,255,0.08);margin-top:8px">Designed by <a href="https://thesocialmedia-lab.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;font-weight:600">The Social Media Lab</a></div></footer>
+
+<!-- Scripts -->
+<script>
+// Mobile Menu Toggle
+const mobileToggle = document.getElementById('mobileToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+if(mobileToggle){
+  mobileToggle.addEventListener('click',()=>{
+    mobileMenu.classList.toggle('open');
+    mobileToggle.classList.toggle('active');
+  });
+}
+
+// Scroll Progress
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{
+  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  if(scrollProgress) scrollProgress.style.width = scrolled + '%';
+});
+
+// Custom Cursor
+const cursor = document.getElementById('cursor');
+document.addEventListener('mousemove',e=>{
+  if(cursor){
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  }
+});
+
+document.addEventListener('mousedown',()=>{
+  if(cursor) cursor.classList.add('active');
+});
+
+document.addEventListener('mouseup',()=>{
+  if(cursor) cursor.classList.remove('active');
+});
+
+// Nav Scrolled Effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  if(window.scrollY > 50){
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+});
+
+// Reveal Animation
+const revealElements = document.querySelectorAll('.reveal');
+const revealOnScroll = ()=>{
+  revealElements.forEach(el=>{
+    const rect = el.getBoundingClientRect();
+    if(rect.top < window.innerHeight * 0.9){
+      el.classList.add('visible');
+    }
+  });
+};
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+
+// FAQ Accordion
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item=>{
+  const question = item.querySelector('.faq-q');
+  question.addEventListener('click',()=>{
+    faqItems.forEach(i=>i.classList.remove('open'));
+    item.classList.add('open');
+  });
+});
+
+// Particles Canvas (simple version)
+const canvas = document.getElementById('particles');
+if(canvas && canvas.getContext){
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  let particles = [];
+
+  class Particle {
+    constructor(){
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
+      this.size = Math.random() * 1.5;
+      this.speedX = (Math.random() - 0.5) * 0.5;
+      this.speedY = (Math.random() - 0.5) * 0.5;
+      this.opacity = Math.random() * 0.5;
+    }
+    update(){
+      this.x += this.speedX;
+      this.y += this.speedY;
+      if(this.x > canvas.width) this.x = 0;
+      if(this.x < 0) this.x = canvas.width;
+      if(this.y > canvas.height) this.y = 0;
+      if(this.y < 0) this.y = canvas.height;
+    }
+    draw(){
+      ctx.fillStyle = `rgba(0, 212, 255, ${this.opacity})`;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  for(let i = 0; i < 50; i++){
+    particles.push(new Particle());
+  }
+
+  const animateParticles = ()=>{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p=>{
+      p.update();
+      p.draw();
+    });
+    requestAnimationFrame(animateParticles);
+  };
+  animateParticles();
+
+  window.addEventListener('resize',()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+}
+</script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
